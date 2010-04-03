@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
+The top-level auxiliary file: report.aux
+The style file: plain.bst
+Database file #1: report.bib.bib
+Repeated entry---line 26 of file report.bib.bib
+ : @misc{codingtheory+blog
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 50 of file report.bib.bib
+ : @misc{codingtheory+blog
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 59 of file report.bib.bib
+ : @misc{codingtheory+blog
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 77 of file report.bib.bib
+ : @misc{codingtheory+blog
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 86 of file report.bib.bib
+ : @misc{codingtheory+blog
+ :                        ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in codingtheory+blog
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            499 strings with 4046 characters,
+and the built_in function-call counts, 157 in all, are:
+= -- 8
+> -- 1
+< -- 0
++ -- 1
+- -- 0
+* -- 7
+:= -- 20
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 7
+empty$ -- 24
+format.name$ -- 0
+if$ -- 34
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 6
+num.names$ -- 0
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 5
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 1
+while$ -- 0
+width$ -- 2
+write$ -- 6
+(There were 5 error messages)

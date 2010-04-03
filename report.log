@@ -1,0 +1,444 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2009.8.18)  29 MAR 2010 10:17
+entering extended mode
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, basque, danish, dutch, finnish, french, german, ngerman, hungarian,
+ italian, bokmal, nynorsk, polish, portuguese, spanish, swedish, ukenglish, loa
+ded.
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2008basic/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 149.
+LaTeX Info: Redefining \nocite on input line 214.
+Package: cite 2003/11/04  v 4.01
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-comm
+on.tex
+\pgfutil@everybye=\toks26
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-late
+x.def)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.
+tex
+Package: pgfrcs 2008/02/20 v2.00 (rcs-revision 1.21)
+))
+Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.cod
+e.tex
+Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code
+.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+)
+\pgf@x=\dimen114
+\pgf@y=\dimen115
+\pgf@xa=\dimen116
+\pgf@ya=\dimen117
+\pgf@xb=\dimen118
+\pgf@yb=\dimen119
+\pgf@xc=\dimen120
+\pgf@yc=\dimen121
+\c@pgf@counta=\count99
+\c@pgf@countb=\count100
+\c@pgf@countc=\count101
+\c@pgf@countd=\count102
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 885.
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvi
+ps.def
+File: pgfsys-dvips.def 2007/12/12  (rcs-revision 1.19)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-com
+mon-postscript.def
+File: pgfsys-common-postscript.def 2008/02/07  (rcs-revision 1.18)
+\pgf@objectcount=\count103
+)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoft
+path.code.tex
+File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
+\pgfsyssoftpath@smallbuffer@items=\count104
+\pgfsyssoftpath@bigbuffer@items=\count105
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprot
+ocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2008basic/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.cod
+e.tex
+Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.
+tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.
+tex
+\pgfmath@box=\box28
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathparser.cod
+e.tex
+\pgfmath@stack=\toks29
+\c@pgfmath@parsecounta=\count106
+\c@pgfmath@parsecountb=\count107
+\c@pgfmath@parsecountc=\count108
+\pgfmath@parsex=\dimen122
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathoperations
+.code.tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathtrig.code.
+tex)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathrnd.code.t
+ex))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathbase.code.
+tex)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoin
+ts.code.tex
+File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
+\pgf@picminx=\dimen123
+\pgf@picmaxx=\dimen124
+\pgf@picminy=\dimen125
+\pgf@picmaxy=\dimen126
+\pgf@pathminx=\dimen127
+\pgf@pathmaxx=\dimen128
+\pgf@pathminy=\dimen129
+\pgf@pathmaxy=\dimen130
+\pgf@xx=\dimen131
+\pgf@xy=\dimen132
+\pgf@yx=\dimen133
+\pgf@yy=\dimen134
+\pgf@zx=\dimen135
+\pgf@zy=\dimen136
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+construct.code.tex
+File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
+\pgf@path@lastx=\dimen137
+\pgf@path@lasty=\dimen138
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+usage.code.tex
+File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
+\pgf@shorten@end@additional=\dimen139
+\pgf@shorten@start@additional=\dimen140
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescop
+es.code.tex
+File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count109
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregrap
+hicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
+\pgflinewidth=\dimen141
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretran
+sformations.code.tex
+File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
+\pgf@pt@x=\dimen142
+\pgf@pt@y=\dimen143
+\pgf@pt@temp=\dimen144
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequic
+k.code.tex
+File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobje
+cts.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+processing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/01/23  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearro
+ws.code.tex
+File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshad
+e.code.tex
+File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
+\pgf@max=\dimen145
+\pgf@sys@shading@range@num=\count110
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimag
+e.code.tex
+File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfexternal@startupbox=\box32
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelaye
+rs.code.tex
+File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretran
+sparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatt
+erns.code.tex
+File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
+)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmoduleshape
+s.code.tex
+File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
+\pgfnodeparttextbox=\box33
+\toks@savedmacro=\toks30
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.
+code.tex
+File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgf@plotwrite=\write3
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-ve
+rsion-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen146
+\pgf@nodesepend=\dimen147
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-ve
+rsion-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgffor.code.
+tex
+Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
+\pgffor@iter=\dimen148
+\pgffor@skip=\dimen149
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tik
+z.code.tex
+Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/libraries/pgflibrarypl
+othandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
+\pgf@plot@mark@count=\count111
+\pgfplotmarksize=\dimen150
+)
+\tikz@lastx=\dimen151
+\tikz@lasty=\dimen152
+\tikz@lastxsaved=\dimen153
+\tikz@lastysaved=\dimen154
+\tikzleveldistance=\dimen155
+\tikzsiblingdistance=\dimen156
+\tikz@figbox=\box34
+\tikz@tempbox=\box35
+\tikztreelevel=\count112
+\tikznumberofchildren=\count113
+\tikznumberofcurrentchild=\count114
+\tikz@fig@count=\count115
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmodulematri
+x.code.tex
+File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfmatrixcurrentrow=\count116
+\pgfmatrixcurrentcolumn=\count117
+\pgf@matrix@numberofcolumns=\count118
+)
+\tikz@expandcount=\count119
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+))) (./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+
+! LaTeX Error: \mathcal allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 Reed-Muller (\mathcal
+                          {R}) codes are \ldots
+? 
+! Double superscript.
+l.45 ...h vector over $F_2$. Since there are $2^2^
+                                                  m$ such boolean functions ...
+
+? 
+! Double superscript.
+l.45 ...ible, this gives us a collection of  $2^2^
+                                                  m$ vectors, each of length...
+
+? 
+
+Overfull \hbox (13.54782pt too wide) in paragraph at lines 49--51
+[]\OT1/cmr/m/n/10 Using log-i-cal op-er-a-tions, $\OML/cmm/m/it/10 f$ \OT1/cmr/
+m/n/10 can be rep-re-sented as a func-tion of the $\OML/cmm/m/it/10 x[]; x[]; [
+] ; x[]$\OT1/cmr/m/n/10 .
+ []
+
+! Undefined control sequence.
+l.53 $a \wedgw
+               b$
+? 
+[1
+
+] (./report.bbl) [2] (./report.aux) ) 
+Here is how much of TeX's memory you used:
+ 7595 strings out of 494734
+ 133815 string characters out of 1170961
+ 189516 words of memory out of 3000000
+ 10673 multiletter control sequences out of 10000+50000
+ 9322 words of font info for 34 fonts, out of 3000000 for 5000
+ 188 hyphenation exceptions out of 8191
+ 47i,7n,49p,440b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on report.dvi (2 pages, 10112 bytes).

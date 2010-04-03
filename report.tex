@@ -1,0 +1,95 @@
+
+%%% Local Variables:  %%% mode: latex %%% TeX-master: t %%% End: 
+
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[dvips]{graphicx}
+\usepackage{cite}
+\usepackage{tikz}
+
+%opening
+\title{Reed Muller Codes}
+\author{Prateek Sharma}
+\pagestyle{plain}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract} 
+This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented.
+\end{abstract}
+
+
+\newcommand{\RM}{\ensuremath{\mathcal{R}}}
+
+\section {Introduction and Terminology}
+Reed-Muller (\mathcal{R}) codes are \ldots
+
+\section {Construction}
+The simplest construction is using Boolean functions.
+Let $(x_1,x_2,\ldots,x_m) \in V^m$ be the set of binary m-tuples, and let $x \equiv (x_1,x_2,\ldots,x_m)$. Consider a Boolean Function $f$, $f: V^m \rightarrow {0,1} $ . Thus $f(x) = f(x_1,x_2,\ldots,x_m)$ takes an m-tuple and returns either $0$ or $1$ .
+$x$ can take $2^m$ values. For each value of $x$ we compute $f(x)$. This is the familiar and ubiquitious 'Truth-table' wherein a boolean function is evaluated for all possible inputs.
+In the example below, $x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ is computed and represented as another row. 
+\begin {center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+$x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+$x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+$x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+$f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+
+\end{tabular}
+\end{center} 
+
+Since $(x_1,x_2,\ldots,x_m)$ can take $2^m$ values, $f$ is a $n=2^m$ length vector over $F_2$. Since there are $2^2^m$ such boolean functions possible, this gives us a collection of  $2^2^m$ vectors, each of length $2^m$.
+ 
+The Reed-Muller codes are particular subsets of this collection as described below.
+
+Using logical operations, $f$ can be represented as a function of the $x_1, x_2, \ldots , x_m$. In the above example, for instance, $f = x_1 \vee x_2 \vee x_3 ... $. 
+Define a Boolean Monomial as 
+
+$a \oplus b$
+$a \wedgw b$
+$\vec{a}$
+
+
+
+\subsection {Boolean functions}
+
+\subsection {Recursive Construction}
+The Reed-Muller codes can also be defined recursively as follows:
+\begin{equation}
+\mathcal{R}(r+1,m+1) = {u+v| u \in \R(r+1,m), v \in \R(r,m)}
+\end{equation}
+This is known as the concatenation construction of codes, with $+$ denoting the concatenation.
+Proof: <TODO, see the singaporean book>
+
+Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
+\begin{theorem}
+Minimum distance, $d=2^{m-r}$
+\end{theorem}
+Proof:...
+\subsection {Projective Geometry}
+ 
+\section {Properties}
+\subsection {Weight distribution}
+\subsection {Distance, error correction}
+
+\section {Decoding}
+\subsection {Majority Logic Decoding}
+\subsection {Geometrical}
+\subsection {Hadamard Transforms}
+
+\subsection {List Decoding}
+\subsection {Introduction}
+\subsection {RM(1,m) decoding algorithm}
+
+\section {Uses of Reed Muller codes}
+
+~\cite{codingtheory+blog}
+\section {References}
+
+\bibliographystyle{plain}      
+\bibliography{report}
+\end{document}
