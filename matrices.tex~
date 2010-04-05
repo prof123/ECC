@@ -1,0 +1,70 @@
+
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[dvips]{graphicx}
+\usepackage{cite}
+\usepackage{tikz}
+
+%opening
+\title{Reed Muller Codes}
+\author{Prateek Sharma}
+\pagestyle{plain}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented.
+\end{abstract}
+
+\newcommand{\RM}[2]{\ensuremath{\mathcal{R}(#1,#2)}}
+\newcommand{\rm}{Reed-Muller}
+
+\section {\RM{1}{3}}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&  	 1&1&1&1&1&1&1&1 \\
+
+v_1 \quad& 	 0&0&0&0&1&1&1&1 \\
+v_2 \quad& 	 0&0&1&1&0&0&1&1 \\
+v_3 \quad&	 0&1&0&1&0&1&0&1 \\
+v_1+v_2 \quad&    0&0&1&1&1&1&0&0 \\
+v_1+v_3 \quad&	 0&1&1&0&0&1&1&0 \\
+v_2+v_3 \quad&	 0&1&0&1&1&0&1&0 \\
+v_1+v2+v_3 \quad& 0&1&1&0&1&0&0&1 \\
+
+0	\quad&	 0&0&0&0&0&0&0&0 \\
+1+v_1	\quad&	 1&1&1&1&0&0&0&0 \\
+1+v_2	\quad&	 1&1&0&0&1&1&0&0 \\
+1+v_3	\quad&	 1&0&1&0&1&0&1&0 \\
+1+v_1+v2 \quad&	 1&1&0&0&0&0&1&1 \\
+1+v_1+v3 \quad&	 1&0&0&1&1&0&0&1 \\
+1+v_2+v_3 \quad&	 1&0&1&0&0&1&0&1 \\
+1+v_1+v_2+v_3\quad& 1&0&0&1&0&1&1&0 \\
+
+\end{array}
+
+\end{equation}
+
+\section{$G(2,3)$}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&         1&1&1&1&1&1&1&1 \\
+
+v_1 \quad&       0&0&0&0&1&1&1&1 \\
+v_2 \quad&       0&0&1&1&0&0&1&1 \\
+v_3 \quad&       0&1&0&1&0&1&0&1 \\
+v_1\cdot v_2 \quad& 0&0&0&0&0&0&1&1 \\ 
+v1\cdot v_3 \quad& 0&0&0&0&0&1&0&1 \\
+v2\cdot v_3 \quad& 0&0&0&1&0&0&0&1 \\
+
+\end{array}
+\end{equation}
+
+\section{
+
+\end{document}

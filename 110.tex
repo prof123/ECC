@@ -1,17 +1,31 @@
 
-%%% Local Variables:  %%% mode: latex %%% TeX-master: t %%% End: 
 
-\documentclass[]{article}
+\documentclass{article}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage[dvips]{graphicx}
 \usepackage{cite}
 \usepackage{tikz}
 
+\newcommand{\RM}[2]{\ensuremath{\mathcal{R}(#1,#2)}}
+
+\newcommand{\rem}{Reed-Muller}
+
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+
+\newcommand{\V}[1]{\ensuremath{\mathbf{#1}}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{def}{Definition}
+\newtheorem{claim}{Claim}
+
+
 %opening
 \title{Reed Muller Codes}
 \author{Prateek Sharma}
 \pagestyle{plain}
+
 
 \begin{document}
 
@@ -21,13 +35,9 @@
 This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented.
 \end{abstract}
 
-\newcommand{\RM}[2]{\ensuremath{\mathcal{R}(#1,#2)}}
-\newcommand{\rm}{Reed-Muller}
-\newcommand{\F}{\ensuremath{\mathbb{F}}
-\newcommand{\V}[1]{\ensuremath{\mathbf{#1}}}
 
 \section {Introduction and Terminology}
-Reed-Muller (\mathcal{R}) codes are are amongst the oldest and most well-known of codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. 
+Reed-Muller ($\mathcal{R}$) codes are are amongst the oldest and most well-known of codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. 
 Reed-Muller codes have many interesting properties that are worth examination; they 
 form an inﬁnite family of codes, and larger Reed-Muller codes can be constructed from 
 smaller ones. This particular observation leads us to show that Reed-Muller codes can be 
@@ -41,14 +51,14 @@ Reed-Muller codes, like many other codes, have tight links to design theory; we 
 investigate this link between Reed-Muller codes and the designs resulting from affine geometries. 
 
 \subsection{Notation}
-$F_q$ denotes a finite field of order $q$
+$\F _q$ denotes a finite field of order $q$
 Throughout, unless otherwise explicity stated, $q=2$, and therefore $F={0,1}$, with the addition operation being equivalent to the boolean exclusive-or (\emph{xor}), and the multiplication operation being the boolean \emph{and}.
 
-A vector field over $F$, with the length of the vector being $n$ will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors}, but this very basic understanding is sufficient for the purpose of understanding this report.
+A vector field over $\F$, with the length of the vector being $n$ will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors}, but this very basic understanding is sufficient for the purpose of understanding this report.
 
-We use a string of length n with elements in $F_2$ to write a vector in the vector space $F^2_n$ . For example, if we have the vector $\mathbf{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in F_2^8$, we simply write $\mathbf{v}$ as $10110101$. 
+We use a string of length n with elements in $\F_2$ to write a vector in the vector space $\F^2_n$ . For example, if we have the vector $\mathbf{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in \F_2^8$, we simply write $\mathbf{v}$ as $10110101$. 
 
-We shall also deal with boolean functions, and shall denote the boolean xor by $+$, instead of the customary $\xor$ to maintain consistency with the addition operation in $F_2$. 
+We shall also deal with boolean functions, and shall denote the boolean xor by $+$, instead of the customary $\oplus$ to maintain consistency with the addition operation in $F_2$. 
 
 Three parameters of linear error-correcting codes are it's length, minimum distance, and dimension, denoted by the triplet $[n,k,d]$. The elements of a code $C$ are called the \emph{codewords}. Codewords are represented as vectors of length $n$. 
 The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the $Hamming Distance$, defined as:
@@ -58,21 +68,21 @@ d_H = \sum_{u_i \neq v_i} 1
 In other words, the hamming distance is the number of positions in which 2 vectors differ. 
 Analogously, the hamming weight of a vector is defined as:
 \begin{equation}
-wt(x) = d(x,0) = \left{ 
+wt(x) = d(x,0) = \{ 
 \begin{array}{rl} 
 1 & \text{if } x \neq 0 \\
-0 & \text{if } x \eq 0 
+0 & \text{if } x = 0 
 \end{array} \right.
 \end{equation}
 
-We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x*y = (x_1y_1, x_2,y_2,\ldots,x_n,y_n) .
+We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x*y = (x_1y_1, x_2y_2,\ldots,x_ny_n) .
 
 
 \section {Construction}
 The simplest construction of \rm is by using boolean functions.
-Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $x \equiv (x_1,x_2,\ldots,x_m)$. Consider a Boolean Function $f$, $f: \F_2^m \rightarrow {0,1} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an m-tuple and returns either $0$ or $1$ .
+Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $v \equiv (x_1,x_2,\ldots,x_m)$. Consider a Boolean Function $f$, $f: \F_2^m \rightarrow {0,1} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an m-tuple and returns either $0$ or $1$ .
 
-$x$ can take $2^m$ values. For each value of $x$ we compute $f(x)$. This is the familiar and ubiquitious 'Truth-table' wherein a boolean function is evaluated for all possible inputs.
+$v$ can take $2^m$ values. For each value of $v$ we compute $f(v)$. This is the familiar and ubiquitious 'Truth-table' wherein a boolean function is evaluated for all possible inputs.
 In the example below, $x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ is computed and represented as another row. 
 \begin {center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -106,88 +116,122 @@ We now define the \rm codes.
 \RM{r}{m} = \text{Boolean polynomials over of degree} r
 \end{equation}
 
+The boolean monomials are \begin{equation*}
+1,v_1,v_2,\ldots,v_m,v_1v_2,v_1v_3,\ldots,v_1v_m,ldots,v_1v_2..v_m
+\end{equations}
+Thus there are \begin{equatio*}
+1+\binom{m}{1}+ldots+\binom{m}{m} = 2^m 
+\end{equation*} boolean monomials.
 
+We can write the generator matrix such that the columns are the binary representations of the numbers from $0$ to $2^m -1$.
 
-$a \oplus b$
-$a \wedgw b$
-$\vec{a}$
+If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence vector $\V{f}$ has length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
 
-The first order \rm code of length $2^3$ is
-\begin{equation}
-\left(
-\begin{array}{lcccccccc}
-v_1&0&0&0&0&0&1&1&1&1 \\
-v_2
-v_3
-\end{array}
-\right)
-\end{equation}
+Properties:
+Length, $n = 2^m$
+Minimum Distance, $d = 2^{m-r}$
+Dimension, $k=1+..$
 
-\subsection {Boolean functions}
-
-\subsection {Recursive Construction}
-The Reed-Muller codes can also be defined recursively as follows:
-\begin{equation}
-\mathcal{R}(r+1,m+1) = {u+v| u \in \R(r+1,m), v \in \R(r,m)}
+\subsection{Recursive Formulation}
+\begin{thm}
+$\RM{r+1}{m+1}$ =  \{\V{u}+\V{v}| \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m}\}
 \end{equation}
 This is known as the concatenation construction of codes, with $+$ denoting the concatenation.
-Proof: <TODO, see the singaporean book>
+Proof:
+Let $\V{f} \in \RM{r+1}{m+1}$.  $\V{f}$ can be written as \begin{equation*}
+f(v_1,v_2,\ldots,v_{m+1}) = g(v_1,v_2,\ldots,v_m)+v_{m+1}h((v_1,v_2,\ldots,v_{m})
+\end{equation*}
+Where $g \in \RM{r+1}{m} $ and $h \in \RM{r}{m}$
+
+
+\end{thm}
+
+Theorem is also equivalent to:
+\begin{equation}
+G(r+1,m+1) = \begin{pmatrix}
+G(r+1,m) & G(r+1,m) \\
+0 & G(r,m) 
+\end{pmatrix}
+\end{equation}
+
+Because of the systematic way the basis vectors are chosen, \begin{equation}
+G(1,m+1) = \begin{pmatrix}
+G(1,m) & G(1,m) \\
+0 & 1
+\end{pmatrix}
+\end{equation}
+
 
 Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
 
-We can write the generator matrix such that the columns are the binary representations of the numbers from $0$ to $2^m -1$.
-\begin{theorem}
+\begin{thm}
 Minimum distance, $d=2^{m-r}$
-\end{theorem}
+\begin{proof}
 Proof:...
+\end{proof}
+\end{thm}
 
 $\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
+\subsection{Properties}
 
-\subsection{Bounds}
-However, after examining how this functions on large chunks of data it becomes 
-apparent that it is similarly ineﬃcient. Let us examine R(15, 25). This gives us the 
-capability to encode a string of length 29703675 with 33554432 bits with at most 511 
-errors. It is highly improbably that only 511 errors occurs in a string of that size 
-so even though this is highly eﬃcient it will probably return an incorrect result. 
-However, if you increase the number of errors to a more logical number like 32767 
-(or 
-≈ 1 in 250) by using R(8, 25) then you can only encode at most 1807780 bits. 
-Therefore to get a reasonable number of error checking you are forced to send 18 
-times the amount of data. For comparison, using the most common Hamming 
-Code (7 bits: 4 parity, 3 data) you would have the ability to correct about 146 times 
-more errors and send 8 times more information. 
-Through these calculations it does not seem advantageous to ever use Reed- 
-Mullen codes. However, there is one very large practical advantage I am glossing 
-over. The Hamming code has the ability to correct 146 times as many errors, but 
-it still can only correct one error every seven bits (although it can detect up to 
-two). When assuming that each bit has the same chance of ﬂipping regardless of 
-its surrounding bits this is not an issue. If every bit has signiﬁcantly less then a 
-1 
-250 chance of ﬂipping then the likelihood that more then two errors will occur in 
-a set of seven is probabilistically impossible. However, in real situations errors 
-can tend to cluster. This causes the Hamming Code option to be infeasible in 
-certain situation (despite it being nice theoretically). Reed-Mullen codes sacriﬁce 
-overall eﬃciency for broad accuracy. If the errors are known to cluster then this is 
-a necessary sacriﬁce. 
-
-
-\subsection {Projective Geometry}
- 
-\section {Properties}
-Dimension
-\begin{equation}
-dim(\RM{r}{m}) = \binom{m}{0} + \binom{m}{1} + \ldots + binom{m}{r}
-\end{equation}
-
-The \rm codes are a nested family of codes - the codes of higher order contain those of the lower order.
-\begin{equation}
+The \rem codes are a nested family of codes - the codes of higher order contain those of the lower order.
+\begin{thm}
+\begin{equation*}
 \RM{r}{m} \subset \RM{t}{m} 
+\text{if} 0 \leq r \leq t \leq m \\
+\end{equation*}
 
-\text{if} 0 \leq r \leq t \leq m
-\end{equation}
-see vera pless...
+\begin{proof}
+By Induction.
+ is certainly true if m 
+= 1 by direct computation and if j = m as R(m, m) 
+is the full space F2 
+m 
+2 . Assume inductively that 
+R(k , m − 1) ⊆ R(ℓ, m − 1) for all 0 ≤ k ≤ 
+ℓ < m. Let 0 < i 
+≤ j < m. Then: 
+\end{proof}
+\end{thm}
+
+
+
+\begin{thm}
+$\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
+\begin{proof}
+\end{proof}
+\end{thm}
+
+\begin{thm}
+
+\begin{proof}
+\end{proof}
+\end{thm}
+
+
+\begin{thm}
+
+\begin{proof}
+\end{proof}
+\end{thm}
+
+
+\begin{thm}
+
+\begin{proof}
+\end{proof}
+\end{thm}
+
+
+\begin{thm}
+
+\begin{proof}
+\end{proof}
+\end{thm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection {Weight distribution}
-\subsection {Distance, error correction}
+
 \section{cyclic decoding}
 In addition, it is next shown that a cyclic RM⋆ (r, m) code is simpler to decode. The 
 argument is as follows. It is shown in Chapter 3 that in a cyclic code C , if (v1 , v2 , . . . , vn ) 
@@ -197,10 +241,10 @@ Therefore, once a particular position can be corrected with ML decoding, all the
 positions can also be corrected with the same algorithm (or hardware circuit) by cyclically 
 shifting received code words, until all n positions have been tried.
 \section {Decoding}
-As mentioned earlier, the RM family of codes came into prominence because of the ease of deconding. In this section we present a variety of decoding algorithms. 
+As mentioned earlier, the RM family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
 Several very efficient algorithms have been known specially for the reed muller codes of the first order. 
 \subsection {Majority Logic Decoding}
-Majority Logic Decoding is the oldest and simplest method to decode the \rm codes. 
+Majority Logic Decoding is the oldest and simplest method to decode the \rem codes. 
 Some terminology is needed for a clearer understanding:
 Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{T}$. 
 Define the \emph{support vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
@@ -243,6 +287,7 @@ Definition: A set of parity checks $S_1, S_2,\ldots$ is orthogonal on coordinate
 
 \begin{Theorem}
 The number of errors which can be corrected by an L-step majority decoding scheme, $E_l \leq n/d' - 1/2 $ 
+
 
 Proof:
 Let the $i-th$ parity check involve $a_i$ coordinates (besides the $l$). 
@@ -298,4 +343,11 @@ Proof:
 
 \bibliographystyle{plain}      
 \bibliography{report}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

@@ -7,8 +7,15 @@
  annote = "Good for finite fields.Video lectures also available."
 }
 
+@misc{codingtheory+blog,
+ author    = "",
+ title     = " ",
+ publisher = " ",
+ address   = "http://codingtheory.wordpress.com/",
+ annote = "."
+}
 
-@misc{jhall,
+@misc{,
  author    = "",
  title     = " ",
  publisher = " ",
@@ -16,6 +23,12 @@
  annote = "Exhaustive lecture notes - almost like a book"
 }
 
+@misc{codingtheory+blog,
+ author    = "",
+ title     = " ",
+ address   = "http://codingtheory.wordpress.com/",
+ annote = "."
+}
 
 @misc{applications,
  author    = "",
@@ -34,6 +47,24 @@
 }
 
 
+@misc{codingtheory+blog,
+ author    = "",
+ title     = " ",
+ publisher = " ",
+ address   = "http://codingtheory.wordpress.com/",
+ annote = "."
+}
+
+
+@misc{codingtheory+blog,
+ author    = "",
+ title     = " ",
+ publisher = " ",
+ address   = "http://codingtheory.wordpress.com/",
+ annote = "."
+}
+
+
 @misc{side+channel,
  author    = "Thomas Roche, C´edric Tavernier ",
  title     = "Side channel attacks based on linearapproximations ",
@@ -43,7 +74,7 @@
 }
 
 
-@misc{fourier,
+@misc{codingtheory+blog,
  author    = "Parikshit Gopalan",
  title     = "A Fourier-analytic approach to Reed-Muller decoding. ",
  publisher = " ",
@@ -52,7 +83,7 @@
 }
 
 
-@misc{weight+distributions,
+@misc{codingtheory+blog,
  author    = " Tali Kaufman",
  title     = " The List-Decoding Size of Reed-Muller Codes",
  publisher = " ",
@@ -93,87 +124,3 @@
  annote = "Whether a vector is far enough from codewrods by testing a small number of bits. "
 }
 
-@conference{kabatiansky2006list,
-  title={{List decoding of first order Reed-Muller codes II}},
-  author={Kabatiansky, G. and Tavernier, C.},
-  booktitle={Tenth International Workshop on Algebraic and Combinatorial Coding Theory, ACCT},
-  pages={131--134},
-  year={2006}
-}
-
-@conference{dumer2008complexity,
-  title={{On complexity of decoding Reed-Muller codes within their code distance}},
-  author={Dumer, I. and Kabatiansky, G. and Tavernier, C. and Le Plessis Robinson, F.},
-  booktitle={Proc. Eleventh International Workshop on Algebraic and Combinatorial Coding Theory},
-  pages={82--85},
-  year={2008}
-}
-
-@article{codes2007list,
-  title={{List Decoding of the First-Order Binary}},
-  author={Codes, R.M.},
-  journal={PROBLEMS OF INFORMATION TRANSMISSION},
-  volume={43},
-  number={3},
-  year={2007}
-}
-
-@book{vanlint,
-  title={{A course in combinatorics}},
-  author={van Lint, J.H. and Wilson, R.M.},
-  year={2001},
-  publisher={Cambridge Univ Pr}
-}
-@misc{sloane,
-  title={{The Theory of Correcting Codes}},
-  author={Sloane, N. and MacWilliams, F.},
-  year={1979},
-  publisher={North Holland, Amsterdam}
-}
-
-
-
-@book{pless,
-  title={{Introduction to the theory of error-correcting codes}},
-  author={Pless, V.},
-  year={1998},
-  publisher={Wiley-Interscience}
-}
-
-@conference{gopalan2008list,
-  title={{List-decoding Reed-Muller codes over small fields}},
-  author={Gopalan, P. and Klivans, A.R. and Zuckerman, D.},
-  booktitle={Proceedings of the 40th annual ACM symposium on Theory of computing},
-  pages={265--274},
-  year={2008},
-  organization={ACM}
-}
-
-@article{dumer2004recursive,
-  title={{Recursive decoding and its performance for low-rate Reed-Muller codes}},
-  author={Dumer, I.},
-  journal={IEEE Transactions on Information Theory},
-  volume={50},
-  number={5},
-  pages={811--823},
-  year={2004},
-  publisher={Citeseer}
-}
-
-@article{forney1999generalized,
-  title={{Generalized State Realizations of Reed-Muller Codes}},
-  author={Forney Jr, G.D.},
-  year={1999},
-  publisher={Citeseer}
-  annote={Trellis diagram etc}
-
-}
-
-
-@misc{zuckerman10,
- author    = "Prof. David Zuckerman",
- title     = "Lecture notes CS295T, Lecture 10.",
- publisher = " ",
- address   = "http://www.mth.msu.edu/~jhall/classes/codenotes/coding-notes.html ",
- annote = "Johnson proof"
-}

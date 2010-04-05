@@ -1,0 +1,4221 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2009.8.18)  6 APR 2010 00:53
+entering extended mode
+ %&-line parsing enabled.
+**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\A
+tBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graph
+ics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input _region_.tex
+(./_region_.tex  !name(110.tex)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2008basic/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 149.
+LaTeX Info: Redefining \nocite on input line 214.
+Package: cite 2003/11/04  v 4.01
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-comm
+on.tex
+\pgfutil@everybye=\toks26
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-late
+x.def)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.
+tex
+Package: pgfrcs 2008/02/20 v2.00 (rcs-revision 1.21)
+))
+Package: pgf 2008/01/15 v2.00 (rcs-revision 1.12)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.cod
+e.tex
+Package: pgfsys 2008/02/07 v2.00 (rcs-revision 1.31)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code
+.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+)
+\pgf@x=\dimen114
+\pgf@y=\dimen115
+\pgf@xa=\dimen116
+\pgf@ya=\dimen117
+\pgf@xb=\dimen118
+\pgf@yb=\dimen119
+\pgf@xc=\dimen120
+\pgf@yc=\dimen121
+\c@pgf@counta=\count99
+\c@pgf@countb=\count100
+\c@pgf@countc=\count101
+\c@pgf@countd=\count102
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/01/13  (rcs-revision 1.6)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-dvips.def on input line 885.
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvi
+ps.def
+File: pgfsys-dvips.def 2007/12/12  (rcs-revision 1.19)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-com
+mon-postscript.def
+File: pgfsys-common-postscript.def 2008/02/07  (rcs-revision 1.18)
+\pgf@objectcount=\count103
+)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoft
+path.code.tex
+File: pgfsyssoftpath.code.tex 2008/01/23  (rcs-revision 1.6)
+\pgfsyssoftpath@smallbuffer@items=\count104
+\pgfsyssoftpath@bigbuffer@items=\count105
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprot
+ocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2008basic/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.cod
+e.tex
+Package: pgfcore 2008/01/15 v2.00 (rcs-revision 1.6)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.
+tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.
+tex
+\pgfmath@box=\box28
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathparser.cod
+e.tex
+\pgfmath@stack=\toks29
+\c@pgfmath@parsecounta=\count106
+\c@pgfmath@parsecountb=\count107
+\c@pgfmath@parsecountc=\count108
+\pgfmath@parsex=\dimen122
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathoperations
+.code.tex
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathtrig.code.
+tex)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathrnd.code.t
+ex))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/math/pgfmathbase.code.
+tex)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoin
+ts.code.tex
+File: pgfcorepoints.code.tex 2008/02/03  (rcs-revision 1.13)
+\pgf@picminx=\dimen123
+\pgf@picmaxx=\dimen124
+\pgf@picminy=\dimen125
+\pgf@picmaxy=\dimen126
+\pgf@pathminx=\dimen127
+\pgf@pathmaxx=\dimen128
+\pgf@pathminy=\dimen129
+\pgf@pathmaxy=\dimen130
+\pgf@xx=\dimen131
+\pgf@xy=\dimen132
+\pgf@yx=\dimen133
+\pgf@yy=\dimen134
+\pgf@zx=\dimen135
+\pgf@zy=\dimen136
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+construct.code.tex
+File: pgfcorepathconstruct.code.tex 2008/02/13  (rcs-revision 1.14)
+\pgf@path@lastx=\dimen137
+\pgf@path@lasty=\dimen138
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+usage.code.tex
+File: pgfcorepathusage.code.tex 2008/01/23  (rcs-revision 1.11)
+\pgf@shorten@end@additional=\dimen139
+\pgf@shorten@start@additional=\dimen140
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescop
+es.code.tex
+File: pgfcorescopes.code.tex 2008/01/15  (rcs-revision 1.26)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count109
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregrap
+hicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2007/12/12  (rcs-revision 1.8)
+\pgflinewidth=\dimen141
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretran
+sformations.code.tex
+File: pgfcoretransformations.code.tex 2008/02/04  (rcs-revision 1.10)
+\pgf@pt@x=\dimen142
+\pgf@pt@y=\dimen143
+\pgf@pt@temp=\dimen144
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequic
+k.code.tex
+File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobje
+cts.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepath
+processing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/01/23  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearro
+ws.code.tex
+File: pgfcorearrows.code.tex 2007/06/07  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshad
+e.code.tex
+File: pgfcoreshade.code.tex 2007/12/10  (rcs-revision 1.9)
+\pgf@max=\dimen145
+\pgf@sys@shading@range@num=\count110
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimag
+e.code.tex
+File: pgfcoreimage.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfexternal@startupbox=\box32
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelaye
+rs.code.tex
+File: pgfcorelayers.code.tex 2008/01/15  (rcs-revision 1.1)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretran
+sparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatt
+erns.code.tex
+File: pgfcorepatterns.code.tex 2008/01/15  (rcs-revision 1.1)
+)))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmoduleshape
+s.code.tex
+File: pgfmoduleshapes.code.tex 2008/02/13  (rcs-revision 1.4)
+\pgfnodeparttextbox=\box33
+\toks@savedmacro=\toks30
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.
+code.tex
+File: pgfmoduleplot.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgf@plotwrite=\write3
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-ve
+rsion-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.00 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen146
+\pgf@nodesepend=\dimen147
+)
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-ve
+rsion-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.00 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/utilities/pgffor.code.
+tex
+Package: pgffor 2007/11/07 v2.00 (rcs-revision 1.8)
+\pgffor@iter=\dimen148
+\pgffor@skip=\dimen149
+))
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tik
+z.code.tex
+Package: tikz 2008/02/13 v2.00 (rcs-revision 1.27)
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/libraries/pgflibrarypl
+othandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2007/03/09 v2.00 (rcs-revision 1.9)
+\pgf@plot@mark@count=\count111
+\pgfplotmarksize=\dimen150
+)
+\tikz@lastx=\dimen151
+\tikz@lasty=\dimen152
+\tikz@lastxsaved=\dimen153
+\tikz@lastysaved=\dimen154
+\tikzleveldistance=\dimen155
+\tikzsiblingdistance=\dimen156
+\tikz@figbox=\box34
+\tikz@tempbox=\box35
+\tikztreelevel=\count112
+\tikznumberofchildren=\count113
+\tikznumberofcurrentchild=\count114
+\tikz@fig@count=\count115
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/modules/pgfmodulematri
+x.code.tex
+File: pgfmodulematrix.code.tex 2008/01/15  (rcs-revision 1.1)
+\pgfmatrixcurrentrow=\count116
+\pgfmatrixcurrentcolumn=\count117
+\pgf@matrix@numberofcolumns=\count118
+)
+\tikz@expandcount=\count119
+
+(/usr/local/texlive/2008basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/lib
+raries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/01/09 v2.00 (rcs-revision 1.1)
+)))
+\c@thm=\count120
+\c@lem=\count121
+
+
+! LaTeX Error: Command \def already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \newtheorem{def}
+                     {Definition}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \newtheorem{def}{D
+                       efinition}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\c@claim=\count122
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+(/Applications/Aquamacs Emacs.app/Contents/Resources/site-lisp/edit-modes/aucte
+x/latex/preview.sty
+Package: preview 2006/08/25 11.84 (AUCTeX/preview-latex)
+
+(/Applications/Aquamacs Emacs.app/Contents/Resources/site-lisp/edit-modes/aucte
+x/latex/prtightpage.def
+\PreviewBorder=\dimen157
+)
+(/Applications/Aquamacs Emacs.app/Contents/Resources/site-lisp/edit-modes/aucte
+x/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count123
+\hfuzz=\dimen158
+
+(/Applications/Aquamacs Emacs.app/Contents/Resources/site-lisp/edit-modes/aucte
+x/latex/prauctex.cfg))
+(/Applications/Aquamacs Emacs.app/Contents/Resources/site-lisp/edit-modes/aucte
+x/latex/prfootnotes.def)
+\pr@snippet=\count124
+\pr@box=\box36
+\pr@output=\toks31
+
+Preview: Fontsize 10pt
+)  !name(110.tex) !offset(-3) 
+! Preview: Snippet 1 started.
+<-><->
+      
+l.40 \section
+              {Introduction and Terminology}
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+! Preview: Snippet 1 ended.(655359+183500x22609920).
+<-><->
+      
+l.40 \section {Introduction and Terminology}
+                                            
+Not a real error.
+
+[1
+
+]
+! Preview: Snippet 2 started.
+<-><->
+      
+l.41 Reed-Muller ($
+                   \mathcal{R}$) codes are are amongst the oldest and most w...
+
+Not a real error.
+
+! Preview: Snippet 2 ended.(447828+0x555420).
+<-><->
+      
+l.41 Reed-Muller ($\mathcal{R}$
+                               ) codes are are amongst the oldest and most w...
+
+Not a real error.
+
+[2]
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Ç in font cmr10!
+
+! Preview: Snippet 3 started.
+<-><->
+      
+l.54 \subsection
+                {Notation}
+Not a real error.
+
+! Preview: Snippet 3 ended.(546132+0x22609920).
+<-><->
+      
+l.54 \subsection{Notation}
+                          
+Not a real error.
+
+[3
+
+]
+! Preview: Snippet 4 started.
+<-><->
+      
+l.55 $
+      \F _q$ denotes a finite field of order $q$
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.55 $\F
+         _q$ denotes a finite field of order $q$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 4 ended.(447828+187504x710862).
+<-><->
+      
+l.55 $\F _q$
+             denotes a finite field of order $q$
+Not a real error.
+
+[4]
+! Preview: Snippet 5 started.
+<-><->
+      
+l.55 $\F _q$ denotes a finite field of order $
+                                              q$
+Not a real error.
+
+! Preview: Snippet 5 ended.(282168+127431x316074).
+<-><->
+      
+l.55 $\F _q$ denotes a finite field of order $q$
+                                                
+Not a real error.
+
+[5]
+! Preview: Snippet 6 started.
+<-><->
+      
+l.56 ...hout, unless otherwise explicity stated, $
+                                                  q=2$, and therefore $F={0,...
+
+Not a real error.
+
+! Preview: Snippet 6 ended.(422343+127431x1517561).
+<-><->
+      
+l.56 ..., unless otherwise explicity stated, $q=2$
+                                                  , and therefore $F={0,1}$,...
+
+Not a real error.
+
+[6]
+! Preview: Snippet 7 started.
+<-><->
+      
+l.56 ...e explicity stated, $q=2$, and therefore $
+                                                  F={0,1}$, with the additio...
+
+Not a real error.
+
+! Preview: Snippet 7 ended.(447828+127431x2332893).
+<-><->
+      
+l.56 ...ity stated, $q=2$, and therefore $F={0,1}$
+                                                  , with the addition operat...
+
+Not a real error.
+
+[7]
+! Preview: Snippet 8 started.
+<-><->
+      
+l.58 A vector field over $
+                          \F$, with the length of the vector being $n$ will ...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.58 A vector field over $\F
+                            $, with the length of the vector being $n$ will ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 8 ended.(447828+0x512456).
+<-><->
+      
+l.58 A vector field over $\F$
+                             , with the length of the vector being $n$ will ...
+
+Not a real error.
+
+[8]
+! Preview: Snippet 9 started.
+<-><->
+      
+l.58 ...\F$, with the length of the vector being $
+                                                  n$ will be denoted by $F^n...
+
+Not a real error.
+
+! Preview: Snippet 9 ended.(282168+0x393370).
+<-><->
+      
+l.58 ...$, with the length of the vector being $n$
+                                                   will be denoted by $F^n$....
+
+Not a real error.
+
+[9]
+! Preview: Snippet 10 started.
+<-><->
+      
+l.58 ... the vector being $n$ will be denoted by $
+                                                  F^n$. For more on vector f...
+
+Not a real error.
+
+! Preview: Snippet 10 ended.(447828+0x869190).
+<-><->
+      
+l.58 ... vector being $n$ will be denoted by $F^n$
+                                                  . For more on vector field...
+
+Not a real error.
+
+[10]
+
+LaTeX Warning: Citation `vectors' on page 2 undefined on input line 58.
+
+! Preview: Snippet 11 started.
+<-><->
+      
+l.60 ...se a string of length n with elements in $
+                                                  \F_2$ to write a vector in...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.60 ... a string of length n with elements in $\F
+                                                  _2$ to write a vector in t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 11 ended.(447828+98303x715436).
+<-><->
+      
+l.60 ...string of length n with elements in $\F_2$
+                                                   to write a vector in the ...
+
+Not a real error.
+
+[11]
+! Preview: Snippet 12 started.
+<-><->
+      
+l.60 ...2$ to write a vector in the vector space $
+                                                  \F^2_n$ . For example, if ...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.60 ... to write a vector in the vector space $\F
+                                                  ^2_n$ . For example, if we...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 12 ended.(533465+162016x806459).
+<-><->
+      
+l.60 ...rite a vector in the vector space $\F^2_n$
+                                                   . For example, if we have...
+
+Not a real error.
+
+[12]
+! Preview: Snippet 13 started.
+<-><->
+      
+l.60 ..._n$ . For example, if we have the vector $
+                                                  \mathbf{v} = (1, 0, 1, 1, ...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.60 ...athbf{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in \F
+                                                  _2^8$, we simply write $\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 13 ended.(533465+163840x8059543).
+<-><->
+      
+l.60 ...{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in \F_2^8$
+                                                  , we simply write $\mathbf...
+
+Not a real error.
+
+[13]
+! Preview: Snippet 14 started.
+<-><->
+      
+l.60 ...0, 1, 0, 1) \in \F_2^8$, we simply write $
+                                                  \mathbf{v}$ as $10110101$.
+Not a real error.
+
+! Preview: Snippet 14 ended.(291271+0x408233).
+<-><->
+      
+l.60 ... \in \F_2^8$, we simply write $\mathbf{v}$
+                                                   as $10110101$.
+Not a real error.
+
+[14]
+! Preview: Snippet 15 started.
+<-><->
+      
+l.60 ...\F_2^8$, we simply write $\mathbf{v}$ as $
+                                                  10110101$.
+Not a real error.
+
+! Preview: Snippet 15 ended.(422343+0x2621448).
+<-><->
+      
+l.60 ...we simply write $\mathbf{v}$ as $10110101$
+                                                  .
+Not a real error.
+
+[15]
+! Preview: Snippet 16 started.
+<-><->
+      
+l.62 ...ons, and shall denote the boolean xor by $
+                                                  +$, instead of the customa...
+
+Not a real error.
+
+! Preview: Snippet 16 ended.(382293+54613x509726).
+<-><->
+      
+l.62 ...s, and shall denote the boolean xor by $+$
+                                                  , instead of the customary...
+
+Not a real error.
+
+[16]
+! Preview: Snippet 17 started.
+<-><->
+      
+l.62 ...ean xor by $+$, instead of the customary $
+                                                  \oplus$ to maintain consis...
+
+Not a real error.
+
+! Preview: Snippet 17 ended.(382293+54613x509726).
+<-><->
+      
+l.62 ... by $+$, instead of the customary $\oplus$
+                                                   to maintain consistency w...
+
+Not a real error.
+
+[17]
+! Preview: Snippet 18 started.
+<-><->
+      
+l.62 ...nsistency with the addition operation in $
+                                                  F_2$.
+Not a real error.
+
+! Preview: Snippet 18 ended.(447828+98303x715436).
+<-><->
+      
+l.62 ...tency with the addition operation in $F_2$
+                                                  .
+Not a real error.
+
+[18]
+! Preview: Snippet 19 started.
+<-><->
+      
+l.64 ...e, and dimension, denoted by the triplet $
+                                                  [n,k,d]$. The elements of ...
+
+Not a real error.
+
+! Preview: Snippet 19 ended.(491520+163840x2042918).
+<-><->
+      
+l.64 ...imension, denoted by the triplet $[n,k,d]$
+                                                  . The elements of a code $...
+
+Not a real error.
+
+[19]
+! Preview: Snippet 20 started.
+<-><->
+      
+l.64 ...riplet $[n,k,d]$. The elements of a code $
+                                                  C$ are called the \emph{co...
+
+Not a real error.
+
+! Preview: Snippet 20 ended.(447828+0x515276).
+<-><->
+      
+l.64 ...plet $[n,k,d]$. The elements of a code $C$
+                                                   are called the \emph{code...
+
+Not a real error.
+
+[20]
+! Preview: Snippet 21 started.
+<-><->
+      
+l.64 ...rds are represented as vectors of length $
+                                                  n$.
+Not a real error.
+
+! Preview: Snippet 21 ended.(282168+0x393370).
+<-><->
+      
+l.64 ...s are represented as vectors of length $n$
+                                                  .
+Not a real error.
+
+[21]
+! Preview: Snippet 22 started.
+<-><->
+      
+l.65 The distance between two vectors $
+                                       \V{u}$ and $\V{v}$ which we are conce...
+
+Not a real error.
+
+! Preview: Snippet 22 ended.(291271+0x418700).
+<-><->
+      
+l.65 The distance between two vectors $\V{u}$
+                                              and $\V{v}$ which we are conce...
+
+Not a real error.
+
+[22]
+! Preview: Snippet 23 started.
+<-><->
+      
+l.65 ...distance between two vectors $\V{u}$ and $
+                                                  \V{v}$ which we are concer...
+
+Not a real error.
+
+! Preview: Snippet 23 ended.(291271+0x408233).
+<-><->
+      
+l.65 ...ce between two vectors $\V{u}$ and $\V{v}$
+                                                   which we are concerned ab...
+
+Not a real error.
+
+[23]
+! Preview: Snippet 24 started.
+<-><->
+      
+l.65 ...{v}$ which we are concerned about is the $
+                                                  Hamming Distance$, defined...
+
+Not a real error.
+
+! Preview: Snippet 24 ended.(447828+127431x5709485).
+<-><->
+      
+l.65 ... concerned about is the $Hamming Distance$
+                                                  , defined as:
+Not a real error.
+
+[24]
+! Preview: Snippet 25 started.
+<-><->
+      
+l.66 \begin{equation}
+                     
+Not a real error.
+
+! Preview: Snippet 25 ended.(1631124+0x22609920).
+<-><->
+      
+l.68 \end{equation}
+                   
+Not a real error.
+
+[25]
+! Preview: Snippet 26 started.
+<-><->
+      
+l.71 \begin{equation}
+                     
+Not a real error.
+
+! Extra \right.
+l.76 \end{array} \right.
+                        
+I'm ignoring a \right that had no matching \left.
+
+! Preview: Snippet 26 ended.(1572864+0x22609920).
+<-><->
+      
+l.77 \end{equation}
+                   
+Not a real error.
+
+[26]
+! Preview: Snippet 27 started.
+<-><->
+      
+l.79 We will use $
+                  d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$,...
+
+Not a real error.
+
+! Preview: Snippet 27 ended.(491520+163840x5488859).
+<-><->
+      
+l.79 We will use $d(x,y) = wt(x-y)$
+                                    and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$,...
+
+Not a real error.
+
+[27]
+! Preview: Snippet 28 started.
+<-><->
+      
+l.79 We will use $d(x,y) = wt(x-y)$ and $
+                                         wt(x+y) = wt(x) + wt(y) -2wt(x*y)$,...
+
+Not a real error.
+
+! Preview: Snippet 28 ended.(491520+163840x11314350).
+<-><->
+      
+l.79 ...)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$
+                                                  , where $x*y = (x_1y_1, x_...
+
+Not a real error.
+
+[28]
+! Preview: Snippet 29 started.
+<-><->
+      
+l.79 ...t(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $
+                                                  x*y = (x_1y_1, x_2y_2,\ldo...
+
+Not a real error.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.80 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Preview: Snippet 29 ended.(491520+163840x8628597).
+<-><->
+      
+l.80 
+     
+Not a real error.
+
+[29]
+! Preview: Snippet 30 started.
+<-><->
+      
+l.82 \section
+              {Construction}
+Not a real error.
+
+! Preview: Snippet 30 ended.(655359+0x22609920).
+<-><->
+      
+l.82 \section {Construction}
+                            
+Not a real error.
+
+[30
+
+]
+! Preview: Snippet 31 started.
+<-><->
+      
+l.84 Let $
+          (x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and ...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.84 Let $(x_1,x_2,\ldots,x_m) \in \F
+                                     ^m$ be the set of binary m-tuples, and ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 31 ended.(491520+163840x6278096).
+<-><->
+      
+l.84 Let $(x_1,x_2,\ldots,x_m) \in \F^m$
+                                         be the set of binary m-tuples, and ...
+
+Not a real error.
+
+[31]
+! Preview: Snippet 32 started.
+<-><->
+      
+l.84 ...$ be the set of binary m-tuples, and let $
+                                                  v \equiv (x_1,x_2,\ldots,x...
+
+Not a real error.
+
+! Preview: Snippet 32 ended.(491520+163840x5681820).
+<-><->
+      
+l.84 ...s, and let $v \equiv (x_1,x_2,\ldots,x_m)$
+                                                  . Consider a Boolean Funct...
+
+Not a real error.
+
+[32]
+! Preview: Snippet 33 started.
+<-><->
+      
+l.84 ...ldots,x_m)$. Consider a Boolean Function $
+                                                  f$, $f: \F_2^m \rightarrow...
+
+Not a real error.
+
+! Preview: Snippet 33 ended.(455111+127431x391398).
+<-><->
+      
+l.84 ...ots,x_m)$. Consider a Boolean Function $f$
+                                                  , $f: \F_2^m \rightarrow {...
+
+Not a real error.
+
+[33]
+! Preview: Snippet 34 started.
+<-><->
+      
+l.84 ...,x_m)$. Consider a Boolean Function $f$, $
+                                                  f: \F_2^m \rightarrow {0,1...
+
+Not a real error.
+
+! Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.84 ...$. Consider a Boolean Function $f$, $f: \F
+                                                  _2^m \rightarrow {0,1} $ ....
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 34 ended.(455111+162667x3913870).
+<-><->
+      
+l.84 ...nction $f$, $f: \F_2^m \rightarrow {0,1} $
+                                                   . Thus $f(\V{x}) = f(x_1,...
+
+Not a real error.
+
+[34]
+! Preview: Snippet 35 started.
+<-><->
+      
+l.84 ...$, $f: \F_2^m \rightarrow {0,1} $ . Thus $
+                                                  f(\V{x}) = f(x_1,x_2,\ldot...
+
+Not a real error.
+
+! Preview: Snippet 35 ended.(491520+163840x7030926).
+<-><->
+      
+l.84 ... . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$
+                                                   takes an m-tuple and retu...
+
+Not a real error.
+
+[35]
+! Preview: Snippet 36 started.
+<-><->
+      
+l.84 ..._m)$ takes an m-tuple and returns either $
+                                                  0$ or $1$ .
+Not a real error.
+
+! Preview: Snippet 36 ended.(422343+0x327681).
+<-><->
+      
+l.84 ...)$ takes an m-tuple and returns either $0$
+                                                   or $1$ .
+Not a real error.
+
+[36]
+! Preview: Snippet 37 started.
+<-><->
+      
+l.84 ...kes an m-tuple and returns either $0$ or $
+                                                  1$ .
+Not a real error.
+
+! Preview: Snippet 37 ended.(422343+0x327681).
+<-><->
+      
+l.84 ...s an m-tuple and returns either $0$ or $1$
+                                                   .
+Not a real error.
+
+[37]
+! Preview: Snippet 38 started.
+<-><->
+      
+l.86 $
+      v$ can take $2^m$ values. For each value of $v$ we compute $f(v)$. Thi...
+
+Not a real error.
+
+! Preview: Snippet 38 ended.(282168+0x341181).
+<-><->
+      
+l.86 $v$
+         can take $2^m$ values. For each value of $v$ we compute $f(v)$. Thi...
+
+Not a real error.
+
+[38]
+! Preview: Snippet 39 started.
+<-><->
+      
+l.86 $v$ can take $
+                   2^m$ values. For each value of $v$ we compute $f(v)$. Thi...
+
+Not a real error.
+
+! Preview: Snippet 39 ended.(435343+0x825500).
+<-><->
+      
+l.86 $v$ can take $2^m$
+                        values. For each value of $v$ we compute $f(v)$. Thi...
+
+Not a real error.
+
+[39]
+! Preview: Snippet 40 started.
+<-><->
+      
+l.86 ...can take $2^m$ values. For each value of $
+                                                  v$ we compute $f(v)$. This...
+
+Not a real error.
+
+! Preview: Snippet 40 ended.(282168+0x341181).
+<-><->
+      
+l.86 ...n take $2^m$ values. For each value of $v$
+                                                   we compute $f(v)$. This i...
+
+Not a real error.
+
+[40]
+! Preview: Snippet 41 started.
+<-><->
+      
+l.86 ...values. For each value of $v$ we compute $
+                                                  f(v)$. This is the familia...
+
+Not a real error.
+
+! Preview: Snippet 41 ended.(491520+163840x1242305).
+<-><->
+      
+l.86 ...s. For each value of $v$ we compute $f(v)$
+                                                  . This is the familiar and...
+
+Not a real error.
+
+[41]
+! Preview: Snippet 42 started.
+<-><->
+      
+l.87 In the example below, $
+                            x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ i...
+
+Not a real error.
+
+! Preview: Snippet 42 ended.(282168+127431x2588215).
+<-><->
+      
+l.87 In the example below, $x_1, x_2, x_3$
+                                           are rows and $f(x_1, x_2, x_3)$ i...
+
+Not a real error.
+
+[42]
+! Preview: Snippet 43 started.
+<-><->
+      
+l.87 ...mple below, $x_1, x_2, x_3$ are rows and $
+                                                  f(x_1, x_2, x_3)$ is compu...
+
+Not a real error.
+
+! Preview: Snippet 43 ended.(491520+163840x3489339).
+<-><->
+      
+l.87 ... x_2, x_3$ are rows and $f(x_1, x_2, x_3)$
+                                                   is computed and represent...
+
+Not a real error.
+
+[43]
+! Preview: Snippet 44 started.
+<-><->
+      
+l.90 $
+      x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 44 ended.(282168+98303x668559).
+<-><->
+      
+l.90 $x_1$
+           & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[44]
+! Preview: Snippet 45 started.
+<-><->
+      
+l.90 $x_1$ & $
+              0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 45 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$
+                 & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[45]
+! Preview: Snippet 46 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $
+                    0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 46 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$
+                       & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[46]
+! Preview: Snippet 47 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $
+                          0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 47 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$
+                             & $0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[47]
+! Preview: Snippet 48 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $
+                                0$ & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 48 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$
+                                   & $1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[48]
+! Preview: Snippet 49 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$ & $
+                                      1$ & $1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 49 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$ & $1$
+                                         & $1$ & $1$ & $1$ \\
+Not a real error.
+
+[49]
+! Preview: Snippet 50 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $
+                                            1$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 50 ended.(422343+0x327681).
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$
+                                               & $1$ & $1$ \\
+Not a real error.
+
+[50]
+! Preview: Snippet 51 started.
+<-><->
+      
+l.90 $x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $
+                                                  1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 51 ended.(422343+0x327681).
+<-><->
+      
+l.90 ... & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$
+                                                   & $1$ \\
+Not a real error.
+
+[51]
+! Preview: Snippet 52 started.
+<-><->
+      
+l.90 ...0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $
+                                                  1$ \\
+Not a real error.
+
+! Preview: Snippet 52 ended.(422343+0x327681).
+<-><->
+      
+l.90 ... & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$
+                                                   \\
+Not a real error.
+
+[52]
+! Preview: Snippet 53 started.
+<-><->
+      
+l.91 $
+      x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 53 ended.(282168+98303x668559).
+<-><->
+      
+l.91 $x_2$
+           & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[53]
+! Preview: Snippet 54 started.
+<-><->
+      
+l.91 $x_2$ & $
+              0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 54 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$
+                 & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[54]
+! Preview: Snippet 55 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $
+                    0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 55 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$
+                       & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[55]
+! Preview: Snippet 56 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $
+                          1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 56 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$
+                             & $1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[56]
+! Preview: Snippet 57 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $
+                                1$ & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 57 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$
+                                   & $0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[57]
+! Preview: Snippet 58 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$ & $
+                                      0$ & $0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 58 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$ & $0$
+                                         & $0$ & $1$ & $1$ \\
+Not a real error.
+
+[58]
+! Preview: Snippet 59 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $
+                                            0$ & $1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 59 ended.(422343+0x327681).
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$
+                                               & $1$ & $1$ \\
+Not a real error.
+
+[59]
+! Preview: Snippet 60 started.
+<-><->
+      
+l.91 $x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $
+                                                  1$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 60 ended.(422343+0x327681).
+<-><->
+      
+l.91 ... & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$
+                                                   & $1$ \\
+Not a real error.
+
+[60]
+! Preview: Snippet 61 started.
+<-><->
+      
+l.91 ...0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $
+                                                  1$ \\
+Not a real error.
+
+! Preview: Snippet 61 ended.(422343+0x327681).
+<-><->
+      
+l.91 ... & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$
+                                                   \\
+Not a real error.
+
+[61]
+! Preview: Snippet 62 started.
+<-><->
+      
+l.92 $
+      x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 62 ended.(282168+98303x668559).
+<-><->
+      
+l.92 $x_3$
+           & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[62]
+! Preview: Snippet 63 started.
+<-><->
+      
+l.92 $x_3$ & $
+              0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 63 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$
+                 & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[63]
+! Preview: Snippet 64 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $
+                    1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 64 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$
+                       & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[64]
+! Preview: Snippet 65 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $
+                          0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 65 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$
+                             & $1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[65]
+! Preview: Snippet 66 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $
+                                1$ & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 66 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$
+                                   & $0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[66]
+! Preview: Snippet 67 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$ & $
+                                      0$ & $1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 67 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$ & $0$
+                                         & $1$ & $0$ & $1$ \\
+Not a real error.
+
+[67]
+! Preview: Snippet 68 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $
+                                            1$ & $0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 68 ended.(422343+0x327681).
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$
+                                               & $0$ & $1$ \\
+Not a real error.
+
+[68]
+! Preview: Snippet 69 started.
+<-><->
+      
+l.92 $x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $
+                                                  0$ & $1$ \\
+Not a real error.
+
+! Preview: Snippet 69 ended.(422343+0x327681).
+<-><->
+      
+l.92 ... & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$
+                                                   & $1$ \\
+Not a real error.
+
+[69]
+! Preview: Snippet 70 started.
+<-><->
+      
+l.92 ...0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $
+                                                  1$ \\
+Not a real error.
+
+! Preview: Snippet 70 ended.(422343+0x327681).
+<-><->
+      
+l.92 ... & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$
+                                                   \\
+Not a real error.
+
+[70]
+! Preview: Snippet 71 started.
+<-><->
+      
+l.93 $
+      f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 71 ended.(455111+127431x391398).
+<-><->
+      
+l.93 $f$
+           & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[71]
+! Preview: Snippet 72 started.
+<-><->
+      
+l.93 $f$   & $
+              0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 72 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$
+                 & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[72]
+! Preview: Snippet 73 started.
+<-><->
+      
+l.93 $f$   & $0$ & $
+                    0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 73 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$ & $0$
+                       & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[73]
+! Preview: Snippet 74 started.
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $
+                          0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 74 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$
+                             & $1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[74]
+! Preview: Snippet 75 started.
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $
+                                1$ & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 75 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$
+                                   & $1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[75]
+! Preview: Snippet 76 started.
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$ & $
+                                      1$ & $0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 76 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$ & $1$
+                                         & $0$ & $0$ & $0$ \\
+Not a real error.
+
+[76]
+! Preview: Snippet 77 started.
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $
+                                            0$ & $0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 77 ended.(422343+0x327681).
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $0$
+                                               & $0$ & $0$ \\
+Not a real error.
+
+[77]
+! Preview: Snippet 78 started.
+<-><->
+      
+l.93 $f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $
+                                                  0$ & $0$ \\
+Not a real error.
+
+! Preview: Snippet 78 ended.(422343+0x327681).
+<-><->
+      
+l.93 ... & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$
+                                                   & $0$ \\
+Not a real error.
+
+[78]
+! Preview: Snippet 79 started.
+<-><->
+      
+l.93 ...0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $
+                                                  0$ \\
+Not a real error.
+
+! Preview: Snippet 79 ended.(422343+0x327681).
+<-><->
+      
+l.93 ... & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$
+                                                   \\
+Not a real error.
+
+[79]
+! Preview: Snippet 80 started.
+<-><->
+      
+l.98 Since $
+            (x_1,x_2,\ldots,x_m)$ can take $2^m$ values, $f$ is a $n=2^m$ le...
+
+Not a real error.
+
+! Preview: Snippet 80 ended.(491520+163840x4466833).
+<-><->
+      
+l.98 Since $(x_1,x_2,\ldots,x_m)$
+                                  can take $2^m$ values, $f$ is a $n=2^m$ le...
+
+Not a real error.
+
+[80]
+! Preview: Snippet 81 started.
+<-><->
+      
+l.98 Since $(x_1,x_2,\ldots,x_m)$ can take $
+                                            2^m$ values, $f$ is a $n=2^m$ le...
+
+Not a real error.
+
+! Preview: Snippet 81 ended.(435343+0x825500).
+<-><->
+      
+l.98 Since $(x_1,x_2,\ldots,x_m)$ can take $2^m$
+                                                 values, $f$ is a $n=2^m$ le...
+
+Not a real error.
+
+[81]
+! Preview: Snippet 82 started.
+<-><->
+      
+l.98 ...,x_2,\ldots,x_m)$ can take $2^m$ values, $
+                                                  f$ is a $n=2^m$ length vec...
+
+Not a real error.
+
+! Preview: Snippet 82 ended.(455111+127431x391398).
+<-><->
+      
+l.98 ..._2,\ldots,x_m)$ can take $2^m$ values, $f$
+                                                   is a $n=2^m$ length vecto...
+
+Not a real error.
+
+[82]
+! Preview: Snippet 83 started.
+<-><->
+      
+l.98 ...ts,x_m)$ can take $2^m$ values, $f$ is a $
+                                                  n=2^m$ length vector over ...
+
+Not a real error.
+
+! Preview: Snippet 83 ended.(435343+0x2092676).
+<-><->
+      
+l.98 ...)$ can take $2^m$ values, $f$ is a $n=2^m$
+                                                   length vector over $F_2$....
+
+Not a real error.
+
+[83]
+! Preview: Snippet 84 started.
+<-><->
+      
+l.98 ...ues, $f$ is a $n=2^m$ length vector over $
+                                                  F_2$. Since there are $2^2...
+
+Not a real error.
+
+! Preview: Snippet 84 ended.(447828+98303x715436).
+<-><->
+      
+l.98 ... $f$ is a $n=2^m$ length vector over $F_2$
+                                                  . Since there are $2^2^m$ ...
+
+Not a real error.
+
+[84]
+! Preview: Snippet 85 started.
+<-><->
+      
+l.98 ...ength vector over $F_2$. Since there are $
+                                                  2^2^m$ such boolean functi...
+
+Not a real error.
+
+! Double superscript.
+l.98 ...h vector over $F_2$. Since there are $2^2^
+                                                  m$ such boolean functions ...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+! Preview: Snippet 85 ended.(533465+0x1119503).
+<-><->
+      
+l.98 ...vector over $F_2$. Since there are $2^2^m$
+                                                   such boolean functions po...
+
+Not a real error.
+
+[85]
+! Preview: Snippet 86 started.
+<-><->
+      
+l.98 ...possible, this gives us a collection of  $
+                                                  2^2^m$ vectors, each of le...
+
+Not a real error.
+
+! Double superscript.
+l.98 ...ible, this gives us a collection of  $2^2^
+                                                  m$ vectors, each of length...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+! Preview: Snippet 86 ended.(533465+0x1119503).
+<-><->
+      
+l.98 ...le, this gives us a collection of  $2^2^m$
+                                                   vectors, each of length $...
+
+Not a real error.
+
+[86]
+! Preview: Snippet 87 started.
+<-><->
+      
+l.98 ...tion of  $2^2^m$ vectors, each of length $
+                                                  2^m$.
+Not a real error.
+
+! Preview: Snippet 87 ended.(435343+0x825500).
+<-><->
+      
+l.98 ... of  $2^2^m$ vectors, each of length $2^m$
+                                                  .
+Not a real error.
+
+[87]
+! Preview: Snippet 88 started.
+<-><->
+      
+l.102 Using logical operations, $
+                                 f$ can be represented as a function of the ...
+
+Not a real error.
+
+! Preview: Snippet 88 ended.(455111+127431x391398).
+<-><->
+      
+l.102 Using logical operations, $f$
+                                    can be represented as a function of the ...
+
+Not a real error.
+
+[88]
+! Preview: Snippet 89 started.
+<-><->
+      
+l.102 ...can be represented as a function of the $
+                                                  x_1, x_2, \ldots , x_m$. I...
+
+Not a real error.
+
+! Preview: Snippet 89 ended.(282168+127431x3957107).
+<-><->
+      
+l.102 ... function of the $x_1, x_2, \ldots , x_m$
+                                                  . In the above example, fo...
+
+Not a real error.
+
+[89]
+! Preview: Snippet 90 started.
+<-><->
+      
+l.102 ...m$. In the above example, for instance, $
+                                                  f = x_1 \vee x_2 \vee x_3 ...
+
+Not a real error.
+
+! Preview: Snippet 90 ended.(455111+127431x5273360).
+<-><->
+      
+l.102 ...nstance, $f = x_1 \vee x_2 \vee x_3 ... $
+                                                  . We can represent any boo...
+
+Not a real error.
+
+[90]
+
+LaTeX Warning: Citation `Problem2' on page 3 undefined on input line 102.
+
+! Preview: Snippet 91 started.
+<-><->
+      
+l.102 ...em2}, for instance in the above example $
+                                                  f = $
+Not a real error.
+
+! Preview: Snippet 91 ended.(455111+127431x1083164).
+<-><->
+      
+l.102 ... for instance in the above example $f = $
+                                                  
+Not a real error.
+
+[91]
+! Preview: Snippet 92 started.
+<-><->
+      
+l.107 ...inear combination (with coefficients in $
+                                                  F_2$) of boolean monomials...
+
+Not a real error.
+
+! Preview: Snippet 92 ended.(447828+98303x715436).
+<-><->
+      
+l.107 ...r combination (with coefficients in $F_2$
+                                                  ) of boolean monomials. Th...
+
+Not a real error.
+
+[92]
+! Preview: Snippet 93 started.
+<-><->
+      
+l.109 ...he term boolean from here on) of degree $
+                                                  1$ are of the form:
+Not a real error.
+
+! Preview: Snippet 93 ended.(422343+0x327681).
+<-><->
+      
+l.109 ... term boolean from here on) of degree $1$
+                                                   are of the form:
+Not a real error.
+
+[93]
+! Preview: Snippet 94 started.
+<-><->
+      
+l.110 \begin{equation}
+                      
+Not a real error.
+
+! Double subscript.
+l.111  1+a_1x_1+a_2_
+                    x2+\ldots+a_nx_n
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Preview: Snippet 94 ended.(655360+0x22609920).
+<-><->
+      
+l.112 \end{equation}
+                    
+Not a real error.
+
+[94]
+! Preview: Snippet 95 started.
+<-><->
+      
+l.113 ...mply represents a linear combination of $
+                                                  m$ vectors.
+Not a real error.
+
+! Preview: Snippet 95 ended.(282168+0x575415).
+<-><->
+      
+l.113 ...ly represents a linear combination of $m$
+                                                   vectors.
+Not a real error.
+
+[95]
+! Preview: Snippet 96 started.
+<-><->
+      
+l.115 \begin{equation}
+                      
+Not a real error.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.116 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in horizontal mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.118 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.118 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Preview: Snippet 96 ended.(2621440+0x22609920).
+<-><->
+      
+l.118 \end{equation}
+                    
+Not a real error.
+
+[96]
+! Preview: Snippet 97 started.
+<-><->
+      
+l.120 The boolean monomials are \begin{equation*}
+                                                 
+Not a real error.
+
+
+! LaTeX Error: \begin{equation*} on input line 120 ended by \end{equations}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \end{equations}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.122 \end{equations}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.122 \end{equations}
+                     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Preview: Snippet 97 ended.(582542+0x18662285).
+<-><->
+      
+l.122 \end{equations}
+                     
+Not a real error.
+
+[97]
+
+! LaTeX Error: Environment equatio* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 Thus there are \begin{equatio*}
+                                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.124 1+\binom{m}{1}
+                    +ldots+\binom{m}{m} = 2^m
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\@genfrac ...begingroup #4\endgroup #2#3\relax #5}
+                                                  }
+l.124 1+\binom{m}{1}
+                    +ldots+\binom{m}{m} = 2^m
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\@genfrac ...egingroup #4\endgroup #2#3\relax #5}}
+                                                  
+l.124 1+\binom{m}{1}
+                    +ldots+\binom{m}{m} = 2^m
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 \end{equation*}
+                      boolean monomials.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.125 \end{equation*}
+                      boolean monomials.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.125 \end{equation*}
+                      boolean monomials.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.125 \end{equation*}
+                      boolean monomials.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Preview: Snippet 98 started.
+<-><->
+      
+l.127 ...ary representations of the numbers from $
+                                                  0$ to $2^m -1$.
+Not a real error.
+
+! Preview: Snippet 98 ended.(422343+0x327681).
+<-><->
+      
+l.127 ...y representations of the numbers from $0$
+                                                   to $2^m -1$.
+Not a real error.
+
+[98]
+! Preview: Snippet 99 started.
+<-><->
+      
+l.127 ...resentations of the numbers from $0$ to $
+                                                  2^m -1$.
+Not a real error.
+
+! Preview: Snippet 99 ended.(435343+54613x1954171).
+<-><->
+      
+l.127 ...tions of the numbers from $0$ to $2^m -1$
+                                                  .
+Not a real error.
+
+[99]
+! Preview: Snippet 100 started.
+<-><->
+      
+l.129 If there $
+                f$ is an $m-ary$ function, it can take the $2^m$ input value...
+
+Not a real error.
+
+! Preview: Snippet 100 ended.(455111+127431x391398).
+<-><->
+      
+l.129 If there $f$
+                   is an $m-ary$ function, it can take the $2^m$ input value...
+
+Not a real error.
+
+[100]
+! Preview: Snippet 101 started.
+<-><->
+      
+l.129 If there $f$ is an $
+                          m-ary$ function, it can take the $2^m$ input value...
+
+Not a real error.
+
+! Preview: Snippet 101 ended.(382293+127431x2381521).
+<-><->
+      
+l.129 If there $f$ is an $m-ary$
+                                 function, it can take the $2^m$ input value...
+
+Not a real error.
+
+[101]
+! Preview: Snippet 102 started.
+<-><->
+      
+l.129 ...is an $m-ary$ function, it can take the $
+                                                  2^m$ input values. Hence v...
+
+Not a real error.
+
+! Preview: Snippet 102 ended.(435343+0x825500).
+<-><->
+      
+l.129 ...n $m-ary$ function, it can take the $2^m$
+                                                   input values. Hence vecto...
+
+Not a real error.
+
+[102]
+! Preview: Snippet 103 started.
+<-><->
+      
+l.129 ...ke the $2^m$ input values. Hence vector $
+                                                  \V{f}$ has length $2^m$. S...
+
+Not a real error.
+
+! Preview: Snippet 103 ended.(455111+0x301736).
+<-><->
+      
+l.129 ... $2^m$ input values. Hence vector $\V{f}$
+                                                   has length $2^m$. Since $...
+
+Not a real error.
+
+[103]
+! Preview: Snippet 104 started.
+<-><->
+      
+l.129 ...values. Hence vector $\V{f}$ has length $
+                                                  2^m$. Since $\V{f}$ is als...
+
+Not a real error.
+
+! Preview: Snippet 104 ended.(435343+0x825500).
+<-><->
+      
+l.129 ...es. Hence vector $\V{f}$ has length $2^m$
+                                                  . Since $\V{f}$ is also a ...
+
+Not a real error.
+
+[104]
+! Preview: Snippet 105 started.
+<-><->
+      
+l.129 ... vector $\V{f}$ has length $2^m$. Since $
+                                                  \V{f}$ is also a linear co...
+
+Not a real error.
+
+! Preview: Snippet 105 ended.(455111+0x301736).
+<-><->
+      
+l.129 ...r $\V{f}$ has length $2^m$. Since $\V{f}$
+                                                   is also a linear combinat...
+
+Not a real error.
+
+[105]
+! Preview: Snippet 106 started.
+<-><->
+      
+l.129 ...bination, it follows that the length of $
+                                                  x_1, x_2,ldots,x_m$ is $2^m$.
+
+Not a real error.
+
+! Preview: Snippet 106 ended.(455111+127431x4494374).
+<-><->
+      
+l.129 ...s that the length of $x_1, x_2,ldots,x_m$
+                                                   is $2^m$.
+Not a real error.
+
+[106]
+! Preview: Snippet 107 started.
+<-><->
+      
+l.129 ...t the length of $x_1, x_2,ldots,x_m$ is $
+                                                  2^m$.
+Not a real error.
+
+! Preview: Snippet 107 ended.(435343+0x825500).
+<-><->
+      
+l.129 ...e length of $x_1, x_2,ldots,x_m$ is $2^m$
+                                                  .
+Not a real error.
+
+[107]
+! Preview: Snippet 108 started.
+<-><->
+      
+l.132 Length, $
+               n = 2^m$
+Not a real error.
+
+! Preview: Snippet 108 ended.(435343+0x2092676).
+<-><->
+      
+l.132 Length, $n = 2^m$
+                       
+Not a real error.
+
+[108]
+! Preview: Snippet 109 started.
+<-><->
+      
+l.133 Minimum Distance, $
+                         d = 2^{m-r}$
+Not a real error.
+
+! Preview: Snippet 109 ended.(521815+0x2707455).
+<-><->
+      
+l.133 Minimum Distance, $d = 2^{m-r}$
+                                     
+Not a real error.
+
+[109]
+! Preview: Snippet 110 started.
+<-><->
+      
+l.134 Dimension, $
+                  k=1+..$
+Not a real error.
+
+! Preview: Snippet 110 ended.(455111+54613x2728381).
+<-><->
+      
+l.134 Dimension, $k=1+..$
+                         
+Not a real error.
+
+[110]
+! Preview: Snippet 111 started.
+<-><->
+      
+l.136 \subsection
+                 {Recursive Formulation}
+Not a real error.
+
+! Preview: Snippet 111 ended.(546132+0x22609920).
+<-><->
+      
+l.136 \subsection{Recursive Formulation}
+                                        
+Not a real error.
+
+[111
+
+]
+! Preview: Snippet 112 started.
+<-><->
+      
+l.138 $
+       \RM{r+1}{m+1}$ =  \{\V{u}+\V{v}| \V{u} \in \RM{r+1}{m}, \V{v} \in \RM...
+
+Not a real error.
+
+! Preview: Snippet 112 ended.(491520+163840x4503048).
+<-><->
+      
+l.138 $\RM{r+1}{m+1}$
+                      =  \{\V{u}+\V{v}| \V{u} \in \RM{r+1}{m}, \V{v} \in \RM...
+
+Not a real error.
+
+[112]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 138.
+
+ (/usr/local/texlive/2008basic/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.138 $\RM{r+1}{m+1}$ =  \{\V{u}+\V{v}| \V{u} \in
+                                                  \RM{r+1}{m}, \V{v} \in \RM...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \begin{thm} on input line 137 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Preview: Snippet 113 started.
+<-><->
+      
+l.140 ...ncatenation construction of codes, with $
+                                                  +$ denoting the concatenat...
+
+Not a real error.
+
+! Preview: Snippet 113 ended.(382293+54613x509726).
+<-><->
+      
+l.140 ...atenation construction of codes, with $+$
+                                                   denoting the concatenation.
+Not a real error.
+
+[113]
+! Preview: Snippet 114 started.
+<-><->
+      
+l.142 Let $
+           \V{f} \in \RM{r+1}{m+1}$.  $\V{f}$ can be written as \begin{equat...
+
+Not a real error.
+
+! Preview: Snippet 114 ended.(491520+163840x5605772).
+<-><->
+      
+l.142 Let $\V{f} \in \RM{r+1}{m+1}$
+                                   .  $\V{f}$ can be written as \begin{equat...
+
+Not a real error.
+
+[114]
+! Preview: Snippet 115 started.
+<-><->
+      
+l.142 Let $\V{f} \in \RM{r+1}{m+1}$.  $
+                                       \V{f}$ can be written as \begin{equat...
+
+Not a real error.
+
+! Preview: Snippet 115 ended.(455111+0x301736).
+<-><->
+      
+l.142 Let $\V{f} \in \RM{r+1}{m+1}$.  $\V{f}$
+                                              can be written as \begin{equat...
+
+Not a real error.
+
+[115]
+! Preview: Snippet 116 started.
+<-><->
+      
+l.142 ...V{f}$ can be written as \begin{equation*}
+                                                  
+Not a real error.
+
+! Preview: Snippet 116 ended.(655360+0x20337886).
+<-><->
+      
+l.144 \end{equation*}
+                     
+Not a real error.
+
+[116]
+! Preview: Snippet 117 started.
+<-><->
+      
+l.145 Where $
+             g \in \RM{r+1}{m} $ and $h \in \RM{r}{m}$
+Not a real error.
+
+! Preview: Snippet 117 ended.(491520+163840x4511464).
+<-><->
+      
+l.145 Where $g \in \RM{r+1}{m} $
+                                 and $h \in \RM{r}{m}$
+Not a real error.
+
+[117]
+! Preview: Snippet 118 started.
+<-><->
+      
+l.145 Where $g \in \RM{r+1}{m} $ and $
+                                      h \in \RM{r}{m}$
+Not a real error.
+
+! Preview: Snippet 118 ended.(491520+163840x3387876).
+<-><->
+      
+l.145 ...g \in \RM{r+1}{m} $ and $h \in \RM{r}{m}$
+                                                  
+Not a real error.
+
+[118]
+
+! LaTeX Error: \begin{document} ended by \end{thm}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \end{thm}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.148 \end{thm}
+               
+Things are pretty mixed up, but I think the worst is over.
+
+! Preview: Snippet 119 started.
+<-><->
+      
+l.151 \begin{equation}
+                      
+Not a real error.
+
+! Preview: Snippet 119 ended.(1572879+0x22609920).
+<-><->
+      
+l.156 \end{equation}
+                    
+Not a real error.
+
+[119]
+! Preview: Snippet 120 started.
+<-><->
+      
+l.158 ...asis vectors are chosen, \begin{equation}
+                                                  
+Not a real error.
+
+! Preview: Snippet 120 ended.(1572879+0x22609920).
+<-><->
+      
+l.163 \end{equation}
+                    
+Not a real error.
+
+[120]
+! Preview: Snippet 121 started.
+<-><->
+      
+l.169 Minimum distance, $
+                         d=2^{m-r}$
+Not a real error.
+
+! Preview: Snippet 121 ended.(521815+0x2707455).
+<-><->
+      
+l.169 Minimum distance, $d=2^{m-r}$
+                                   
+Not a real error.
+
+[121]
+! Preview: Snippet 122 started.
+<-><->
+      
+l.175 $
+       \RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ ...
+
+Not a real error.
+
+! Preview: Snippet 122 ended.(491520+163840x2259511).
+<-><->
+      
+l.175 $\RM{0}{m} $
+                   is the repetition code. At the other extreme $\RM{m}{m}$ ...
+
+Not a real error.
+
+[122]
+! Preview: Snippet 123 started.
+<-><->
+      
+l.175 ...e repetition code. At the other extreme $
+                                                  \RM{m}{m}$ is a code consi...
+
+Not a real error.
+
+! Preview: Snippet 123 ended.(491520+163840x2507245).
+<-><->
+      
+l.175 ...on code. At the other extreme $\RM{m}{m}$
+                                                   is a code consisting of a...
+
+Not a real error.
+
+[123]
+! Preview: Snippet 124 started.
+<-><->
+      
+l.175 ...all possible binary sequences of length $
+                                                  m$.
+Not a real error.
+
+! Preview: Snippet 124 ended.(282168+0x575415).
+<-><->
+      
+l.175 ...l possible binary sequences of length $m$
+                                                  .
+Not a real error.
+
+[124]
+! Preview: Snippet 125 started.
+<-><->
+      
+l.176 \subsection
+                 {Properties}
+Not a real error.
+
+! Preview: Snippet 125 ended.(546132+152916x22609920).
+<-><->
+      
+l.176 \subsection{Properties}
+                             
+Not a real error.
+
+[125
+
+]
+! Preview: Snippet 126 started.
+<-><->
+      
+l.180 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 126 ended.(655360+0x16169256).
+<-><->
+      
+l.183 \end{equation*}
+                     
+Not a real error.
+
+[126]
+! Preview: Snippet 127 started.
+<-><->
+      
+l.193 $
+       \RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
+Not a real error.
+
+! Preview: Snippet 127 ended.(491520+163840x4750782).
+<-><->
+      
+l.193 $\RM{m-r-1}{m}$
+                      is the dual code of $\RM{r}{m}$
+Not a real error.
+
+[127]
+! Preview: Snippet 128 started.
+<-><->
+      
+l.193 $\RM{m-r-1}{m}$ is the dual code of $
+                                           \RM{r}{m}$
+Not a real error.
+
+! Preview: Snippet 128 ended.(491520+163840x2209297).
+<-><->
+      
+l.193 ...-r-1}{m}$ is the dual code of $\RM{r}{m}$
+                                                  
+Not a real error.
+
+[128]
+! Preview: Snippet 129 started.
+<-><->
+      
+l.226 \subsection
+                  {Weight distribution}
+Not a real error.
+
+! Preview: Snippet 129 ended.(546132+152916x22609920).
+<-><->
+      
+l.226 \subsection {Weight distribution}
+                                       
+Not a real error.
+
+[129
+
+]
+! Preview: Snippet 130 started.
+<-><->
+      
+l.228 \section
+              {cyclic decoding}
+Not a real error.
+
+! Preview: Snippet 130 ended.(655359+183500x22609920).
+<-><->
+      
+l.228 \section{cyclic decoding}
+                               
+Not a real error.
+
+[130
+
+]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no ã in font cmr10!
+Missing character: There is no Ü in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no í in font cmr10!
+
+! Preview: Snippet 131 started.
+<-><->
+      
+l.236 \section
+               {Decoding}
+Not a real error.
+
+! Preview: Snippet 131 ended.(655359+183500x22609920).
+<-><->
+      
+l.236 \section {Decoding}
+                         
+Not a real error.
+
+[131
+
+]
+! Preview: Snippet 132 started.
+<-><->
+      
+l.239 \subsection
+                  {Majority Logic Decoding}
+Not a real error.
+
+! Preview: Snippet 132 ended.(546132+152916x22609920).
+<-><->
+      
+l.239 \subsection {Majority Logic Decoding}
+                                           
+Not a real error.
+
+[132
+
+]
+! Preview: Snippet 133 started.
+<-><->
+      
+l.242 ...ly a code vector in the orthogonal code $
+                                                  C^{T}$.
+Not a real error.
+
+! Preview: Snippet 133 ended.(551306+0x928130).
+<-><->
+      
+l.242 ...ode vector in the orthogonal code $C^{T}$
+                                                  .
+Not a real error.
+
+[133]
+! Preview: Snippet 134 started.
+<-><->
+      
+l.243 ...e the \emph{support vector} of a vector $
+                                                  \vec{v}$ as the coordinate...
+
+Not a real error.
+
+! Preview: Snippet 134 ended.(468218+0x341181).
+<-><->
+      
+l.243 ...mph{support vector} of a vector $\vec{v}$
+                                                   as the coordinates where ...
+
+Not a real error.
+
+[134]
+! Preview: Snippet 135 started.
+<-><->
+      
+l.243 ...zero.For example, the support-vector of $
+                                                  01010100$ is $(2,4,6)$.
+Not a real error.
+
+! Preview: Snippet 135 ended.(422343+0x2621448).
+<-><->
+      
+l.243 ...example, the support-vector of $01010100$
+                                                   is $(2,4,6)$.
+Not a real error.
+
+[135]
+! Preview: Snippet 136 started.
+<-><->
+      
+l.243 ...le, the support-vector of $01010100$ is $
+                                                  (2,4,6)$.
+Not a real error.
+
+! Preview: Snippet 136 ended.(491520+163840x2075307).
+<-><->
+      
+l.243 ...support-vector of $01010100$ is $(2,4,6)$
+                                                  .
+Not a real error.
+
+[136]
+! Preview: Snippet 137 started.
+<-><->
+      
+l.244 Suppose we are given $
+                            J$ parity checks and a coordinate position, $i$,...
+
+Not a real error.
+
+! Preview: Snippet 137 ended.(447828+0x426439).
+<-><->
+      
+l.244 Suppose we are given $J$
+                               parity checks and a coordinate position, $i$,...
+
+Not a real error.
+
+[137]
+! Preview: Snippet 138 started.
+<-><->
+      
+l.244 ...arity checks and a coordinate position, $
+                                                  i$, such that the intersec...
+
+Not a real error.
+
+! Preview: Snippet 138 ended.(432226+0x225780).
+<-><->
+      
+l.244 ...ity checks and a coordinate position, $i$
+                                                  , such that the intersecti...
+
+Not a real error.
+
+[138]
+! Preview: Snippet 139 started.
+<-><->
+      
+l.244 ..., such that the intersection of all the $
+                                                  J$ supports is precisely $...
+
+Not a real error.
+
+! Preview: Snippet 139 ended.(447828+0x426439).
+<-><->
+      
+l.244 ...such that the intersection of all the $J$
+                                                   supports is precisely $i$...
+
+Not a real error.
+
+[139]
+! Preview: Snippet 140 started.
+<-><->
+      
+l.244 ...on of all the $J$ supports is precisely $
+                                                  i$. The $J$ parity checks ...
+
+Not a real error.
+
+! Preview: Snippet 140 ended.(432226+0x225780).
+<-><->
+      
+l.244 ... of all the $J$ supports is precisely $i$
+                                                  . The $J$ parity checks es...
+
+Not a real error.
+
+[140]
+! Preview: Snippet 141 started.
+<-><->
+      
+l.244 ... the $J$ supports is precisely $i$. The $
+                                                  J$ parity checks essential...
+
+Not a real error.
+
+! Preview: Snippet 141 ended.(447828+0x426439).
+<-><->
+      
+l.244 ...he $J$ supports is precisely $i$. The $J$
+                                                   parity checks essentially...
+
+Not a real error.
+
+[141]
+! Preview: Snippet 142 started.
+<-><->
+      
+l.244 ...cks essentially 'vote' for the position $
+                                                  i$ , and the result of the...
+
+Not a real error.
+
+! Preview: Snippet 142 ended.(432226+0x225780).
+<-><->
+      
+l.244 ...s essentially 'vote' for the position $i$
+                                                   , and the result of the m...
+
+Not a real error.
+
+[142]
+! Preview: Snippet 143 started.
+<-><->
+      
+l.244 ...esult of the majority for the parity of $
+                                                  i$ is the value.
+Not a real error.
+
+! Preview: Snippet 143 ended.(432226+0x225780).
+<-><->
+      
+l.244 ...ult of the majority for the parity of $i$
+                                                   is the value.
+Not a real error.
+
+[143]
+! Preview: Snippet 144 started.
+<-><->
+      
+l.245 ...bove is said to be \emph{orthogonal} to $
+                                                  i$. If each of the coordin...
+
+Not a real error.
+
+! Preview: Snippet 144 ended.(432226+0x225780).
+<-><->
+      
+l.245 ...ve is said to be \emph{orthogonal} to $i$
+                                                  . If each of the coordinat...
+
+Not a real error.
+
+[144]
+! Preview: Snippet 145 started.
+<-><->
+      
+l.245 ...dinates of the code has a collection of $
+                                                  J$ parity checks orthogona...
+
+Not a real error.
+
+! Preview: Snippet 145 ended.(447828+0x426439).
+<-><->
+      
+l.245 ...nates of the code has a collection of $J$
+                                                   parity checks orthogonal ...
+
+Not a real error.
+
+[145]
+! Preview: Snippet 146 started.
+<-><->
+      
+l.245 ... the code is capable of correcting upto $
+                                                  J/2$  errors.
+Not a real error.
+
+! Preview: Snippet 146 ended.(491520+163840x1045392).
+<-><->
+      
+l.245 ... code is capable of correcting upto $J/2$
+                                                    errors.
+Not a real error.
+
+[146]
+! Preview: Snippet 147 started.
+<-><->
+      
+l.247 ...k equations is called orthogonal on the $
+                                                  i$ coordinate if $x_i$ app...
+
+Not a real error.
+
+! Preview: Snippet 147 ended.(432226+0x225780).
+<-><->
+      
+l.247 ...equations is called orthogonal on the $i$
+                                                   coordinate if $x_i$ appea...
+
+Not a real error.
+
+[147]
+! Preview: Snippet 148 started.
+<-><->
+      
+l.247 ...led orthogonal on the $i$ coordinate if $
+                                                  x_i$ appears in each equat...
+
+Not a real error.
+
+! Preview: Snippet 148 ended.(282168+98303x592744).
+<-><->
+      
+l.247 ...orthogonal on the $i$ coordinate if $x_i$
+                                                   appears in each equation ...
+
+Not a real error.
+
+[148]
+! Preview: Snippet 149 started.
+<-><->
+      
+l.247 ...$ appears in each equation and no other $
+                                                  x_j$ appears more than onc...
+
+Not a real error.
+
+! Preview: Snippet 149 ended.(282168+187504x650696).
+<-><->
+      
+l.247 ...pears in each equation and no other $x_j$
+                                                   appears more than once in...
+
+Not a real error.
+
+[149]
+! Preview: Snippet 150 started.
+<-><->
+      
+l.248 ...rly, the minimum weight must be atleast $
+                                                  J+1$, because the
+Not a real error.
+
+! Preview: Snippet 150 ended.(447828+54613x1555110).
+<-><->
+      
+l.248 ... the minimum weight must be atleast $J+1$
+                                                  , because the
+Not a real error.
+
+[150]
+
+! LaTeX Error: Environment Theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.250 \begin{Theorem}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Preview: Snippet 151 started.
+<-><->
+      
+l.251 If there are $
+                    J$ parity checks on every co-ordinate, the code can corr...
+
+Not a real error.
+
+! Preview: Snippet 151 ended.(447828+0x426439).
+<-><->
+      
+l.251 If there are $J$
+                       parity checks on every co-ordinate, the code can corr...
+
+Not a real error.
+
+[151]
+! Preview: Snippet 152 started.
+<-><->
+      
+l.251 ...every co-ordinate, the code can correct $
+                                                  J/2$ errors.
+Not a real error.
+
+! Preview: Snippet 152 ended.(491520+163840x1045392).
+<-><->
+      
+l.251 ...y co-ordinate, the code can correct $J/2$
+                                                   errors.
+Not a real error.
+
+[152]
+! Preview: Snippet 153 started.
+<-><->
+      
+l.253 Let $
+           m_i$ be the message bit at coordinate $i$. $x_i$ is the received ...
+
+Not a real error.
+
+! Preview: Snippet 153 ended.(282168+98303x793603).
+<-><->
+      
+l.253 Let $m_i$
+                be the message bit at coordinate $i$. $x_i$ is the received ...
+
+Not a real error.
+
+[153]
+! Preview: Snippet 154 started.
+<-><->
+      
+l.253 Let $m_i$ be the message bit at coordinate $
+                                                  i$. $x_i$ is the received ...
+
+Not a real error.
+
+! Preview: Snippet 154 ended.(432226+0x225780).
+<-><->
+      
+l.253 ...m_i$ be the message bit at coordinate $i$
+                                                  . $x_i$ is the received bit.
+Not a real error.
+
+[154]
+! Preview: Snippet 155 started.
+<-><->
+      
+l.253 ...$ be the message bit at coordinate $i$. $
+                                                  x_i$ is the received bit.
+Not a real error.
+
+! Preview: Snippet 155 ended.(282168+98303x592744).
+<-><->
+      
+l.253 ... the message bit at coordinate $i$. $x_i$
+                                                   is the received bit.
+Not a real error.
+
+[155]
+! Preview: Snippet 156 started.
+<-><->
+      
+l.254 Let $
+           m_i=0$
+Not a real error.
+
+! Preview: Snippet 156 ended.(422343+98303x1995090).
+<-><->
+      
+l.254 Let $m_i=0$
+                 
+Not a real error.
+
+[156]
+! Preview: Snippet 157 started.
+<-><->
+      
+l.255 Since there are $
+                       J$ orthogonal parity equations voting for $x_i$, if t...
+
+Not a real error.
+
+! Preview: Snippet 157 ended.(447828+0x426439).
+<-><->
+      
+l.255 Since there are $J$
+                          orthogonal parity equations voting for $x_i$, if t...
+
+Not a real error.
+
+[157]
+! Preview: Snippet 158 started.
+<-><->
+      
+l.255 ... orthogonal parity equations voting for $
+                                                  x_i$, if there are fewer t...
+
+Not a real error.
+
+! Preview: Snippet 158 ended.(282168+98303x592744).
+<-><->
+      
+l.255 ...hogonal parity equations voting for $x_i$
+                                                  , if there are fewer than ...
+
+Not a real error.
+
+[158]
+! Preview: Snippet 159 started.
+<-><->
+      
+l.255 ...ting for $x_i$, if there are fewer than $
+                                                  J/2$ errors, then the resu...
+
+Not a real error.
+
+! Preview: Snippet 159 ended.(491520+163840x1045392).
+<-><->
+      
+l.255 ... for $x_i$, if there are fewer than $J/2$
+                                                   errors, then the result i...
+
+Not a real error.
+
+[159]
+! Preview: Snippet 160 started.
+<-><->
+      
+l.255 ... result is unchanged. Therefore atleast $
+                                                  J/2$ equations are $0$ and...
+
+Not a real error.
+
+! Preview: Snippet 160 ended.(491520+163840x1045392).
+<-><->
+      
+l.255 ...ult is unchanged. Therefore atleast $J/2$
+                                                   equations are $0$ and thu...
+
+Not a real error.
+
+[160]
+! Preview: Snippet 161 started.
+<-><->
+      
+l.255 .... Therefore atleast $J/2$ equations are $
+                                                  0$ and thus $x_i=0$.
+Not a real error.
+
+! Preview: Snippet 161 ended.(422343+0x327681).
+<-><->
+      
+l.255 ...Therefore atleast $J/2$ equations are $0$
+                                                   and thus $x_i=0$.
+Not a real error.
+
+[161]
+! Preview: Snippet 162 started.
+<-><->
+      
+l.255 ...tleast $J/2$ equations are $0$ and thus $
+                                                  x_i=0$.
+Not a real error.
+
+! Preview: Snippet 162 ended.(422343+98303x1794231).
+<-><->
+      
+l.255 ... $J/2$ equations are $0$ and thus $x_i=0$
+                                                  .
+Not a real error.
+
+[162]
+! Preview: Snippet 163 started.
+<-><->
+      
+l.256 If $
+          m_i=1$
+Not a real error.
+
+! Preview: Snippet 163 ended.(422343+98303x1995090).
+<-><->
+      
+l.256 If $m_i=1$
+                
+Not a real error.
+
+[163]
+! Preview: Snippet 164 started.
+<-><->
+      
+l.257 Still less than $
+                       J/2$ equations are affected, and we get the right res...
+
+Not a real error.
+
+! Preview: Snippet 164 ended.(491520+163840x1045392).
+<-><->
+      
+l.257 Still less than $J/2$
+                            equations are affected, and we get the right res...
+
+Not a real error.
+
+[164]
+
+! LaTeX Error: \begin{document} ended by \end{Theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 \end{Theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Preview: Snippet 165 started.
+<-><->
+      
+l.260 ... broken in any way consistently. Either $
+                                                  0$, etc.
+Not a real error.
+
+! Preview: Snippet 165 ended.(422343+0x327681).
+<-><->
+      
+l.260 ...roken in any way consistently. Either $0$
+                                                  , etc.
+Not a real error.
+
+[165]
+
+! LaTeX Error: Environment Theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 \begin{Theorem}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Preview: Snippet 166 started.
+<-><->
+      
+l.263 ...ed by one-step majority logic decoding, $
+                                                  E_1$ is at most $n-1/2(d'-...
+
+Not a real error.
+
+! Preview: Snippet 166 ended.(447828+98303x777786).
+<-><->
+      
+l.263 ...y one-step majority logic decoding, $E_1$
+                                                   is at most $n-1/2(d'-1)$ ...
+
+Not a real error.
+
+[166]
+! Preview: Snippet 167 started.
+<-><->
+      
+l.263 ...jority logic decoding, $E_1$ is at most $
+                                                  n-1/2(d'-1)$ where $d'$ is...
+
+Not a real error.
+
+! Preview: Snippet 167 ended.(492688+163840x4340771).
+<-><->
+      
+l.263 ... decoding, $E_1$ is at most $n-1/2(d'-1)$
+                                                   where $d'$ is the minimum...
+
+Not a real error.
+
+[167]
+! Preview: Snippet 168 started.
+<-><->
+      
+l.263 ...g, $E_1$ is at most $n-1/2(d'-1)$ where $
+                                                  d'$ is the minimum distanc...
+
+Not a real error.
+
+! Preview: Snippet 168 ended.(492688+0x524971).
+<-><->
+      
+l.263 ...$E_1$ is at most $n-1/2(d'-1)$ where $d'$
+                                                   is the minimum distance o...
+
+Not a real error.
+
+[168]
+! Preview: Snippet 169 started.
+<-><->
+      
+l.267 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 169 ended.(422343+0x14254089).
+<-><->
+      
+l.270 \end{equation*}
+                     
+Not a real error.
+
+[169]
+! Preview: Snippet 170 started.
+<-><->
+      
+l.271 Since there are $
+                       J$ orthogonal equations there will be $J$ such vectors.
+Not a real error.
+
+! Preview: Snippet 170 ended.(447828+0x426439).
+<-><->
+      
+l.271 Since there are $J$
+                          orthogonal equations there will be $J$ such vectors.
+Not a real error.
+
+[170]
+! Preview: Snippet 171 started.
+<-><->
+      
+l.271 ... $J$ orthogonal equations there will be $
+                                                  J$ such vectors.
+Not a real error.
+
+! Preview: Snippet 171 ended.(447828+0x426439).
+<-><->
+      
+l.271 ...J$ orthogonal equations there will be $J$
+                                                   such vectors.
+Not a real error.
+
+[171]
+! Preview: Snippet 172 started.
+<-><->
+      
+l.272 ...dual code vectors cannot overlap, hence $
+                                                  J \leq n-1/(d'-1) $.
+Not a real error.
+
+! Preview: Snippet 172 ended.(492688+163840x5313335).
+<-><->
+      
+l.272 ...annot overlap, hence $J \leq n-1/(d'-1) $
+                                                  .
+Not a real error.
+
+[172]
+
+! LaTeX Error: \begin{document} ended by \end{Theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.274 \end{Theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Preview: Snippet 173 started.
+<-><->
+      
+l.276 \subsection
+                 {L-step decoding}
+Not a real error.
+
+! Preview: Snippet 173 ended.(546132+152916x22609920).
+<-><->
+      
+l.276 \subsection{L-step decoding}
+                                  
+Not a real error.
+
+[173
+
+]
+! Preview: Snippet 174 started.
+<-><->
+      
+l.279 Definition: A set of parity checks $
+                                          S_1, S_2,\ldots$ is orthogonal on ...
+
+Not a real error.
+
+! Preview: Snippet 174 ended.(447828+127431x2738853).
+<-><->
+      
+l.279 ... A set of parity checks $S_1, S_2,\ldots$
+                                                   is orthogonal on coordina...
+
+Not a real error.
+
+[174]
+! Preview: Snippet 175 started.
+<-><->
+      
+l.279 ..._2,\ldots$ is orthogonal on coordinates $
+                                                  i,j,..$ if the sum $x_i+x_...
+
+Not a real error.
+
+! Preview: Snippet 175 ended.(432226+127431x1443395).
+<-><->
+      
+l.279 ...ts$ is orthogonal on coordinates $i,j,..$
+                                                   if the sum $x_i+x_j+\ldot...
+
+Not a real error.
+
+[175]
+! Preview: Snippet 176 started.
+<-><->
+      
+l.279 ...onal on coordinates $i,j,..$ if the sum $
+                                                  x_i+x_j+\ldots$ appears in...
+
+Not a real error.
+
+! Preview: Snippet 176 ended.(382293+187504x3610003).
+<-><->
+      
+l.279 ...ates $i,j,..$ if the sum $x_i+x_j+\ldots$
+                                                   appears in each S but no ...
+
+Not a real error.
+
+[176]
+! Preview: Snippet 177 started.
+<-><->
+      
+l.279 ...+\ldots$ appears in each S but no other $
+                                                  x_p$ appears more than onc...
+
+Not a real error.
+
+! Preview: Snippet 177 ended.(282168+187504x677486).
+<-><->
+      
+l.279 ...ots$ appears in each S but no other $x_p$
+                                                   appears more than once in...
+
+Not a real error.
+
+[177]
+
+! LaTeX Error: Environment Theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.281 \begin{Theorem}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Preview: Snippet 178 started.
+<-><->
+      
+l.282 ... by an L-step majority decoding scheme, $
+                                                  E_l \leq n/d' - 1/2 $
+Not a real error.
+
+! Preview: Snippet 178 ended.(492688+163840x4588804).
+<-><->
+      
+l.282 ...y decoding scheme, $E_l \leq n/d' - 1/2 $
+                                                  
+Not a real error.
+
+[178]
+! Preview: Snippet 179 started.
+<-><->
+      
+l.286 Let the $
+               i-th$ parity check involve $a_i$ coordinates (besides the $l$).
+Not a real error.
+
+! Preview: Snippet 179 ended.(455111+54613x1641019).
+<-><->
+      
+l.286 Let the $i-th$
+                     parity check involve $a_i$ coordinates (besides the $l$).
+Not a real error.
+
+[179]
+! Preview: Snippet 180 started.
+<-><->
+      
+l.286 Let the $i-th$ parity check involve $
+                                           a_i$ coordinates (besides the $l$).
+Not a real error.
+
+! Preview: Snippet 180 ended.(282168+98303x564604).
+<-><->
+      
+l.286 Let the $i-th$ parity check involve $a_i$
+                                                coordinates (besides the $l$).
+Not a real error.
+
+[180]
+! Preview: Snippet 181 started.
+<-><->
+      
+l.286 ... involve $a_i$ coordinates (besides the $
+                                                  l$).
+Not a real error.
+
+! Preview: Snippet 181 ended.(455111+0x208442).
+<-><->
+      
+l.286 ...nvolve $a_i$ coordinates (besides the $l$
+                                                  ).
+Not a real error.
+
+[181]
+! Preview: Snippet 182 started.
+<-><->
+      
+l.289 \begin{equation}
+                      
+Not a real error.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.291 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.291 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.292 a_
+        i + a_j \geq d'
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `\eqno' in math mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.293 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.293 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Preview: Snippet 182 ended.(1705104+187504x12791367).
+<-><->
+      
+l.293 \end{equation}
+                    
+Not a real error.
+
+[182]
+! Preview: Snippet 183 started.
+<-><->
+      
+l.296 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 183 ended.(2036992+0x13910216).
+<-><->
+      
+l.298 \end{equation*}
+                     
+Not a real error.
+
+[183]
+! Preview: Snippet 184 started.
+<-><->
+      
+l.299 Thus, \begin{equation*}
+                             
+Not a real error.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.301 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.301 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.302 (J-1)S \geq
+                  \binom{J}{2}d'
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.303 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Preview: Snippet 184 ended.(1705104+229380x13155322).
+<-><->
+      
+l.303 \end{equation*}
+                     
+Not a real error.
+
+[184]
+! Preview: Snippet 185 started.
+<-><->
+      
+l.304 ...inating l and S, we get \begin{equation*}
+                                                  
+Not a real error.
+
+! Preview: Snippet 185 ended.(689296+0x13306270).
+<-><->
+      
+l.306 \end{equation*}
+                     
+Not a real error.
+
+[185]
+
+! LaTeX Error: \begin{document} ended by \end{Theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.308 \end{Theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{Theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 \end{Theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.313 \end{Theorem}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+! Preview: Snippet 186 started.
+<-><->
+      
+l.314 \subsection
+                  {Geometrical}
+Not a real error.
+
+! Preview: Snippet 186 ended.(546132+0x22609920).
+<-><->
+      
+l.314 \subsection {Geometrical}
+                               
+Not a real error.
+
+[186
+
+]
+! Preview: Snippet 187 started.
+<-><->
+      
+l.316 \subsection
+                  {Hadamard Transforms}
+Not a real error.
+
+! Preview: Snippet 187 ended.(546132+0x22609920).
+<-><->
+      
+l.316 \subsection {Hadamard Transforms}
+                                       
+Not a real error.
+
+[187
+
+]
+! Preview: Snippet 188 started.
+<-><->
+      
+l.318 \subsection
+                  {List Decoding}
+Not a real error.
+
+! Preview: Snippet 188 ended.(546132+152916x22609920).
+<-><->
+      
+l.318 \subsection {List Decoding}
+                                 
+Not a real error.
+
+[188
+
+]
+! Preview: Snippet 189 started.
+<-><->
+      
+l.319 ... code C is a function which for given a $
+                                                  u\inF_q^n$ and $e > 0$ out...
+
+Not a real error.
+
+! Undefined control sequence.
+l.319 ... C is a function which for given a $u\inF
+                                                  _q^n$ and $e > 0$ outputs ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 189 ended.(435343+251217x731900).
+<-><->
+      
+l.319 ... a function which for given a $u\inF_q^n$
+                                                   and $e > 0$ outputs all $...
+
+Not a real error.
+
+[189]
+! Preview: Snippet 190 started.
+<-><->
+      
+l.319 ...ction which for given a $u\inF_q^n$ and $
+                                                  e > 0$ outputs all $v\elem...
+
+Not a real error.
+
+! Preview: Snippet 190 ended.(422343+25623x1506640).
+<-><->
+      
+l.319 ...which for given a $u\inF_q^n$ and $e > 0$
+                                                   outputs all $v\elem C$ su...
+
+Not a real error.
+
+[190]
+! Preview: Snippet 191 started.
+<-><->
+      
+l.319 ...n a $u\inF_q^n$ and $e > 0$ outputs all $
+                                                  v\elem C$ such that $\Delt...
+
+Not a real error.
+
+! Undefined control sequence.
+l.319 ...\inF_q^n$ and $e > 0$ outputs all $v\elem
+                                                   C$ such that $\Delta(u,v)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Preview: Snippet 191 ended.(447828+0x856457).
+<-><->
+      
+l.319 ...F_q^n$ and $e > 0$ outputs all $v\elem C$
+                                                   such that $\Delta(u,v) \l...
+
+Not a real error.
+
+[191]
+! Preview: Snippet 192 started.
+<-><->
+      
+l.319 ...e > 0$ outputs all $v\elem C$ such that $
+                                                  \Delta(u,v) \leq e$.
+Not a real error.
+
+! Preview: Snippet 192 ended.(491520+163840x3242436).
+<-><->
+      
+l.319 ...$v\elem C$ such that $\Delta(u,v) \leq e$
+                                                  .
+Not a real error.
+
+[192]
+
+LaTeX Warning: Citation `zuckerman10' on page 5 undefined on input line 322.
+
+! Preview: Snippet 193 started.
+<-><->
+      
+l.323 If $
+          C$ is an [n,k,d] code with $d \geq (1/2-\epsilon)$, then
+Not a real error.
+
+! Preview: Snippet 193 ended.(447828+0x515276).
+<-><->
+      
+l.323 If $C$
+             is an [n,k,d] code with $d \geq (1/2-\epsilon)$, then
+Not a real error.
+
+[193]
+! Preview: Snippet 194 started.
+<-><->
+      
+l.323 If $C$ is an [n,k,d] code with $
+                                      d \geq (1/2-\epsilon)$, then
+Not a real error.
+
+! Preview: Snippet 194 ended.(491520+163840x3774684).
+<-><->
+      
+l.323 ...[n,k,d] code with $d \geq (1/2-\epsilon)$
+                                                  , then
+Not a real error.
+
+[194]
+! Preview: Snippet 195 started.
+<-><->
+      
+l.324 \[
+         \forall{u}\in F_q^n | \{v \in C : \Delta(u,v) \leq (1/2 - \sqrt{\ep...
+
+Not a real error.
+
+! Preview: Snippet 195 ended.(807678+0x18018305).
+<-><->
+      
+l.325 \]
+        
+Not a real error.
+
+[195]
+! Preview: Snippet 196 started.
+<-><->
+      
+l.328 \subsection
+                  {RM(1,m) decoding algorithm}
+Not a real error.
+
+! Preview: Snippet 196 ended.(589824+196608x22609920).
+<-><->
+      
+l.328 \subsection {RM(1,m) decoding algorithm}
+                                              
+Not a real error.
+
+[196
+
+]
+! Preview: Snippet 197 started.
+<-><->
+      
+l.330 \section
+              {Generalized \rm codes}
+Not a real error.
+
+! Preview: Snippet 197 ended.(655359+0x22609920).
+<-><->
+      
+l.330 \section{Generalized \rm codes}
+                                     
+Not a real error.
+
+[197
+
+]
+! Preview: Snippet 198 started.
+<-><->
+      
+l.332 \section
+               {Uses of Reed Muller codes}
+Not a real error.
+
+! Preview: Snippet 198 ended.(655359+0x22609920).
+<-><->
+      
+l.332 \section {Uses of Reed Muller codes}
+                                          
+Not a real error.
+
+[198
+
+]
+
+LaTeX Warning: Citation `codingtheory+blog' on page 5 undefined on input line 3
+34.
+
+! Preview: Snippet 199 started.
+<-><->
+      
+l.335 \section
+               {References}
+Not a real error.
+
+! Preview: Snippet 199 ended.(655359+0x22609920).
+<-><->
+      
+l.335 \section {References}
+                           
+Not a real error.
+
+[199
+
+]
+No file _region_.bbl.
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 7804 strings out of 494734
+ 137052 string characters out of 1170961
+ 192670 words of memory out of 3000000
+ 10864 multiletter control sequences out of 10000+50000
+ 11293 words of font info for 40 fonts, out of 3000000 for 5000
+ 188 hyphenation exceptions out of 8191
+ 47i,10n,49p,663b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on _region_.dvi (199 pages, 30120 bytes).
