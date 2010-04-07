@@ -1,39 +1,9 @@
-\message{ !name(110.tex)}
-
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage[dvips]{graphicx}
-\usepackage{cite}
-\usepackage{tikz}
-
-\newcommand{\RM}[2]{\ensuremath{\mathcal{R}(#1,#2)}}
-
-\newcommand{\rem}{Reed-Muller}
-
-\newcommand{\F}{\ensuremath{\mathbb{F}}}
-
-\newcommand{\V}[1]{\ensuremath{\mathbf{#1}}}
-
-\newtheorem{thm}{Theorem}
-\newtheorem{lem}{Lemma}
-\newtheorem{def}{Definition}
-\newtheorem{claim}{Claim}
-
-
-%opening
-\title{Reed Muller Codes}
-\author{Prateek Sharma}
-\pagestyle{plain}
-
-
-\begin{document}
- \message{ !name(110.tex) !offset(-3) } 
+\message{ !name(<none>.tex)} \message{ !name(110.tex) !offset(27) } 
 
 \maketitle
 
 \begin{abstract} 
-This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented.
+This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented. We conclude with some applications of the code.
 \end{abstract}
 
 
@@ -46,8 +16,7 @@ deﬁned recursively.
 Unfortunately, Reed-Muller codes become weaker as their length increases. However, 
 they are often used as building blocks in other codes. 
 One of the ma jor advantages of Reed-Muller codes is their relative simplicity to encode 
-messages and decode received transmissions. We examine encoding using generator matrices 
-and decoding using one form of a process known as majority logic. 
+messages and decode received transmissions.  
 Reed-Muller codes, like many other codes, have tight links to design theory; we brieﬂy 
 investigate this link between Reed-Muller codes and the designs resulting from affine geometries. 
 
@@ -177,21 +146,50 @@ $\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code 
 
 The \rem codes are a nested family of codes - the codes of higher order contain those of the lower order.
 \begin{thm}
+  \begin{equation*}
+    
+  \end{equation*}
 \begin{equation*}
 \RM{r}{m} \subset \RM{t}{m} 
 \text{if} 0 \leq r \leq t \leq m \\
 \end{equation*}
 
 \begin{proof}
-BF
+By Induction.
+Trivially true for $m=1$.
+Let $\RM{k}{m-1} \subset \RM{l}{m-1}$ for all $0 \leq k \leq l < m$.
+Let $0 <i \leq j < m$. By the recursive definition, we get:
+\begin{equation*}
+  \RM{i}{m}=\{(\V{u},\V{u}+\V{v} | \V{u} \in \RM{i}{m-1}, \V{v} \in \RM{i-1}{m-1} \}
+\end{equation*}
+Induction hypothesis gives :
+\begin{equation*}
+  \subset \{(\V{u},\V{u}+\V{v} | \V{u} \in \RM{j}{m-1}, \V{v} \in \RM{j-1}{m-1} \} = \RM{j}{m}
+\end{equation*}
+
 \end{proof}
 \end{thm}
 
+\begin{equation}
+  \label{eq:1}
+  dim(\RM{r}{m}) = dim(\RM{r}{m-1}) + dim(\RM{r-1}{m-1})
+\end{equation}
+
+\begin{thm}
+  \begin{equation}
+    \label{eq:2}
+    
+  \end{equation}
+\end{thm}
 
 
 \begin{thm}
 $\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
 \begin{proof}
+
+We induct on $r$. Let $0 \leq i \leq r$.
+Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
+
 \end{proof}
 \end{thm}
 
@@ -203,15 +201,43 @@ $\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
 
 
 \begin{thm}
-
+  \begin{equation*}
+    \RM{m-2}{m} \text{ is the extended binary hamming code }
+  \end{equation*}
 \begin{proof}
+
 \end{proof}
 \end{thm}
 
-
+We prove a general theorem
 \begin{thm}
+Let $C_i$ be an $[n,k_i,d_i]$ code. Then the concatenated code defined by
 
+  \begin{equation*}
+    C = \{(\V{u},\V{u}+\V{v}) | \V{u} \in C_1 , \V{v} \in C_2 \}
+  \end{equation*}
+has the parameters $[2n,k_1+k_2, min{2d_1,d_2}]$ linear code.
 \begin{proof}
+\emph{Length:} Clearly, since length of $C_1$ and $C_2$ is $n$ each, concatenating produces vectors of length $2n$.
+
+\emph{Dimension:} The number of words in $C$ is product of number of words in $C_1$ and $C_2$.
+because $(c_1,c_2) \rightarrow (c_1,c_1+c_2) $ is a bijection. Thus, the dimension is 
+\begin{equation*}
+  k = k_1+k_2
+\end{equation*}
+
+\emph{Distance: } We can split this into cases, depending on whether $c_1=\V{0}$ or $c_2=\V{0}$. 
+
+\emph{Case: \V{c_2} = \V{0}}
+\begin{equation*}
+  wt((c_1,c_1+c_2)) = wt(c_1,c_1) = 2wt(c_1) = 2d_1 \geq min{2d_1,d_2}
+\end{equation*}
+
+\emph{Case: \V{c_2} \neq \V{0}}
+ wt((c_1,c_1+c_2)) = wt(c_1) + wt(c_1+c_2) \geq wt(c_1) + wt(c_2)-wt(c_1) 
+= wt(c_2) = d_2 \geq min{2d_1,d_2}
+
+
 \end{proof}
 \end{thm}
 
@@ -344,4 +370,4 @@ Proof:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
- \message{ !name(110.tex) !offset(-437) } 
+ \message{ !name(<none>.tex) !offset(-469) } 

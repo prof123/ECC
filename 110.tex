@@ -26,33 +26,26 @@
 \author{Prateek Sharma}
 \pagestyle{plain}
 
-
 \begin{document}
 
 \maketitle
 
 \begin{abstract} 
-This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented.
+This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented. We conclude with some applications of the code.
 \end{abstract}
 
 
 \section {Introduction and Terminology}
-Reed-Muller ($\mathcal{R}$) codes are are amongst the oldest and most well-known of codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. 
-Reed-Muller codes have many interesting properties that are worth examination; they 
-form an inﬁnite family of codes, and larger Reed-Muller codes can be constructed from 
-smaller ones. This particular observation leads us to show that Reed-Muller codes can be 
-deﬁned recursively. 
-Unfortunately, Reed-Muller codes become weaker as their length increases. However, 
-they are often used as building blocks in other codes. 
-One of the ma jor advantages of Reed-Muller codes is their relative simplicity to encode 
-messages and decode received transmissions. We examine encoding using generator matrices 
-and decoding using one form of a process known as majority logic. 
-Reed-Muller codes, like many other codes, have tight links to design theory; we brieﬂy 
-investigate this link between Reed-Muller codes and the designs resulting from affine geometries. 
+
+Reed-Muller ($\mathcal{R}$) codes are are amongst the oldest and most well-known of codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. \cite{original}
+Reed-Muller codes have many interesting properties - they can be deﬁned recursively, and are an infinite family of codes. 
+Unfortunately, Reed-Muller codes become weaker as their length increases. However, they are often used as building blocks in other codes. 
+One of the ma jor advantages of Reed-Muller codes is their relative simplicity to encode and decode messages.
+Reed-Muller codes, like many other codes, have tight links to design theory; we brieﬂy investigate this link between Reed-Muller codes and the designs resulting from affine geometries. 
 
 \subsection{Notation}
 $\F _q$ denotes a finite field of order $q$
-Throughout, unless otherwise explicity stated, $q=2$, and therefore $F={0,1}$, with the addition operation being equivalent to the boolean exclusive-or (\emph{xor}), and the multiplication operation being the boolean \emph{and}.
+Throughout, unless otherwise explicity stated, $q=2$, and therefore $F=\{0,1\}$, with the addition operation being equivalent to the boolean exclusive-or (\emph{xor}), and the multiplication operation being the boolean \emph{and}.
 
 A vector field over $\F$, with the length of the vector being $n$ will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors}, but this very basic understanding is sufficient for the purpose of understanding this report.
 
@@ -75,14 +68,14 @@ wt(x) = d(x,0) = \{
 \end{array} \right.
 \end{equation}
 
-We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x*y = (x_1y_1, x_2y_2,\ldots,x_ny_n) .
+We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x*y = (x_1y_1, x_2y_2,\ldots,x_ny_n)$ .
 
 
-\section {Construction}
-The simplest construction of \rm is by using boolean functions.
-Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $v \equiv (x_1,x_2,\ldots,x_m)$. Consider a Boolean Function $f$, $f: \F_2^m \rightarrow {0,1} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an m-tuple and returns either $0$ or $1$ .
+\section {Construction of the Code}
+The simplest construction of \rem is by using boolean functions.
+Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $v \equiv (x_1,x_2,\ldots,x_m)$. Consider a Boolean Function $f$, $f: \F_2^m \rightarrow \{0,1\} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an m-tuple and returns either $0$ or $1$ .
 
-$v$ can take $2^m$ values. For each value of $v$ we compute $f(v)$. This is the familiar and ubiquitious 'Truth-table' wherein a boolean function is evaluated for all possible inputs.
+$\V{x}$ can take $2^m$ values. For each value of $x$ we compute $f(x)$. This is the familiar and ubiquitious 'Truth-table' wherein a boolean function is evaluated for all possible inputs.
 In the example below, $x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ is computed and represented as another row. 
 \begin {center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -110,7 +103,7 @@ Therefore, the polynomials (we will drop the term boolean from here on) of degre
  1+a_1x_1+a_2_x2+\ldots+a_nx_n
 \end{equation}
 The above simply represents a linear combination of $m$ vectors.
-We now define the \rm codes.
+We now define the \rem codes.
 \begin{equation}
 
 \RM{r}{m} = \text{Boolean polynomials over of degree} r
@@ -119,7 +112,7 @@ We now define the \rm codes.
 The boolean monomials are \begin{equation*}
 1,v_1,v_2,\ldots,v_m,v_1v_2,v_1v_3,\ldots,v_1v_m,ldots,v_1v_2..v_m
 \end{equations}
-Thus there are \begin{equatio*}
+Thus there are \begin{equation*}
 1+\binom{m}{1}+ldots+\binom{m}{m} = 2^m 
 \end{equation*} boolean monomials.
 
@@ -127,26 +120,64 @@ We can write the generator matrix such that the columns are the binary represent
 
 If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence vector $\V{f}$ has length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
 
+\subsection{clarification}
+In what follows, we frequently switch back and forth between 
+B(r, {v1 , . . . , vm}) 
+and 
+R(r, m). Doing so in the most explicit manner would make the reasonings a 
+lot harder to read, and for this reason we decided to treat codewords and Boolean 
+functions as interchangeable.
+In fact, boolean logic using xor is also called reed-muller logic! \cite{rmlogic}
+
 Properties:
 Length, $n = 2^m$
 Minimum Distance, $d = 2^{m-r}$
 Dimension, $k=1+..$
 
+The rate of an $[n, k]$ code is deﬁned as $k/n$. 
+(Thinking of the code as having $n − k$ check digits and $k$ message 
+digits.
+
+
+\subsection{Code properties}
+
+We have seen that the first order Reed-Muller code $\RM{1}{m}$ consists of all vectors $u_01 + \sum_{i=1}^m{u_i\V{v_i}} $ with $u_i=$ $0$ or $1$. 
+Define the \emph{orthogonal code} $\mathcal{0}_m$ to be the $[2m, m, 2m−1 ]$ code consisting of the vectors $ \sum_{i=1}^m{u_i\V{v_i}} $
+Then
+\begin{equation*}
+  \RM{1}{m} = \mathcal{O}_m \union (\V{1} + \mathcal{O}_m) 
+\end{equation*}
+ 
+\begin{theorem}
+  Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m−1} ]$ is equivalent to the first order \rem code.
+\begin{proof}[from \cite{uniq}]
+  
+\end{proof}
+\end{theorem}
+
+Run-length properties at \cite{syncro}
+
 \subsection{Recursive Formulation}
 \begin{thm}
-$\RM{r+1}{m+1}$ =  \{\V{u}+\V{v}| \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m}\}
+$\RM{r+1}{m+1}$ =  \{ \V{u} | \V{u}+\V{v} : \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m} \}
 \end{equation}
-This is known as the concatenation construction of codes, with $+$ denoting the concatenation.
-Proof:
+This is known as the concatenation construction of codes, with $|$ denoting the concatenation.
+\begin{proof} We use the boolean logic definition of the codewords.
 Let $\V{f} \in \RM{r+1}{m+1}$.  $\V{f}$ can be written as \begin{equation*}
 f(v_1,v_2,\ldots,v_{m+1}) = g(v_1,v_2,\ldots,v_m)+v_{m+1}h((v_1,v_2,\ldots,v_{m})
 \end{equation*}
-Where $g \in \RM{r+1}{m} $ and $h \in \RM{r}{m}$
+Where $\V{g} \in \RM{r+1}{m} $ and $\V{h} \in \RM{r}{m}$. Consider the associated vectors $\V{f}, \V{g'}, \V{h'}$ as polynomials over $v_1,\ldots,v_{m+1}$. 
+Then, $\V{g'} = (\V{g}|\V{g})$ and $\V{h'} = (\V{0}|\V{h})$. [Problem7, \cite{sloane}. ]
+Thus
+\begin{equation*}
+  \V{f} = \V{g}|\V{g} + \V{0}|\V{h}
+\end{equation*}
 
+\end{proof}
 
 \end{thm}
+The generator matrix version of the above theorem is
 
-Theorem is also equivalent to:
 \begin{equation}
 G(r+1,m+1) = \begin{pmatrix}
 G(r+1,m) & G(r+1,m) \\
@@ -172,33 +203,64 @@ Proof:...
 \end{thm}
 
 $\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
+
+Another recursive construction
+Let $R_1 = \begin{pmatrix}
+1 & 1 \\
+0 & 0 \\
+1 & 0 \\
+0 & 1 
+\end{pmatrix}
+$
+Then, $R_{n+1} = \begin{pmatrix}
+R_n & R_n \\
+R_n & neg R_n
+\end{matrix}
 \subsection{Properties}
 
 The \rem codes are a nested family of codes - the codes of higher order contain those of the lower order.
 \begin{thm}
 \begin{equation*}
 \RM{r}{m} \subset \RM{t}{m} 
-\text{if} 0 \leq r \leq t \leq m \\
+\text{ if } 0 \leq r \leq t \leq m \\
 \end{equation*}
 
 \begin{proof}
 By Induction.
- is certainly true if m 
-= 1 by direct computation and if j = m as R(m, m) 
-is the full space F2 
-m 
-2 . Assume inductively that 
-R(k , m − 1) ⊆ R(ℓ, m − 1) for all 0 ≤ k ≤ 
-ℓ < m. Let 0 < i 
-≤ j < m. Then: 
+Trivially true for $m=1$.
+Let $\RM{k}{m-1} \subset \RM{l}{m-1}$ for all $0 \leq k \leq l < m$.
+Let $0 <i \leq j < m$. By the recursive definition, we get:
+\begin{equation*}
+  \RM{i}{m}=\{(\V{u},\V{u}+\V{v} | \V{u} \in \RM{i}{m-1}, \V{v} \in \RM{i-1}{m-1} \}
+\end{equation*}
+Induction hypothesis gives :
+\begin{equation*}
+  \subset \{(\V{u},\V{u}+\V{v} | \V{u} \in \RM{j}{m-1}, \V{v} \in \RM{j-1}{m-1} \} = \RM{j}{m}
+\end{equation*}
+
 \end{proof}
 \end{thm}
 
+\begin{equation}
+  \label{eq:1}
+  dim(\RM{r}{m}) = dim(\RM{r}{m-1}) + dim(\RM{r-1}{m-1})
+\end{equation}
+
+\begin{thm}
+  \begin{equation}
+    \label{eq:2}
+    
+  \end{equation}
+\end{thm}
 
 
 \begin{thm}
 $\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
 \begin{proof}
+
+We induct on $r$. Let $0 \leq i \leq r$.
+Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
+
 \end{proof}
 \end{thm}
 
@@ -210,27 +272,104 @@ $\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
 
 
 \begin{thm}
-
+  \begin{equation*}
+    \RM{m-2}{m} \text{ is the extended binary hamming code }
+  \end{equation*}
 \begin{proof}
+
 \end{proof}
 \end{thm}
 
+We prove a general theorem
+\begin{thm}
+Let $C_i$ be an $[n,k_i,d_i]$ code. Then the concatenated code defined by
+
+  \begin{equation*}
+    C = \{(\V{u},\V{u}+\V{v}) | \V{u} \in C_1 , \V{v} \in C_2 \}
+  \end{equation*}
+has the parameters $[2n,k_1+k_2, min{2d_1,d_2}]$ linear code.
+\begin{proof}
+\emph{Length:} Clearly, since length of $C_1$ and $C_2$ is $n$ each, concatenating produces vectors of length $2n$.
+
+\emph{Dimension:} The number of words in $C$ is product of number of words in $C_1$ and $C_2$.
+because $(c_1,c_2) \rightarrow (c_1,c_1+c_2) $ is a bijection. Thus, the dimension is 
+\begin{equation*}
+  k = k_1+k_2
+\end{equation*}
+
+\emph{Distance: } We can split this into cases, depending on whether $c_1=\V{0}$ or $c_2=\V{0}$. 
+
+\emph{Case: \V{c_2} = \V{0}}
+\begin{equation*}
+  wt((c_1,c_1+c_2)) = wt(c_1,c_1) = 2wt(c_1) = 2d_1
+\end{equation*}
+
+\emph{Case: \V{c_2} \neq \V{0}}
+\begin{equation*}
+   wt((c_1,c_1+c_2)) = wt(c_1) + wt(c_1+c_2) \geq wt(c_1) + wt(c_2)-wt(c_1) 
+= wt(c_2) = d_2
+\end{equation*}
+
+
+Thus, the minimum distance of the code, which is equal to the weight of the minimum weight vector is $ min{2d_1,d_2}$
+
+\end{proof}
+\end{thm}
+
+
+\begin{lem}
+Every codeword in $\RM{1}{m}$ (except $\V{1}, \V{0}$) has weight $2^{m-1}$
+\begin{proof}
+This can also be proved by using the randomization lemma for boolean functions as done in \cite{sloane}. However, if we notice that
+\begin{equation*}
+  \RM{1}{m} = \{(u,u) : u \in \RM{1}{m-1} \} \union \{(u,\vec{1}+u) : u \in \RM{1}{m-1} \} 
+\end{equation*}
+We use induction on $m$ and are done.
+\end{proof}
+\end{lem}
 
 \begin{thm}
-
-\begin{proof}
-\end{proof}
+  \begin{equation*}
+    \RM{m-r-1}{m} = \RM{r}{m}^{\bot}
+  \end{equation*}
+  \begin{proof}
+    Let $\V{a} \in \RM{m-r-1}{m}$, and $\V{b} \in \RM{r}{m}$.
+Then $a$ and $b$ are polynomials of degree $m-r-1$ and $r$ respectively.
+$\V{ab} \in \RM{m-2}{m}$, and since $\RM{m-2}{m}$ contains all the even weight vectors, $a\cdot b \equiv 0 (mod 2) $.
+Thus, $\RM{m-r-1}{m} \subset \RM{r}{m}^{\bot}$.
+But by considering the dimensions we get
+\begin{equation*}
+  dim(\RM{m-r-1}{m}) + dim(\RM{r}{m} = 2^m = n
+\end{equation*}
+This implies the relation.
+  \end{proof}
 \end{thm}
-
 
 \begin{thm}
-
-\begin{proof}
-\end{proof}
+The dual code $\RM{1}{m}^{\bot}$ is the extended binary Hamming code $H(m)$ 
+  \begin{proof}
+    TODO. this is important. From singa book
+  \end{proof}
 \end{thm}
+
+
+\section{Bounds}
+$A_q(n, d)$ is the largest integer $M$ such that there exists a 
+$q$-ary $(n, M, d)$ code.
+A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
+
+The plotkin bound shows that the codes are all optimal.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {Weight distribution}
+\section {Weight distribution}
+Stated without proof
+\cite{kasami+tokura}
+\begin{equation}
+  \label{eq:4}
+  \text{There are at least} 2^{mr−r(r−1)} . 
+\text{minimum weight codewords in } \RM{r}{m}. 
+
+\end{equation}
 
 \section{cyclic decoding}
 In addition, it is next shown that a cyclic RM⋆ (r, m) code is simpler to decode. The 
@@ -242,11 +381,11 @@ positions can also be corrected with the same algorithm (or hardware circuit) by
 shifting received code words, until all n positions have been tried.
 \section {Decoding}
 As mentioned earlier, the RM family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
-Several very efficient algorithms have been known specially for the reed muller codes of the first order. 
+Several very efficient algorithms have been known specially for the \rem codes of the first order. 
 \subsection {Majority Logic Decoding}
-Majority Logic Decoding is the oldest and simplest method to decode the \rem codes. 
+Majority Logic Decoding is the oldest and simplest method to decode the \rem codes. \cite{assmus}
 Some terminology is needed for a clearer understanding:
-Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{T}$. 
+Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{\bot}$. 
 Define the \emph{support vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
 Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $i$. The $J$ parity checks essentially 'vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
 A collection of such parity checks described above is said to be \emph{orthogonal} to $i$. If each of the coordinates of the code has a collection of $J$ parity checks orthogonal to it, then the code is capable of correcting upto $J/2$  errors.
@@ -315,13 +454,66 @@ J \leq 2n/d' -1
 \end{Theorem}
 
 
+\subsection{Reed Decoding Algorithm}
+The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem codes of any order.
 
+Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in 
+, in which the nonzero coordinates of the codeword are points lying in the 
+subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the kth order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
 
-\end{Theorem}
+Let the corresponding subspace be $S$.
+Let $T$ be the complementary subspace of $S$ where $j_1j_2\ldotsj_{m-k} = {1,2,ldots,m}-{i_1,i_2,\ldots,i_k}.$ The incidence vector of $T$ is v. <todo>
+
+Define a \emph{Translate} of a subspace with respect to a point to be the subspace obtained by adding the binary representation of the point to each element of the subspace. 
+
+\begin{them}
+  If there are no errors, the message bit $m_b$ is given by 
+  \begin{equation*}
+    m_b = \sum_{P \in U_i}{x_P} \quad i=1,2,\ldots,2^{m-r}
+  \end{equation*}
+  \begin{proof}[geometry]
+    
+  \end{proof}
+\end{them}
+
+For a detailed algorithm refer to \cite{cooke} and \cite{lec9}
 \subsection {Geometrical}
 We can use the finite geometry construction of the codes to help in the decoding. 
 \subsection {Hadamard Transforms}
-Green machine
+\begin{def}
+  Real Vector $\V{F}$ of a binary vector $\V{V}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
+\end{def}
+\begin{lem}
+  The Orthogonal code $\mathcal{O}_m$ with real vectors is equivalent to the Hadamard matrix $H_m$.
+\begin{proof}
+  Let the elements of this real-vectorized orthogonal code be $v$. 
+  \begin{claim}
+    \begin{equation*}
+      v_i, v_j \in \RM{1}{m} \implies v_i\cdot v_j = 0
+    \end{equation*}
+    \begin{proof}
+      The systematic choice of the basis vectors helps. We use the recursive definition of the Generator matrix.
+
+    \end{proof}
+  \end{claim}
+This is the definition of the hadamard matrix too. 
+\end{proof}
+\end{lem}
+
+\begin{equation}
+  \label{eq:3}
+  \RM{1}{m} =
+  \begin{pmatrix}
+    H_m \\
+    -H_m
+  \end{pmatrix}
+\end{equation}
+
+Keeping note that the code has been converted to the real-vector form, maximizing $FH_m$ is equivalent to finding the least-distance neighbour to $\V{v}$.
+This would entail doing a simple vector product with each row of the hadamard matrix. There are $n$ such rows, and we need $O(n^2)$ operations. However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+
+This is the fastest classical decoding technique and was employed in the \emph{Green Machine} decoder for the Mariner-9 space mission. 
+
 \subsection {List Decoding}
 A list decoding procedure for a code C is a function which for given a $u\inF_q^n$ and $e > 0$ outputs all $v\elem C$ such that $\Delta(u,v) \leq e$.
 
@@ -336,7 +528,22 @@ Proof:
 
 \section{Generalized \rm codes}
 
-\section {Uses of Reed Muller codes}
+\section {Applications}
+\subsection{Communication}
+The oldest and original use. \rem codes were used in the 1969 Mariner-9
+deep space probe to the IEEE 802.11b standard for Wire- 
+less Local Area Networks (WLANs) \cite{feldman}.         
+
+\subsection{Tesing Low-degree polynomials}
+\cite{lowdeg} 
+Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem codes, and the properties are used to prove the bounds on the number of queries needed.
+
+\subsection{Sidenkov cryptanalysis}
+\cite{sidenkov} A variant of the McEliece cryptosystem using \rem codes instead of Goppa codes , called the Sidenkov system, because of the efficient decoding.
+A cryptanalysis attack also uses the properties of \rem codes to break the cryptographic code. The uniqueness result proved earlier is a central feature in the cryptographic attack.
+
+\subsection{Side Channel attacks}
+\cite{roche}
 
 ~\cite{codingtheory+blog}
 \section {References}
