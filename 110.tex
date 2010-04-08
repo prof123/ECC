@@ -1,5 +1,4 @@
 
-
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -7,6 +6,16 @@
 \usepackage{cite}
 \usepackage{tikz}
 
+%%%Margins%%%
+\marginparwidth 0pt
+\oddsidemargin  0pt
+\evensidemargin  0pt
+\marginparsep 0pt
+\topmargin   0pt
+\textwidth   6.5in
+\textheight  8.5 in
+
+%%%Macros%%%
 \newcommand{\RM}[2]{\ensuremath{\mathcal{R}(#1,#2)}}
 
 \newcommand{\rem}{Reed-Muller}
@@ -15,10 +24,12 @@
 
 \newcommand{\V}[1]{\ensuremath{\mathbf{#1}}}
 
+%%%Theorems%%%
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}{Lemma}
 \newtheorem{def}{Definition}
 \newtheorem{claim}{Claim}
+
 
 
 %opening
@@ -31,17 +42,17 @@
 \maketitle
 
 \begin{abstract} 
-This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented. We conclude with some applications of the code.
+This seminar report gives an introduction to the Reed-Muller family of Error correcting codes. Reed-Muller codes are one of the oldest codes used for Error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the various decoding techniques and algorithms is presented. Some applications of the code are also presented.
 \end{abstract}
 
 
 \section {Introduction and Terminology}
 
-Reed-Muller ($\mathcal{R}$) codes are are amongst the oldest and most well-known of codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. \cite{original}
-Reed-Muller codes have many interesting properties - they can be deﬁned recursively, and are an infinite family of codes. 
-Unfortunately, Reed-Muller codes become weaker as their length increases. However, they are often used as building blocks in other codes. 
-One of the ma jor advantages of Reed-Muller codes is their relative simplicity to encode and decode messages.
-Reed-Muller codes, like many other codes, have tight links to design theory; we brieﬂy investigate this link between Reed-Muller codes and the designs resulting from affine geometries. 
+Reed-Muller ($\mathcal{R}$) codes are amongst the oldest and most well-known codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. \cite{original}
+Reed-Muller codes have many interesting properties - they can be defined recursively, and are an infinite family of codes.
+Unfortunately, Reed-Muller codes become weaker as their length increases. However, they are often used as building blocks in other codes.
+One of the major advantages of Reed-Muller codes is their relative simplicity to encode and decode messages.
+Reed-Muller codes, like many other codes, have tight links to design theory; we briefly investigate this link between Reed-Muller codes and the designs resulting from affine geometries.
 
 \subsection{Notation}
 $\F _q$ denotes a finite field of order $q$
@@ -49,16 +60,16 @@ Throughout, unless otherwise explicity stated, $q=2$, and therefore $F=\{0,1\}$,
 
 A vector field over $\F$, with the length of the vector being $n$ will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors}, but this very basic understanding is sufficient for the purpose of understanding this report.
 
-We use a string of length n with elements in $\F_2$ to write a vector in the vector space $\F^2_n$ . For example, if we have the vector $\mathbf{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in \F_2^8$, we simply write $\mathbf{v}$ as $10110101$. 
+We use a string of length n with elements in $\F_2$ to write a vector in the vector space $\F^2_n$ . For example, if we have the vector $\mathbf{v} = (1, 0, 1, 1, 0, 1, 0, 1) \in \F_2^8$, we simply write $\V{v}$ as $10110101$. 
 
 We shall also deal with boolean functions, and shall denote the boolean xor by $+$, instead of the customary $\oplus$ to maintain consistency with the addition operation in $F_2$. 
 
-Three parameters of linear error-correcting codes are it's length, minimum distance, and dimension, denoted by the triplet $[n,k,d]$. The elements of a code $C$ are called the \emph{codewords}. Codewords are represented as vectors of length $n$. 
-The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the $Hamming Distance$, defined as:
+Three parameters of linear error-correcting codes are it's length, dimension, and minimum distance, denoted by the triplet $[n,k,d]$. The elements of a code $C$ are called the \emph{codewords}. Codewords are represented as vectors of length $n$.
+The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the \emph{Hamming Distance}, defined as:
 \begin{equation}
 d_H = \sum_{u_i \neq v_i} 1
 \end{equation}
-In other words, the hamming distance is the number of positions in which 2 vectors differ. 
+In other words, the hamming distance is the number of positions in which 2 vectors differ.
 Analogously, the hamming weight of a vector is defined as:
 \begin{equation}
 wt(x) = d(x,0) = \{ 
@@ -108,6 +119,7 @@ We now define the \rem codes.
 
 \RM{r}{m} = \text{Boolean polynomials over of degree} r
 \end{equation}
+<this is not clear>
 
 The boolean monomials are \begin{equation*}
 1,v_1,v_2,\ldots,v_m,v_1v_2,v_1v_3,\ldots,v_1v_m,ldots,v_1v_2..v_m
@@ -138,7 +150,10 @@ The rate of an $[n, k]$ code is deﬁned as $k/n$.
 (Thinking of the code as having $n − k$ check digits and $k$ message 
 digits.
 
+\subsection{Other interpretations}
+Set theory definition can also be used to define the codes. See \cite{incidence}
 
+The natural polynomial ring definition is standard but the boolean logic one is easier to understand.
 \subsection{Code properties}
 
 We have seen that the first order Reed-Muller code $\RM{1}{m}$ consists of all vectors $u_01 + \sum_{i=1}^m{u_i\V{v_i}} $ with $u_i=$ $0$ or $1$. 
@@ -149,7 +164,7 @@ Then
 \end{equation*}
  
 \begin{theorem}
-  Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m−1} ]$ is equivalent to the first order \rem code.
+  Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem code.
 \begin{proof}[from \cite{uniq}]
   
 \end{proof}
@@ -159,8 +174,8 @@ Run-length properties at \cite{syncro}
 
 \subsection{Recursive Formulation}
 \begin{thm}
-$\RM{r+1}{m+1}$ =  \{ \V{u} | \V{u}+\V{v} : \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m} \}
-\end{equation}
+$\RM{r+1}{m+1} =  \{ \V{u} | \V{u}+\V{v} : \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m} \}$
+
 This is known as the concatenation construction of codes, with $|$ denoting the concatenation.
 \begin{proof} We use the boolean logic definition of the codewords.
 Let $\V{f} \in \RM{r+1}{m+1}$.  $\V{f}$ can be written as \begin{equation*}
@@ -205,17 +220,21 @@ Proof:...
 $\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
 
 Another recursive construction
-Let $R_1 = \begin{pmatrix}
+Let 
+\begin{equation*}
+R_1 = \begin{pmatrix}
 1 & 1 \\
 0 & 0 \\
 1 & 0 \\
 0 & 1 
 \end{pmatrix}
-$
+\end{equation*}
+
+
 Then, $R_{n+1} = \begin{pmatrix}
 R_n & R_n \\
 R_n & neg R_n
-\end{matrix}
+\end{matrix} $
 \subsection{Properties}
 
 The \rem codes are a nested family of codes - the codes of higher order contain those of the lower order.
@@ -287,6 +306,7 @@ Let $C_i$ be an $[n,k_i,d_i]$ code. Then the concatenated code defined by
   \begin{equation*}
     C = \{(\V{u},\V{u}+\V{v}) | \V{u} \in C_1 , \V{v} \in C_2 \}
   \end{equation*}
+
 has the parameters $[2n,k_1+k_2, min{2d_1,d_2}]$ linear code.
 \begin{proof}
 \emph{Length:} Clearly, since length of $C_1$ and $C_2$ is $n$ each, concatenating produces vectors of length $2n$.
