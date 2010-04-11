@@ -1,67 +1,72 @@
 This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: report.aux
 The style file: plain.bst
-Database file #1: report.bib.bib
-Repeated entry---line 26 of file report.bib.bib
- : @misc{codingtheory+blog
- :                        ,
+Database file #1: report.bib
+I was expecting a `,' or a `}'---line 190 of file report.bib
+ :   
+ :   annote={Trellis diagram etc}
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 50 of file report.bib.bib
- : @misc{codingtheory+blog
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 59 of file report.bib.bib
- : @misc{codingtheory+blog
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 77 of file report.bib.bib
- : @misc{codingtheory+blog
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 86 of file report.bib.bib
- : @misc{codingtheory+blog
- :                        ,
-I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in codingtheory+blog
-You've used 1 entry,
+Warning--I didn't find a database entry for "original"
+Warning--I didn't find a database entry for "vectors"
+Warning--I didn't find a database entry for "Problem2"
+Warning--I didn't find a database entry for "rmlogic"
+Warning--I didn't find a database entry for "uniq"
+Warning--I didn't find a database entry for "syncro"
+Warning--I didn't find a database entry for "kasami+tokura"
+Warning--I didn't find a database entry for "assmus"
+Warning--I didn't find a database entry for "cooke"
+Warning--I didn't find a database entry for "lec9"
+Warning--I didn't find a database entry for "elias"
+Warning--I didn't find a database entry for "goldreich"
+Warning--I didn't find a database entry for "kabatiansky"
+Warning--I didn't find a database entry for "dumer"
+Warning--I didn't find a database entry for "feldman"
+Warning--I didn't find a database entry for "lowdeg"
+Warning--I didn't find a database entry for "sidenkov"
+Warning--I didn't find a database entry for "roche"
+Warning--I didn't find a database entry for "codingtheory+blog"
+Warning--empty journal in incidence
+Warning--empty year in incidence
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            499 strings with 4046 characters,
-and the built_in function-call counts, 157 in all, are:
-= -- 8
-> -- 1
+            529 strings with 4471 characters,
+and the built_in function-call counts, 712 in all, are:
+= -- 58
+> -- 38
 < -- 0
-+ -- 1
-- -- 0
-* -- 7
-:= -- 20
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 2
++ -- 15
+- -- 12
+* -- 37
+:= -- 126
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 7
-empty$ -- 24
-format.name$ -- 0
-if$ -- 34
+cite$ -- 5
+duplicate$ -- 24
+empty$ -- 62
+format.name$ -- 12
+if$ -- 143
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 6
-num.names$ -- 0
-pop$ -- 8
+int.to.str$ -- 3
+missing$ -- 1
+newline$ -- 15
+num.names$ -- 6
+pop$ -- 28
 preamble$ -- 1
-purify$ -- 2
+purify$ -- 12
 quote$ -- 0
-skip$ -- 12
+skip$ -- 25
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 15
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 1
-while$ -- 0
-width$ -- 2
-write$ -- 6
-(There were 5 error messages)
+type$ -- 12
+warning$ -- 2
+while$ -- 6
+width$ -- 4
+write$ -- 24
+(There was 1 error message)

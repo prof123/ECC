@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2009.8.18)  4 APR 2010 17:09
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2009.8.18)  10 APR 2010 10:54
 entering extended mode
  %&-line parsing enabled.
 **matrices.tex
@@ -409,16 +409,56 @@ Type  H <return>  for immediate help.
 l.23 \newcommand{\rm}{Reed-Muller}
                                   
 ? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.49 
+     
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.49 
+     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \end{equation}
+                   
+? 
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.50 \end{equation}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 \end{equation}
+                   
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.50 \end{equation}
+                   
+? 
 [1
 
-] (./matrices.aux) ) 
+] [2] (./matrices.aux) ) 
 Here is how much of TeX's memory you used:
  7592 strings out of 494734
  133808 string characters out of 1170961
- 191513 words of memory out of 3000000
+ 195513 words of memory out of 3000000
  10673 multiletter control sequences out of 10000+50000
  9854 words of font info for 36 fonts, out of 3000000 for 5000
  188 hyphenation exceptions out of 8191
- 47i,7n,49p,442b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,6n,49p,442b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on matrices.dvi (1 page, 8324 bytes).
+Output written on matrices.dvi (2 pages, 9076 bytes).

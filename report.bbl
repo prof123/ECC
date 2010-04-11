@@ -1,6 +1,15 @@
 \begin{thebibliography}{1}
 
-\bibitem{codingtheory+blog}
+\bibitem{incidence}
+M.K. Behbahani, GB~Khosrovshahi, and B.~Tayfeh-Rezaie.
+\newblock {Reed-Muller Codes and Incidence Matrices}.
 
+\bibitem{sloane}
+N.~Sloane and F.~MacWilliams.
+\newblock {The Theory of Correcting Codes}, 1979.
+
+\bibitem{zuckerman10}
+David Zuckerman.
+\newblock Lecture notes cs295t, lecture 10.
 
 \end{thebibliography}
