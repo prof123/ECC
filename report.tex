@@ -48,18 +48,25 @@ This Seminar Report gives an introduction to the Reed-Muller family of Error Cor
 
 
 \section {Introduction}
-%%swap introduction and the abstract?
-Reed-Muller ($\mathcal{R}$) codes are amongst the oldest and most well-known codes. They were discovered and proposed by D. E. Muller and I. S. Reed in 1954. \cite{reed} \cite{muller}
-Reed-Muller codes have many interesting properties - they can be defined recursively, and are an infinite family of codes.
-Although they become weaker as their length increases, they are often used as building blocks in other codes. One of the major advantages of Reed-Muller codes is their relative simplicity to encode and decode messages. Reed-Muller codes, like many other codes, have tight links to design theory; we briefly investigate the link between Reed-Muller codes and affine geometries.
+
+%% OK
+
+Reed-Muller ($\mathcal{R}$) codes are amongst the oldest and most well-known codes. They were discovered by D. E. Muller and I. S. Reed in 1954. \cite{reed} \cite{muller}
+Reed-Muller codes have many interesting properties - they can be defined recursively, and are an infinite family of codes. The recursive definitions are studied in section ~\ref{recusive}.
+Although they become weaker as their length increases, they are often used as building blocks in other codes. One of the major advantages of Reed-Muller codes is their relative simplicity to encode and decode messages. Several decoding algorithms are presented in \ref{decoding}.  Reed-Muller codes, like many other codes, have tight links to design theory; we briefly investigate the link between Reed-Muller codes and affine geometries in \ref{geometry}.
+Most famously used to transmit live images of mars in the Mariner-9 mission in 1972, ~\cite{space},~\cite{sloane} , they have applications in a wide variety of areas- some of which are presented in ~\ref{applications}.
 
 
 \subsection {Notation}
 \label{notation}
+
+%% OK
+
 $\F _q$ denotes a finite field of order $q$.
 Throughout, unless otherwise explicity stated, $q=2$ and therefore $F=\{0,1\}$, with the addition operation being equivalent to the binary exclusive-or (\emph{xor}), and the multiplication operation being the binary \emph{and}.
 
-A vector field over $\F$,(with the length of the vector being $n$) will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors},chapter 4 of \cite{singa} , but a very basic understanding is sufficient for understanding \rem{} codes.
+A vector field over $\F$,(with the length of the vector being $n$) will be denoted by $F^n$.
+%% For more on vector fields and finite fields, refer to \cite{vectors},chapter 4 of \cite{singa} , but a very basic understanding is sufficient for understanding \rem{} codes.
 
 We use a string of length $n$ with elements in $\F_2$ to write a vector in the vector space $\F_2^n$ . For example, if we have the vector $\mathbf{v} = (1,0,1,1,0,1,0,1) \in \F_2^8$, we simply write $\V{v}$ as $10110101$. 
 
@@ -67,9 +74,9 @@ We shall also deal with boolean functions, and shall denote the boolean \emph{xo
 
 Three parameters of linear error-correcting codes are it's length, dimension, and minimum distance, denoted by the triplet $[n,k,d]$. The elements of a code $C$ are called the \emph{codewords}. Codewords are represented as vectors of length $n$.
 
-The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the \emph{Hamming Distance} which is the number of positions in which 2 vectors differ.
-Analogously, the hamming weight of a vector is defined as:
-
+The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the \emph{Hamming-Distance} which is the number of positions in which 2 vectors differ.
+Analogously, the Hamming weight of a vector is defined as:
+$$ $$
 \begin{equation}
 wt(x) = d(x,0) = \{ 
 \begin{array}{rl} 
@@ -84,9 +91,9 @@ We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x
 \section {Construction of the Code}
 
 The simplest construction of \rem{} codes is by using boolean functions.
-Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $\V{x} \equiv (x_1,x_2,\ldots,x_m)$. Consider a boolean function $f$, $f: \F^{2^m} \rightarrow \{0,1\} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an $m$-tuple and returns either $0$ or $1$ .
+Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $\V{x} \equiv (x_1,x_2,\ldots,x_m)$. Consider a boolean function $f$, $f: \F^{2^m} \rightarrow \{0,1\} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes a binary $m$-tuple and returns either $0$ or $1$ .
 
-$\V{x}$ can take $2^m$ values. For each value of $\V{x}$ we compute $f(\V{x})$. This is the familiar and ubiquitious \emph{truth-table} wherein a boolean function is evaluated for all possible inputs.
+$\V{x}$ can take $2^m$ values. For each value of $\V{x}$ we compute $f(\V{x})$. This is the familiar and ubiquitous \emph{truth-table} wherein a boolean function is evaluated for all possible inputs.
 In the example below, $x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ is computed and represented as another row. 
 \begin {center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -103,51 +110,78 @@ Since $(x_1,x_2,\ldots,x_m)$ can take $2^m$ values, $\V{f}$ is a $n=2^m$ length 
 The Reed-Muller codes are particular subsets of this collection as described below.
 
 $f$ can be written in the disjunctive normal form.
-Using logical operations, $f$ can be represented as a function of the $x_1, x_2, \ldots , x_m$. In the above example, for instance, $f = x_1 \vee x_2 \vee x_3 ... $. We can represent any boolean function in the Disjunctive Normal form (with or replaced by xor) \cite{Problem2}, for instance in the above example $f = $
+Using logical operations, $f$ can be represented as a function of the $x_1, x_2,\ldots , x_m$. In the above example, for instance, $f = x_1 \vee x_2 \vee x_3 ... $. We can represent any boolean function in the disjunctive Normal form (with or replaced by xor) \cite{Problem2}, for instance in the above example $f = $
 
-Define a Boolean Monomial as .
-The monomials are \begin{equation*}
-1,x_1,x_2,
+If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence $\V{f}$ and $x_1,x_2,\ldots \x_m$ have length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
+
+Let the set of boolean monomials be:
+\begin{equation*}
+M = \{1,x_1,x_2,\ldots,x_m,x_1x_2,\ldots,x_{m-1}x_m,x_1x_2x_3,\ldots,x_1x_2\ldots x_m\}
 \end{equation*}
+Where $\V{1}$ is the all ones vector.
+
 There are
 \begin{equation*}
   1+\binom{m}{1}+\binom{m}{2}+\ldots+\binom{m}{m} = 2^m 
 \end{equation*}
 distinct monomials. 
-The degree of the boolean monomial is ...
 
 A Boolean polynomial is a linear combination (with coefficients in $F_2$) of boolean monomials. The degree of the boolean polynomial is the degree of the its highest term (monomial).
+\begin{equation*}
+  f = 1 + a_1x_1+a_2x_2+\ldots+a_mx_m + a_{12}x_1x_2+\ldots+a_{12\ldots r}x_1x_2\ldots x_r+\ldots
+\end{equation*}
 
-Therefore, the polynomials (we will drop the term boolean from here on) of degree $1$ are of the form:
+
+The polynomials (we will drop the term boolean from here on) of degree $1$ are simply the linear combination of $m$ vectors.
 \begin{equation}
- 1+a_1x_1+a_2_x2+\ldots+a_nx_n
+ \V{1}+a_1x_1+a_2x_2+\ldots+a_mx_m
 \end{equation}
-The above simply represents a linear combination of $m$ vectors.
+The above 
 
 With this, we can now define \rem{} codes of length $m$ and order $r$  as :
 \begin{equation}
 \RM{r}{m} = \{\V{f} : degree(f(x_1,\ldots,x_m)) = r \} 
 \end{equation}
-<this is not clear>
 
-Since there are $\binom{m}{r}$ monomials of degree $r$, the number of 
-The boolean monomials are \begin{equation*}
-1,v_1,v_2,\ldots,v_m,v_1v_2,v_1v_3,\ldots,v_1v_m,ldots,v_1v_2..v_m
-\end{equations}
-Thus there are \begin{equation*}
-1+\binom{m}{1}+ldots+\binom{m}{m} = 2^m 
-\end{equation*} boolean monomials.
 
-We can write the generator matrix such that the columns are the binary representations of the numbers from $0$ to $2^m -1$.
+\begin{lemma}
+  $\RM{r}{m}$ is a linear code.
+  \begin{proof}
+As defined, $\RM{r}{m}$ is a linear combination of the monomials of degree $\leq r$. 
+The vectors $x_1,x_2,\ldots,x_m$ are clearly linearly independent.
+Monomials of higher degree are composed by component-wise multiplication of the above vectors, and hence are also linearly independent.
+Thus the boolean monomial set $M$ consists of linearly independent vectors, and thus any subset of that is also independent. 
+  \end{proof}
+\end{lemma}
 
-If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence vector $\V{f}$ has length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
+From the above proof:
+The monomials of degree $\leq r$ thus form a basis for $\RM{r}{m}$
+
+Let $G(r,m)$ denote the \emph{Generator Matrix} of $\RM{r}{m}$. It consists of all the monomials from set $M$ of degree $\leq r$.
+\begin{equation}
+  \label{eq:5}
+  G(r,m) =
+  \begin{pmatrix}
+    \V{1} \\
+    \V{x_1} \\
+    \V{x_2} \\
+    \vdots \\
+    \V{x_m} \\
+    \V{x_1x_2} \\
+    \vdots \\
+    \V{x_1x_2\ldots x_r}
+  \end{pmatrix}
+\end{equation}
+
+$\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
+
 
 \subsection{clarification}
 
 In what follows, we frequently switch back and forth between 
 B(r, {v1 , . . . , vm}) 
 and 
-R(r, m). Doing so in the most explicit manner would make the reasonings a 
+R(r, m). Doing so in the most explicit manner would make the reasoning a 
 lot harder to read, and for this reason we decided to treat codewords and Boolean 
 functions as interchangeable.
 In fact, boolean logic using xor is also called reed-muller logic! \cite{rmlogic}
@@ -161,20 +195,22 @@ The rate of an $[n, k]$ code is deﬁned as $k/n$.
 (Thinking of the code as having $n − k$ check digits and $k$ message 
 digits.
 
-\subsection{Other interpretations}
-
-Set theory definition can also be used to define the codes. See \cite{incidence}
-
-The natural polynomial ring definition is standard but the boolean logic one is easier to understand.
 
 \subsection{Code properties}
+\label{properies}
 
-We have seen that the first order Reed-Muller code $\RM{1}{m}$ consists of all vectors $u_01 + \sum_{i=1}^m{u_i\V{v_i}} $ with $u_i=$ $0$ or $1$. 
-Define the \emph{orthogonal code} $\mathcal{0}_m$ to be the $[2m, m, 2m−1 ]$ code consisting of the vectors $ \sum_{i=1}^m{u_i\V{v_i}} $
+We have seen that the first order Reed-Muller code $\RM{1}{m}$ consists of all vectors $u_0\V{1} + \sum_{i=1}^m{u_i\V{v_i}} $ with $u_i=$ $0$ or $1$. 
+Define the \emph{orthogonal code} $\mathcal{0}_m$ to be the $[2m, m, 2m−1]$ code consisting of the vectors $ \sum_{i=1}^m{u_i\V{v_i}} $
 Then
-\begin{equation*}
+\begin{theorem}
+  \begin{equation*}
   \RM{1}{m} = \mathcal{O}_m \union (\V{1} + \mathcal{O}_m) 
 \end{equation*}
+\begin{proof}
+  The definition of the orthogonal codes is exactly similar to the corresponding \rem{} codes, with only the complements of the codewords missing. 
+\end{proof}
+\end{theorem}
+
  
 \begin{theorem}
   Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem{} code.
@@ -191,7 +227,9 @@ Run-length properties at \cite{syncro}
 \begin{thm}
 $\RM{r+1}{m+1} =  \{ \V{u} | \V{u}+\V{v} : \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m} \}$
 
+
 This is known as the concatenation construction of codes, with $|$ denoting the concatenation.
+
 \begin{proof} We use the boolean logic definition of the codewords.
 Let $\V{f} \in \RM{r+1}{m+1}$.  $\V{f}$ can be written as \begin{equation*}
 f(v_1,v_2,\ldots,v_{m+1}) = g(v_1,v_2,\ldots,v_m)+v_{m+1}h((v_1,v_2,\ldots,v_{m})
@@ -202,7 +240,7 @@ Thus
 \begin{equation*}
   \V{f} = \V{g}|\V{g} + \V{0}|\V{h}
 \end{equation*}
-
+Thus we have shown that the vector in $\RM{r+1}{m+1}$ can be decomposed into vectors of $\RM{r+1}{m}$ and $\RM{r}{m}$.
 \end{proof}
 
 \end{thm}
@@ -215,26 +253,18 @@ G(r+1,m) & G(r+1,m) \\
 \end{pmatrix}
 \end{equation}
 
-Because of the systematic way the basis vectors are chosen, \begin{equation}
+We can also choose the vectors of the generator matrix in a systematic way \begin{equation}
 G(1,m+1) = \begin{pmatrix}
 G(1,m) & G(1,m) \\
 0 & 1
 \end{pmatrix}
 \end{equation}
+This way, the columns of $G(1,m)$ are binary representations of numbers from $1 to 2*^m$ in descending order.
 
 
-Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
 
-\begin{thm}
-Minimum distance, $d=2^{m-r}$
-\begin{proof}
-Proof:...
-\end{proof}
-\end{thm}
 
-$\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
-
-Another recursive construction
+Another recursive construction:
 Let 
 \begin{equation*}
 R_1 = \begin{pmatrix}
@@ -253,6 +283,10 @@ R_n & neg R_n
 
 
 \subsection{Properties}
+\label{properties}
+
+Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
+
 
 The \rem{} codes are a nested family of codes - the codes of higher order contain those of the lower order.
 \begin{thm}
@@ -283,23 +317,7 @@ Induction hypothesis gives :
   dim(\RM{r}{m}) = dim(\RM{r}{m-1}) + dim(\RM{r-1}{m-1})
 \end{equation}
 
-\begin{thm}
-  \begin{equation}
-    \label{eq:2}
-    
-  \end{equation}
-\end{thm}
 
-
-\begin{thm}
-$\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
-\begin{proof}
-
-We induct on $r$. Let $0 \leq i \leq r$.
-Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
-
-\end{proof}
-\end{thm}
 
 
 \begin{thm}
@@ -313,6 +331,7 @@ Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
 
 We prove a general theorem
 \begin{thm}
+\label{general}
 Let $C_i$ be an $[n,k_i,d_i]$ code. Then the concatenated code defined by
 
   \begin{equation*}
@@ -349,14 +368,27 @@ Thus, the minimum distance of the code, which is equal to the weight of the mini
 \end{thm}
 
 
+
+\begin{thm}
+Minimum distance, $d=2^{m-r}$
+\begin{proof}
+ Let $\V{f} \in \RM{r+1}{m}$ and $\V{g} \in \RM{r}{m}$. By theorem ~\ref{concat} .
+Let $d_1 = 2^{m-r-1}$ and $d_2 = 2^{m-r}$. 
+By ~\ref{general}, $d = min\{2d_1,d_2\} = 2^{m-r}$. 
+
+The standard proof of this by induction is found everywhere - see \cite{sloane}, \cite{pless}.
+\end{proof}
+\end{thm}
+
+
 \begin{lem}
 Every codeword in $\RM{1}{m}$ (except $\V{1}, \V{0}$) has weight $2^{m-1}$
 \begin{proof}
 This can also be proved by using the randomization lemma for boolean functions as done in \cite{sloane}. However, if we notice that
 \begin{equation*}
-  \RM{1}{m} = \{(u,u) : u \in \RM{1}{m-1} \} \union \{(u,\vec{1}+u) : u \in \RM{1}{m-1} \} 
+  \RM{1}{m} = \{\V{u}|\V{u} : \V{u} \in \RM{1}{m-1} \} \union \{(\V{u},\vec{1}+\V{u}) , \V{u} \in \RM{1}{m-1} \} 
 \end{equation*}
-We use induction on $m$ and are done.
+We use induction on $m$ to complete the proof.
 \end{proof}
 \end{lem}
 
@@ -386,17 +418,52 @@ The dual code $\RM{1}{m}^{\bot}$ is the extended binary Hamming code $H(m)$
 
 
 \section{Bounds}
+$A_q(n, d)$ is the largest integer $M$ such that there exists a $q$-ary $(n, M, d)$ code where $M$ is the number of codewords. A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
 
-$A_q(n, d)$ is the largest integer $M$ such that there exists a 
-$q$-ary $(n, M, d)$ code.
-A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
+The \rem{} codes satisfy the \emph{Plotkin bound}.
 
-The plotkin bound shows that the codes are all optimal.
+\begin{theorem}[Plotkin Bound]
+    If $C = [n,k,d]$ code, \begin{equation*}
+d \leq \frac{n2^{k-1}}{2^k - 1}
+\end{equation*}
+  \begin{proof}
+Counting in two ways:
+\begin{equation*}
+  D = \sum_{\V{u} \in C}{ \sum_{\V{v} \in C} {d(u,v)}
+\end{equation*}
+Since $d(u,v) \geq d$, $D \geq 2^k(2^k-1)d$. 
+
+Let $D_{1i}$ denote the number of codewords with a $1$ in their $i$-th component.
+\begin{equation*}
+  D = \sum_{i \in n}{\sum_{j=\{0,1\}} {D_{ji}(2^k-D_{ji})}}
+\end{equation*}
+
+Since $\sum{D_{ji}} = 2^k $, we have:
+\begin{equation*}
+  D = n2^{2k} - \sum_{i \in n}{\sum_{j=\{0,1\}} {D_{ji}^2}}
+\end{equation*}
+
+\begin{equation*}
+  \sum_{j=0,1}{D_{ji}^2} \geq 2^{2k-1}, \qquad i \in n
+\end{equation*}
+Combining the upper and the lower bounds, we obtain:
+\begin{equation*}
+  2^k(2^k-1)d \leq D \leq n2^
+\end{equation*}
+
+  \end{proof}
+\end{theorem}
+
+It can be verified that $\RM{1}{m}$ codes satisfy this bound. This can also be shown by using the fact proved in \ref{equidistant} that $\RM{1}{m}$ are equidistant codes, and using that result in the proof of the plotkin bound.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section {Weight distribution}
 
-Stated without proof
+For the codes of order $r\geq2$, determining the complete weight distribution is hard. (impossible).
+For $r=1$, as shown \ref{r1m}, the weight of all words is $2^{m-1}$.
+
+Considerable work has been done to establish the distribution for $\RM{2}{m}$. We state the classic results (for proofs see \cite{sloane}) : 
+
 \cite{kasami+tokura}
 \begin{equation}
   \label{eq:4}
@@ -426,13 +493,13 @@ Several very efficient algorithms have been known specially for the \rem{} codes
 
 Majority Logic Decoding is the oldest and simplest method to decode the \rem{} codes. \cite{assmus}
 Some terminology is needed for a clearer understanding:
-Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{\bot}$. 
-Define the \emph{support vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
+Let $C$ be an arbitrary code. Then the \emph{parity-check} is simply a codeword in the orthogonal code $C^{\bot}$. 
+Define the \emph{support-vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
 Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $i$. The $J$ parity checks essentially 'vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
-A collection of such parity checks described above is said to be \emph{orthogonal} to $i$. If each of the coordinates of the code has a collection of $J$ parity checks orthogonal to it, then the code is capable of correcting upto $J/2$  errors.
+A collection of such parity checks described above is said to be \emph{orthogonal} to $i$. If each of the coordinates of the code has a collection of $J$ parity checks orthogonal to it, then the code is capable of correcting up-to $J/2$  errors.
 What are the conditions under which a code satisfies this?
 Another definition of orthogonality is: A set of parity check equations is called orthogonal on the $i$ coordinate if $x_i$ appears in each equation and no other $x_j$ appears more than once in the set.
-Clearly, the minimum weight must be atleast $J+1$, because the 
+Clearly, the minimum weight must be at least $J+1$, because the 
 
 \begin{Theorem} 
 If there are $J$ parity checks on every co-ordinate, the code can correct $J/2$ errors.
@@ -503,7 +570,7 @@ The Reed decoding algorithm is a majority logic decoding scheme for decoding \re
 
 Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in 
 , in which the nonzero coordinates of the codeword are points lying in the 
-subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the kth order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
+subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the $k$-th order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
 
 Let the corresponding subspace be $S$.
 Let $T$ be the complementary subspace of $S$ where $j_1j_2\ldotsj_{m-k} = {1,2,ldots,m}-{i_1,i_2,\ldots,i_k}.$ The incidence vector of $T$ is v. <todo>
@@ -564,15 +631,10 @@ This is the fastest classical decoding technique and was employed in the \emph{G
 
 \subsection {List Decoding}
 
-A list decoding procedure for a code $C$ is a function which for given a $\V{u} \in F_q^n$ and $e > 0$ outputs all $v \elem C$ such that $\d(u,v) \leq e$. Alternately, given a decoding radius $T$, it should produce a list (set) of codewords which are distance less than T. List decoding is an old technique given by P.Elias in 1950 \cite{elias}, but has recently found significant attention.
+A list decoding procedure for a code $C$ is a function which for given a $\V{u} \in F_q^n$ and $e > 0$ outputs all $v \elem C$ such that $\d(u,v) \leq e$. Alternately, given a decoding radius $T$, it should produce a list (set) of codewords which are distance less than $T$. List decoding is an old technique given by P.Elias in 1950 \cite{elias}, but has recently found significant attention.
 
-The existance of a good, fast list decoding algorithm for the first order \rem{} codes was given by goldreich and levin \cite{goldreich}, \cite{sudan}. However they do not give a usable algorithm. Recently, Kabatiansky, Dumer and Tavernier \cite{kabatiansky}, \cite{dumer} have presented a simple list decoding algorithm for $\RM{1}{m}$ capable of correcting $n(\frac{1}{2} - \epsilon)$ errors in $O(n \epsilon^3)$. This is significantly better than the $\frac{n}{4}$ correcting capability of the Hadamard transform \ref{}, which uses $O(nlogn)$ time.
+The existence of a good, fast list decoding algorithm for the first order \rem{} codes was given by goldreich and levin \cite{goldreich}, \cite{sudan}. However they do not give a usable algorithm. Recently, Kabatiansky, Dumer and Tavernier \cite{kabatiansky}, \cite{dumer} have presented a simple list decoding algorithm for $\RM{1}{m}$ capable of correcting $n(\frac{1}{2} - \epsilon)$ errors in $O(n \epsilon^3)$. This is significantly better than the $\frac{n}{4}$ correcting capability of the Hadamard transform \ref{}, which uses $O(nlogn)$ time.
 
-Let $\V{y}$ be a received vector and $L_{\epsilon}(y) = 
-\{f \in \RM{1}{m} : d(\V{y}, \V{f} ) \leq n(\frac{1}{2} - \epsilon) \} $
- be the desired list. The algorithm works recursively by ﬁnding on the $i$-th step a list $L_\epsilon^i (y)$ of `candidates' which should (but may not) coincide with $i$-preﬁx of some $f(x1 , ..., xm) = f0 + f1 x1 + . . . + fmxm ∈ Lϵ (y)$ 
-
-The main idea is to approximate the Hamming distance between the received vector y and an arbitrary ``propagation'' of a candidate $c(i) (x1 , . . . , xm) = c1 x1 + . . . + ci xi$ by the sum of Hamming distances over all $i$-dimensional ``facets'' of the $m$-dimensional Boolean cube.
 
 The algorithm  
 
@@ -588,32 +650,50 @@ Proof:
 
 \subsection {RM(1,m) decoding algorithm}
 
-kabatiansky
+Let $\V{y}$ be a received vector and $L_{\epsilon}(y) = \{f \in \RM{1}{m} : d(\V{y}, \V{f} ) \leq n(\frac{1}{2} - \epsilon) \} $ be the desired list. The algorithm works recursively by ﬁnding on the $i$-th step a list $L_\epsilon^i (y)$ of `candidates' which should (but may not) coincide with $i$-preﬁx of some $f(x1 , ..., xm) = f0 + f1x1 + . . . + fmxm ∈ Lϵ (y)$ 
 
+The main idea is to approximate the Hamming distance between the received vector y and an arbitrary ``propagation'' of a candidate $c(i) (x1 , . . . , xm) = c1 x1 + . . . + ci xi$ by the sum of Hamming distances over all $i$-dimensional ``facets'' of the $m$-dimensional Boolean cube.
+
+
+
+\subsection{Other decoding algorithms}
+Besides the algorithms presented above, there exists a large number of algorithms. 
+Majority logic algorithms are:
+Some run in $O(n)$ time. There are hard and soft decision algorithms as well.
 
 \section{Generalized \rm codes}
 
 \section {Applications}
+\label{applications}
 
+
+The \rem{} codes typically find application in communication and complexity theory. In this section a few representative examples are presented. 
 \subsection{Communication}
 
-The oldest and original use. \rem{} codes were used in the 1969 Mariner-9 deep space probe to the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) \cite{feldman}.         
+The oldest and original use. \rem{} codes were used in the 1969 Mariner-9 deep space probe to the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) ~\cite{feldman}.         
 
-\subsection{Tesing Low-degree polynomials}
+\subsection{Testing Low-degree polynomials}
 
-\cite{lowdeg} 
-Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem{} codes, and the properties are used to prove the bounds on the number of queries needed.
+~\cite{lowdeg} 
+
+Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem{} codes, and the properties are used to prove the bounds on the number of queries needed. 
 
 \subsection{Sidenkov cryptanalysis}
 
-\cite{sidenkov} A variant of the McEliece cryptosystem using \rem{} codes instead of Goppa codes , called the Sidenkov system, because of the efficient decoding.
-A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code. The uniqueness result proved earlier is a central feature in the cryptographic attack.
+The Sidenkov public-key system, (a variant of the McEliece cryptosystem) uses \rem{} codes instead of Goppa codes because of the efficient decoding ~\cite{sidenkov}.
+A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code ~\cite{attack}. The uniqueness result proved earlier is a central feature in the cryptographic attack.
 
 \subsection{Side Channel attacks}
 
-\cite{roche}
+~\cite{roche}
 
 ~\cite{codingtheory+blog}
+
+\subsection{Other Applications}
+~\cite{snakes} , ~\cite{OFDM}, ~\cite{}. 
+
+\section{Conclusion}
+
 \section {References}
 
 \bibliographystyle{plain}      
