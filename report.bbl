@@ -1,8 +1,35 @@
 \begin{thebibliography}{1}
 
+\bibitem{assmus}
+EF~Assmus and JD~Key.
+\newblock {\em {Designs and their Codes}}.
+\newblock Cambridge Univ Pr, 1994.
+
 \bibitem{incidence}
 M.K. Behbahani, GB~Khosrovshahi, and B.~Tayfeh-Rezaie.
 \newblock {Reed-Muller Codes and Incidence Matrices}.
+
+\bibitem{dumer}
+I.~Dumer, G.~Kabatiansky, C.~Tavernier, and F.~Le~Plessis~Robinson.
+\newblock {On complexity of decoding Reed-Muller codes within their code
+  distance}.
+\newblock In {\em Proc. Eleventh International Workshop on Algebraic and
+  Combinatorial Coding Theory}, pages 82--85, 2008.
+
+\bibitem{feldman}
+Matteo~Frigo Jon~Feldman, Ibrahim Abou-Faycal.
+\newblock A noise-adaptive algorithm for first-order reed-muller decoding.
+
+\bibitem{kabatiansky}
+G.~Kabatiansky and C.~Tavernier.
+\newblock {List decoding of first order Reed-Muller codes II}.
+\newblock In {\em Tenth International Workshop on Algebraic and Combinatorial
+  Coding Theory, ACCT}, pages 131--134, 2006.
+
+\bibitem{kasami+tokura}
+T.~Kasami and N.~Tokura.
+\newblock {On the weight structure of Reed-Muller codes}.
+\newblock {\em IEEE Transactions on Information Theory}, 16(6):752--759, 1970.
 
 \bibitem{sloane}
 N.~Sloane and F.~MacWilliams.

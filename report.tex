@@ -59,7 +59,7 @@ Although they become weaker as their length increases, they are often used as bu
 $\F _q$ denotes a finite field of order $q$.
 Throughout, unless otherwise explicity stated, $q=2$ and therefore $F=\{0,1\}$, with the addition operation being equivalent to the binary exclusive-or (\emph{xor}), and the multiplication operation being the binary \emph{and}.
 
-A vector field over $\F$,(with the length of the vector being $n$) will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors},chapter 4 of \cite{singa} , but a very basic understanding is sufficient for understanding \rem codes.
+A vector field over $\F$,(with the length of the vector being $n$) will be denoted by $F^n$. For more on vector fields and finite fields, refer to \cite{vectors},chapter 4 of \cite{singa} , but a very basic understanding is sufficient for understanding \rem{} codes.
 
 We use a string of length $n$ with elements in $\F_2$ to write a vector in the vector space $\F_2^n$ . For example, if we have the vector $\mathbf{v} = (1,0,1,1,0,1,0,1) \in \F_2^8$, we simply write $\V{v}$ as $10110101$. 
 
@@ -83,7 +83,7 @@ We will use $d(x,y) = wt(x-y)$ and $wt(x+y) = wt(x) + wt(y) -2wt(x*y)$, where $x
 
 \section {Construction of the Code}
 
-The simplest construction of \rem codes is by using boolean functions.
+The simplest construction of \rem{} codes is by using boolean functions.
 Let $(x_1,x_2,\ldots,x_m) \in \F^m$ be the set of binary m-tuples, and let $\V{x} \equiv (x_1,x_2,\ldots,x_m)$. Consider a boolean function $f$, $f: \F^{2^m} \rightarrow \{0,1\} $ . Thus $f(\V{x}) = f(x_1,x_2,\ldots,x_m)$ takes an $m$-tuple and returns either $0$ or $1$ .
 
 $\V{x}$ can take $2^m$ values. For each value of $\V{x}$ we compute $f(\V{x})$. This is the familiar and ubiquitious \emph{truth-table} wherein a boolean function is evaluated for all possible inputs.
@@ -124,7 +124,7 @@ Therefore, the polynomials (we will drop the term boolean from here on) of degre
 \end{equation}
 The above simply represents a linear combination of $m$ vectors.
 
-With this, we can now define \rem codes of length $m$ and order $r$  as :
+With this, we can now define \rem{} codes of length $m$ and order $r$  as :
 \begin{equation}
 \RM{r}{m} = \{\V{f} : degree(f(x_1,\ldots,x_m)) = r \} 
 \end{equation}
@@ -177,7 +177,7 @@ Then
 \end{equation*}
  
 \begin{theorem}
-  Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem code.
+  Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem{} code.
 \begin{proof}[from \cite{uniq}]
   
 \end{proof}
@@ -254,7 +254,7 @@ R_n & neg R_n
 
 \subsection{Properties}
 
-The \rem codes are a nested family of codes - the codes of higher order contain those of the lower order.
+The \rem{} codes are a nested family of codes - the codes of higher order contain those of the lower order.
 \begin{thm}
 \begin{equation*}
 \RM{r}{m} \subset \RM{t}{m} 
@@ -420,11 +420,11 @@ shifting received code words, until all n positions have been tried.
 \section {Decoding}
 
 As mentioned earlier, the RM family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
-Several very efficient algorithms have been known specially for the \rem codes of the first order. 
+Several very efficient algorithms have been known specially for the \rem{} codes of the first order. 
 
 \subsection {Majority Logic Decoding}
 
-Majority Logic Decoding is the oldest and simplest method to decode the \rem codes. \cite{assmus}
+Majority Logic Decoding is the oldest and simplest method to decode the \rem{} codes. \cite{assmus}
 Some terminology is needed for a clearer understanding:
 Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{\bot}$. 
 Define the \emph{support vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
@@ -499,7 +499,7 @@ J \leq 2n/d' -1
 
 \subsection {Reed Decoding Algorithm}
 
-The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem codes of any order.
+The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem{} codes of any order.
 
 Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in 
 , in which the nonzero coordinates of the codeword are points lying in the 
@@ -566,7 +566,7 @@ This is the fastest classical decoding technique and was employed in the \emph{G
 
 A list decoding procedure for a code $C$ is a function which for given a $\V{u} \in F_q^n$ and $e > 0$ outputs all $v \elem C$ such that $\d(u,v) \leq e$. Alternately, given a decoding radius $T$, it should produce a list (set) of codewords which are distance less than T. List decoding is an old technique given by P.Elias in 1950 \cite{elias}, but has recently found significant attention.
 
-The existance of a good, fast list decoding algorithm for the first order \rem codes was given by goldreich and levin \cite{goldreich}, \cite{sudan}. However they do not give a usable algorithm. Recently, Kabatiansky, Dumer and Tavernier \cite{kabatiansky}, \cite{dumer} have presented a simple list decoding algorithm for $\RM{1}{m}$ capable of correcting $n(\frac{1}{2} - \epsilon)$ errors in $O(n \epsilon^3)$. This is significantly better than the $\frac{n}{4}$ correcting capability of the Hadamard transform \ref{}, which uses $O(nlogn)$ time.
+The existance of a good, fast list decoding algorithm for the first order \rem{} codes was given by goldreich and levin \cite{goldreich}, \cite{sudan}. However they do not give a usable algorithm. Recently, Kabatiansky, Dumer and Tavernier \cite{kabatiansky}, \cite{dumer} have presented a simple list decoding algorithm for $\RM{1}{m}$ capable of correcting $n(\frac{1}{2} - \epsilon)$ errors in $O(n \epsilon^3)$. This is significantly better than the $\frac{n}{4}$ correcting capability of the Hadamard transform \ref{}, which uses $O(nlogn)$ time.
 
 Let $\V{y}$ be a received vector and $L_{\epsilon}(y) = 
 \{f \in \RM{1}{m} : d(\V{y}, \V{f} ) \leq n(\frac{1}{2} - \epsilon) \} $
@@ -597,17 +597,17 @@ kabatiansky
 
 \subsection{Communication}
 
-The oldest and original use. \rem codes were used in the 1969 Mariner-9 deep space probe to the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) \cite{feldman}.         
+The oldest and original use. \rem{} codes were used in the 1969 Mariner-9 deep space probe to the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) \cite{feldman}.         
 
 \subsection{Tesing Low-degree polynomials}
 
 \cite{lowdeg} 
-Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem codes, and the properties are used to prove the bounds on the number of queries needed.
+Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem{} codes, and the properties are used to prove the bounds on the number of queries needed.
 
 \subsection{Sidenkov cryptanalysis}
 
-\cite{sidenkov} A variant of the McEliece cryptosystem using \rem codes instead of Goppa codes , called the Sidenkov system, because of the efficient decoding.
-A cryptanalysis attack also uses the properties of \rem codes to break the cryptographic code. The uniqueness result proved earlier is a central feature in the cryptographic attack.
+\cite{sidenkov} A variant of the McEliece cryptosystem using \rem{} codes instead of Goppa codes , called the Sidenkov system, because of the efficient decoding.
+A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code. The uniqueness result proved earlier is a central feature in the cryptographic attack.
 
 \subsection{Side Channel attacks}
 
