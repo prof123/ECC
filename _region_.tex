@@ -79,7 +79,7 @@ Three parameters of linear error-correcting codes are it's length, dimension, an
 
 The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned about is the \emph{Hamming-Distance} which is the number of positions in which 2 vectors differ.
 Analogously, the Hamming weight of a vector is defined as:
-
+$$ $$
 \begin{equation}
 wt(x) = d(x,0) = \{ 
 \begin{array}{rl} 
@@ -115,48 +115,69 @@ The Reed-Muller codes are particular subsets of this collection as described bel
 $f$ can be written in the disjunctive normal form.
 Using logical operations, $f$ can be represented as a function of the $x_1, x_2,\ldots , x_m$. In the above example, for instance, $f = x_1 \vee x_2 \vee x_3 ... $. We can represent any boolean function in the disjunctive Normal form (with or replaced by xor) \cite{Problem2}, for instance in the above example $f = $
 
-Let the set of monomial functions be:
-The monomials are \begin{equation*}
+If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence $\V{f}$ and $x_1,x_2,\ldots \x_m$ have length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
+
+Let the set of boolean monomials be:
+\begin{equation*}
 M = \{1,x_1,x_2,\ldots,x_m,x_1x_2,\ldots,x_{m-1}x_m,x_1x_2x_3,\ldots,x_1x_2\ldots x_m\}
 \end{equation*}
-These functions are linearly independent. A boolean function in $m$ variables and of degree $r$ can be written as
-\begin{equation*}
-  f = 1 + a_1x_1+a_2x_2+\ldots+a_mx_m + a_{12}x_1x_2+\ldots+a_{12\ldots r}x_1x_2\ldots x_r+\ldots
-\end{equation*}
-where each monomial is of degree atmost $r$.
+Where $\V{1}$ is the all ones vector.
 
 There are
 \begin{equation*}
   1+\binom{m}{1}+\binom{m}{2}+\ldots+\binom{m}{m} = 2^m 
 \end{equation*}
 distinct monomials. 
-The degree of the boolean monomial is ...
 
 A Boolean polynomial is a linear combination (with coefficients in $F_2$) of boolean monomials. The degree of the boolean polynomial is the degree of the its highest term (monomial).
+\begin{equation*}
+  f = 1 + a_1x_1+a_2x_2+\ldots+a_mx_m + a_{12}x_1x_2+\ldots+a_{12\ldots r}x_1x_2\ldots x_r+\ldots
+\end{equation*}
 
-Therefore, the polynomials (we will drop the term boolean from here on) of degree $1$ are of the form:
+
+The polynomials (we will drop the term boolean from here on) of degree $1$ are simply the linear combination of $m$ vectors.
 \begin{equation}
- 1+a_1x_1+a_2_x2+\ldots+a_nx_n
+ \V{1}+a_1x_1+a_2x_2+\ldots+a_mx_m
 \end{equation}
-The above simply represents a linear combination of $m$ vectors.
+The above 
 
 With this, we can now define \rem{} codes of length $m$ and order $r$  as :
 \begin{equation}
 \RM{r}{m} = \{\V{f} : degree(f(x_1,\ldots,x_m)) = r \} 
 \end{equation}
-<this is not clear>
 
-Since there are $\binom{m}{r}$ monomials of degree $r$, the number of 
-The boolean monomials are \begin{equation*}
-1,v_1,v_2,\ldots,v_m,v_1v_2,v_1v_3,\ldots,v_1v_m,ldots,v_1v_2..v_m
-\end{equations}
-Thus there are \begin{equation*}
-1+\binom{m}{1}+ldots+\binom{m}{m} = 2^m 
-\end{equation*} boolean monomials.
 
-We can write the generator matrix such that the columns are the binary representations of the numbers from $0$ to $2^m -1$. 
+\begin{lemma}
+  $\RM{r}{m}$ is a linear code.
+  \begin{proof}
+As defined, $\RM{r}{m}$ is a linear combination of the monomials of degree $\leq r$. 
+The vectors $x_1,x_2,\ldots,x_m$ are clearly linearly independent.
+Monomials of higher degree are composed by component-wise multiplication of the above vectors, and hence are also linearly independent.
+Thus the boolean monomial set $M$ consists of linearly independent vectors, and thus any subset of that is also independent. 
+  \end{proof}
+\end{lemma}
 
-If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence vector $\V{f}$ has length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
+From the above proof:
+The monomials of degree $\leq r$ thus form a basis for $\RM{r}{m}$
+
+Let $G(r,m)$ denote the \emph{Generator Matrix} of $\RM{r}{m}$. It consists of all the monomials from set $M$ of degree $\leq r$.
+\begin{equation}
+  \label{eq:5}
+  G(r,m) =
+  \begin{pmatrix}
+    \V{1} \\
+    \V{x_1} \\
+    \V{x_2} \\
+    \vdots \\
+    \V{x_m} \\
+    \V{x_1x_2} \\
+    \vdots \\
+    \V{x_1x_2\ldots x_r}
+  \end{pmatrix}
+\end{equation}
+
+$\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
+
 
 \subsection{clarification}
 
@@ -180,12 +201,19 @@ digits.
 
 \subsection{Code properties}
 \label{properies}
+
 We have seen that the first order Reed-Muller code $\RM{1}{m}$ consists of all vectors $u_0\V{1} + \sum_{i=1}^m{u_i\V{v_i}} $ with $u_i=$ $0$ or $1$. 
 Define the \emph{orthogonal code} $\mathcal{0}_m$ to be the $[2m, m, 2m−1]$ code consisting of the vectors $ \sum_{i=1}^m{u_i\V{v_i}} $
 Then
-\begin{equation*}
+\begin{theorem}
+  \begin{equation*}
   \RM{1}{m} = \mathcal{O}_m \union (\V{1} + \mathcal{O}_m) 
 \end{equation*}
+\begin{proof}
+  The definition of the orthogonal codes is exactly similar to the corresponding \rem{} codes, with only the complements of the codewords missing. 
+\end{proof}
+\end{theorem}
+
  
 \begin{theorem}
   Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem{} code.
@@ -215,7 +243,7 @@ Thus
 \begin{equation*}
   \V{f} = \V{g}|\V{g} + \V{0}|\V{h}
 \end{equation*}
-Which is exactly what we set out to prove.
+Thus we have shown that the vector in $\RM{r+1}{m+1}$ can be decomposed into vectors of $\RM{r+1}{m}$ and $\RM{r}{m}$.
 \end{proof}
 
 \end{thm}
@@ -228,26 +256,18 @@ G(r+1,m) & G(r+1,m) \\
 \end{pmatrix}
 \end{equation}
 
-Because of the systematic way the basis vectors are chosen, \begin{equation}
+We can also choose the vectors of the generator matrix in a systematic way \begin{equation}
 G(1,m+1) = \begin{pmatrix}
 G(1,m) & G(1,m) \\
 0 & 1
 \end{pmatrix}
 \end{equation}
+This way, the columns of $G(1,m)$ are binary representations of numbers from $1 to 2*^m$ in descending order.
 
 
-Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
 
-\begin{thm}
-Minimum distance, $d=2^{m-r}$
-\begin{proof}
-Proof:...
-\end{proof}
-\end{thm}
 
-$\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
-
-Another recursive construction
+Another recursive construction:
 Let 
 \begin{equation*}
 R_1 = \begin{pmatrix}
@@ -266,6 +286,10 @@ R_n & neg R_n
 
 
 \subsection{Properties}
+\label{properties}
+
+Recursive definition naturally is very helpful for proving certain properties, particularly since it enables the use of induction.
+
 
 The \rem{} codes are a nested family of codes - the codes of higher order contain those of the lower order.
 \begin{thm}
@@ -296,23 +320,7 @@ Induction hypothesis gives :
   dim(\RM{r}{m}) = dim(\RM{r}{m-1}) + dim(\RM{r-1}{m-1})
 \end{equation}
 
-\begin{thm}
-  \begin{equation}
-    \label{eq:2}
-    
-  \end{equation}
-\end{thm}
 
-
-\begin{thm}
-$\RM{m-r-1}{m}$ is the dual code of $\RM{r}{m}$
-\begin{proof}
-
-We induct on $r$. Let $0 \leq i \leq r$.
-Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
-
-\end{proof}
-\end{thm}
 
 
 \begin{thm}
@@ -326,6 +334,7 @@ Inductively, assume that $\RM{i}{m-1}^{\bot} = \RM{m-i-2}{m-1} $
 
 We prove a general theorem
 \begin{thm}
+\label{general}
 Let $C_i$ be an $[n,k_i,d_i]$ code. Then the concatenated code defined by
 
   \begin{equation*}
@@ -345,7 +354,7 @@ because $(c_1,c_2) \rightarrow (c_1,c_1+c_2) $ is a bijection. Thus, the dimensi
 \emph{Distance: } We can split this into cases, depending on whether $c_1=\V{0}$ or $c_2=\V{0}$. 
 
 \emph{Case: \V{c_2} = \V{0}}
-\begin{equation*}n
+\begin{equation*}
   wt((c_1,c_1+c_2)) = wt(c_1,c_1) = 2wt(c_1) = 2d_1
 \end{equation*}
 
@@ -362,14 +371,27 @@ Thus, the minimum distance of the code, which is equal to the weight of the mini
 \end{thm}
 
 
+
+\begin{thm}
+Minimum distance, $d=2^{m-r}$
+\begin{proof}
+ Let $\V{f} \in \RM{r+1}{m}$ and $\V{g} \in \RM{r}{m}$. By theorem ~\ref{concat} .
+Let $d_1 = 2^{m-r-1}$ and $d_2 = 2^{m-r}$. 
+By ~\ref{general}, $d = min\{2d_1,d_2\} = 2^{m-r}$. 
+
+The standard proof of this by induction is found everywhere - see \cite{sloane}, \cite{pless}.
+\end{proof}
+\end{thm}
+
+
 \begin{lem}
 Every codeword in $\RM{1}{m}$ (except $\V{1}, \V{0}$) has weight $2^{m-1}$
 \begin{proof}
 This can also be proved by using the randomization lemma for boolean functions as done in \cite{sloane}. However, if we notice that
 \begin{equation*}
-  \RM{1}{m} = \{(u,u) : u \in \RM{1}{m-1} \} \union \{(u,\vec{1}+u) : u \in \RM{1}{m-1} \} 
+  \RM{1}{m} = \{\V{u}|\V{u} : \V{u} \in \RM{1}{m-1} \} \union \{(\V{u},\vec{1}+\V{u}) , \V{u} \in \RM{1}{m-1} \} 
 \end{equation*}
-We use induction on $m$ and are done.
+We use induction on $m$ to complete the proof.
 \end{proof}
 \end{lem}
 
@@ -397,19 +419,153 @@ The dual code $\RM{1}{m}^{\bot}$ is the extended binary Hamming code $H(m)$
   \end{proof}
 \end{thm}
 
+\section {\RM{1}{3}}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&  	 1&1&1&1&1&1&1&1 \\
+
+v_1 \quad& 	 0&0&0&0&1&1&1&1 \\
+v_2 \quad& 	 0&0&1&1&0&0&1&1 \\
+v_3 \quad&	 0&1&0&1&0&1&0&1 \\
+v_1+v_2 \quad&    0&0&1&1&1&1&0&0 \\
+v_1+v_3 \quad&	 0&1&1&0&0&1&1&0 \\
+v_2+v_3 \quad&	 0&1&0&1&1&0&1&0 \\
+v_1+v2+v_3 \quad& 0&1&1&0&1&0&0&1 \\
+
+0	\quad&	 0&0&0&0&0&0&0&0 \\
+1+v_1	\quad&	 1&1&1&1&0&0&0&0 \\
+1+v_2	\quad&	 1&1&0&0&1&1&0&0 \\
+1+v_3	\quad&	 1&0&1&0&1&0&1&0 \\
+1+v_1+v2 \quad&	 1&1&0&0&0&0&1&1 \\
+1+v_1+v3 \quad&	 1&0&0&1&1&0&0&1 \\
+1+v_2+v_3 \quad&	 1&0&1&0&0&1&0&1 \\
+1+v_1+v_2+v_3\quad& 1&0&0&1&0&1&1&0 \\
+
+\end{array}
+
+\end{equation}
+
+\section{G(2,3)}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&         1&1&1&1&1&1&1&1 \\
+
+v_1 \quad&       0&0&0&0&1&1&1&1 \\
+v_2 \quad&       0&0&1&1&0&0&1&1 \\
+v_3 \quad&       0&1&0&1&0&1&0&1 \\
+v_1\cdot v_2 \quad& 0&0&0&0&0&0&1&1 \\ 
+v1\cdot v_3 \quad& 0&0&0&0&0&1&0&1 \\
+v2\cdot v_3 \quad& 0&0&0&1&0&0&0&1 \\
+
+\end{array}
+\end{equation}
+
 
 \section{Bounds}
+$A_q(n, d)$ is the largest integer $M$ such that there exists a $q$-ary $(n, M, d)$ code where $M$ is the number of codewords. A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
 
-$A_q(n, d)$ is the largest integer $M$ such that there exists a 
-$q$-ary $(n, M, d)$ code.
-A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
+The \rem{} codes satisfy the \emph{Plotkin bound}.
 
-The plotkin bound shows that the codes are all optimal.
+\begin{theorem}[Plotkin Bound]
+    If $C = [n,k,d]$ code, \begin{equation*}
+d \leq \frac{n2^{k-1}}{2^k - 1}
+\end{equation*}
+  \begin{proof}
+Counting in two ways:
+\begin{equation*}
+  D = \sum_{\V{u} \in C}{ \sum_{\V{v} \in C} {d(u,v)}
+\end{equation*}
+Since $d(u,v) \geq d$, $D \geq 2^k(2^k-1)d$. 
+
+Let $D_{1i}$ denote the number of codewords with a $1$ in their $i$-th component.
+\begin{equation*}
+  D = \sum_{i \in n}{\sum_{j=\{0,1\}} {D_{ji}(2^k-D_{ji})}}
+\end{equation*}
+
+Since $\sum{D_{ji}} = 2^k $, we have:
+\begin{equation*}
+  D = n2^{2k} - \sum_{i \in n}{\sum_{j=\{0,1\}} {D_{ji}^2}}
+\end{equation*}
+
+\begin{equation*}
+  \sum_{j=0,1}{D_{ji}^2} \geq 2^{2k-1}, \qquad i \in n
+\end{equation*}
+Combining the upper and the lower bounds, we obtain:
+\begin{equation*}
+  2^k(2^k-1)d \leq D \leq n2^
+\end{equation*}
+
+  \end{proof}
+\end{theorem}
+
+It can be verified that $\RM{1}{m}$ codes satisfy this bound. This can also be shown by using the fact proved in \ref{equidistant} that $\RM{1}{m}$ are equidistant codes, and using that result in the proof of the plotkin bound.
+
+
+\subsection{Geometries}
+
+Some properties of the \rem{} codes can be best stated using finite geometries. A comprehensive source of the relation between the code and finite geometry is ~\cite{assumus} and ~\cite{sloane}.
+
+\begin{thm}
+  Let $f$ be a minimum weight codeword of $\RM{r}{m}$, and $f = \chi(S) $. Then $S$ is an $(m-r)$ dimensional flat in $AG(m,2)$.
+
+  \begin{proof}
+    TODO from sloane macwilliams.
+  \end{proof}
+\end{thm}
+
+The converse of this theorem also holds:
+\begin{thm}
+  The incidence vector of any $(m-r)$ dimensional flat in $AG(m,2)$ is a codeword in $\RM{r}{m}$.
+  \begin{proof}
+    Every $(m-r)$ dimensional flat in $AG(m,2)$ can be represented by $r$ linearly independent linear equations of the form
+    \begin{equation*}
+      \sum_{j \in m}{a_{ij}c_j = b_i}, \qquad i\in r
+    \end{equation*}
+   The elements of the flats are the vectors $c=(c_0,\ldots,c_m)$ satisfying these equations. We thus need to show that $c \in \RM{r}{m}$.
+   \begin{equation*}
+     \sum_{j \in m}{a_{ij}c_j} + b_i +1 =1}, \qquad i\in r
+   \end{equation*}
+   Since we are dealing with $\F_{2}$, we can combine all the $t$ equations to get
+   \begin{equation*}
+     \prod_{i \in r}( \sum_{j \in m}{a_{ij}c_j} + b_i +1) = 1
+   \end{equation*}
+   This is because if one of the original equations does not hold then one of the right hand sides must be zero, which makes the product in the second equation become zero. Conversely if, $c$ is a solution, then each of the equations must be satisfied since the product is one. 
+The last equation is also a polynomial of degree $r$, we get that $c \in \RM{r}{m}$.
+
+Since an affine space of rank $(m-r)$ contains $2^{m-r}$ points, we get that the incidence vector is the minimum weight vector in $\RM{r}{m}$.
+
+  \end{proof}
+\end{thm}
+
+\begin{thm}
+  The number of codewords of minimum weight in $\RM{r}{m}$ is \begin{equation*}
+A_2^{m-r} = 2^r \prod_{i=0}^{m-r-1}{\frac{2^{m-i} -1}{2^{m-r-i} -1}}
+\end{equation*}
+ 
+\end{thm}
+
+A lemma that will help us in decoding:
+\begin{lem}
+  In an affine geometry $AG(m,2)$, each $r$-flat is constained in exactly ${2^{m-r} -1}$ flats of dimension $r+1$. These $r+1$-flats intersect pairwise exactly in the elements of the given $r$-flat.
+  \begin{proof}
+Let $V$ be an $r$-dimensional vector subspace of $\F_2^m$. $W=(V,w)$ is an $r+1$ dimensional space containing $V$. We can choose $w$ in $2^{r+1}-2^r$ different ways such that the same vector space $W$ is obtained. Thus there are $\frac{2^m - 2^r}{2^{r+1} - 2^r} = 2^{m-r}-1$ linear subspaces $W$ of dimension $r+1$ containing $V$. Any two of these subspaces are going to intersect exactly in $V$.
+
+$V+x$ is a contained in $W+x$. Also the collection of all these $W+x$ flats intersect pairwise in exactly $V+x$.
+  \end{proof}
+\end{lem}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section {Weight distribution}
 
-Stated without proof
+For the codes of order $r\geq2$, determining the complete weight distribution is hard. (impossible).
+For $r=1$, as shown \ref{r1m}, the weight of all words is $2^{m-1}$.
+
+Considerable work has been done to establish the distribution for $\RM{2}{m}$. We state the classic results (for proofs see \cite{sloane}) : 
+
 \cite{kasami+tokura}
 \begin{equation}
   \label{eq:4}
@@ -431,30 +587,30 @@ shifting received code words, until all n positions have been tried.
 \RM{}{}
 
 \section {Decoding}
+\label{decoding}
 
-As mentioned earlier, the RM family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
+As mentioned earlier, the \rem{} family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
 Several very efficient algorithms have been known specially for the \rem{} codes of the first order. 
 
 \subsection {Majority Logic Decoding}
 
 Majority Logic Decoding is the oldest and simplest method to decode the \rem{} codes. \cite{assmus}
 Some terminology is needed for a clearer understanding:
-Let C be an arbitrary code. Then the \emph{parity-check} is simply a code vector in the orthogonal code $C^{\bot}$. 
-Define the \emph{support vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
-Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $i$. The $J$ parity checks essentially 'vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
+Let $C$ be an arbitrary code. Then the \emph{parity-check} is simply a codeword in the orthogonal code $C^{\bot}$. 
+Define the \emph{support-vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
+Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $\{i\}$. The $J$ parity checks essentially `vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
 A collection of such parity checks described above is said to be \emph{orthogonal} to $i$. If each of the coordinates of the code has a collection of $J$ parity checks orthogonal to it, then the code is capable of correcting up-to $J/2$  errors.
-What are the conditions under which a code satisfies this?
 Another definition of orthogonality is: A set of parity check equations is called orthogonal on the $i$ coordinate if $x_i$ appears in each equation and no other $x_j$ appears more than once in the set.
-Clearly, the minimum weight must be at least $J+1$, because the 
 
 \begin{Theorem} 
 If there are $J$ parity checks on every co-ordinate, the code can correct $J/2$ errors.
-Proof: 
+\begin{proof}
 Let $m_i$ be the message bit at coordinate $i$. $x_i$ is the received bit. 
 Let $m_i=0$
 Since there are $J$ orthogonal parity equations voting for $x_i$, if there are fewer than $J/2$ errors, then the result is unchanged. Therefore atleast $J/2$ equations are $0$ and thus $x_i=0$.
 If $m_i=1$
 Still less than $J/2$ equations are affected, and we get the right result.
+\end{proof}
 \end{Theorem}
 
 Note: Ties can be broken in any way consistently. Either $0$, etc.
@@ -482,9 +638,7 @@ Definition: A set of parity checks $S_1, S_2,\ldots$ is orthogonal on coordinate
 
 \begin{Theorem}
 The number of errors which can be corrected by an L-step majority decoding scheme, $E_l \leq n/d' - 1/2 $ 
-
-
-Proof:
+\begin{proof}
 Let the $i-th$ parity check involve $a_i$ coordinates (besides the $l$). 
 Since these checks correspond to the codewords in the dual code, we have
 
@@ -507,6 +661,7 @@ Eliminating l and S, we get \begin{equation*}
 J \leq 2n/d' -1
 \end{equation*}
 
+\end{proof}
 \end{Theorem}
 
 
@@ -514,8 +669,7 @@ J \leq 2n/d' -1
 
 The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem{} codes of any order.
 
-Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in 
-, in which the nonzero coordinates of the codeword are points lying in the 
+Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in  in which the nonzero coordinates of the codeword are points lying in the 
 subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the $k$-th order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
 
 Let the corresponding subspace be $S$.
@@ -528,8 +682,29 @@ Define a \emph{Translate} of a subspace with respect to a point to be the subspa
   \begin{equation*}
     m_b = \sum_{P \in U_i}{x_P} \quad i=1,2,\ldots,2^{m-r}
   \end{equation*}
-  \begin{proof}[geometry]
-    
+  \begin{proof}
+    A codeword can be written as
+    \begin{equation*}
+      \V{v} = \sum_{t=i_1i_2\ldotsi_s}{a_t\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
+    \end{equation*}
+    The sum is over all the subsets $\{i_1,i_2 ldots i_s \}$ of $\{1 \ldots m\}$ of size atmost $r$.
+Summing up $\V{v}$ over all the translates gives:
+\begin{equation*}
+  \sum_{P \in U_i}x_P = \sum_t{a_t}\sum_{P \in U_i}{\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
+\end{equation*}
+Let $N(U_i,t)$ be the number of points in the intersection of $U_i$ and the subspace with the incidence vector $\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}$.
+\begin{equation*}
+  \sum_{P \in U_i}x_P = \sum_t{a_t N(U_i,t)}
+\end{equation*}
+
+Since the intersection of two subspaces is a subspace and the number of points in an affine subspace of rank $r$ is $2^r$.
+Let $V$ and $W$ intersect in the subspace
+\begin{equation*}
+   \V{x_{j_1}}\V{x_{j_2}}\ldots \V{x_{j_{m-r}}} \V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}
+\end{equation*}
+
+
+
   \end{proof}
 \end{them}
 
@@ -542,8 +717,9 @@ We can use the finite geometry construction of the codes to help in the decoding
 \subsection {Hadamard Transforms}
 
 \begin{def}
-  Real Vector $\V{F}$ of a binary vector $\V{V}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
+  Real Vector $\V{F(v)}$ of a binary vector $\V{v}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
 \end{def}
+
 \begin{lem}
   The Orthogonal code $\mathcal{O}_m$ with real vectors is equivalent to the Hadamard matrix $H_m$.
 \begin{proof}
@@ -553,11 +729,10 @@ We can use the finite geometry construction of the codes to help in the decoding
       v_i, v_j \in \RM{1}{m} \implies v_i\cdot v_j = 0
     \end{equation*}
     \begin{proof}
-      The systematic choice of the basis vectors helps. We use the recursive definition of the Generator matrix.
-
+      We can prove using induction on the basis vectors. Since the code is a linear combination, the result follows.
     \end{proof}
   \end{claim}
-This is the definition of the hadamard matrix too. 
+This is also the definition of the hadamard matrix.
 \end{proof}
 \end{lem}
 
@@ -570,10 +745,31 @@ This is the definition of the hadamard matrix too.
   \end{pmatrix}
 \end{equation}
 
-Keeping note that the code has been converted to the real-vector form, maximizing $FH_m$ is equivalent to finding the least-distance neighbour to $\V{v}$.
-This would entail doing a simple vector product with each row of the hadamard matrix. There are $n$ such rows, and we need $O(n^2)$ operations. However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+
+
+Keeping note that the code has been converted to the real-vector form, maximizing $F(v)H_m$ is equivalent to finding the least-distance neighbour of $\V{v}$.
+This would entail doing a simple vector product with each row of the hadamard matrix.
+If the correlation is negative, the absolute value is considered since the correlation of the negation of the corresponding row of the hadamard matrix is .
+
+ There are $n$ such rows, and we need $O(n^2)$ operations.
+However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+
+
+\begin{thm}
+  \begin{equation*}
+    H_{2^m} = M_{2^m}^{(1)}M_{2^m}^{(2)} \ldots M_{2^m}^{(m)}
+\text{ where }
+  M_{2^m}^{(i)} = I_{2^{m-i}}\otimes H_2 \oplus I_{2^{i-1}}, \qquad 1 \leq i \leq m
+  \end{equation*}
+  \begin{proof}
+    By simple induction on m.
+  \end{proof}
+\end{thm}
+
 
 This is the fastest classical decoding technique and was employed in the \emph{Green Machine} decoder for the Mariner-9 space mission. 
+
+For a detailed look into the construction of the decoder, refer ~\cite{sloane}
 
 \subsection {List Decoding}
 
@@ -600,8 +796,68 @@ Let $\V{y}$ be a received vector and $L_{\epsilon}(y) = \{f \in \RM{1}{m} : d(\V
 
 The main idea is to approximate the Hamming distance between the received vector y and an arbitrary ``propagation'' of a candidate $c(i) (x1 , . . . , xm) = c1 x1 + . . . + ci xi$ by the sum of Hamming distances over all $i$-dimensional ``facets'' of the $m$-dimensional Boolean cube.
 
+The $i$-th prefix of a boolean function is defined as an $i$-variate linear Boolean funtion:
+\begin{equation*}
+  c^{(i)}(x_1,x_2,ldots,x_i) = c_1x_1+ldots+c_ix_i
+\end{equation*}
+
+The algorithm essentially proceeds by considering more components of the candidates and in the process adds/removes candidates from the list.
+
+Thus, in phase $i$, we use
+\begin{equation*}
+  L_{\epsilon}^{(i-1)} (y) = \{c^{(i-1)}(x_1,x_2,ldots,x_i)\}
+\end{equation*}
+to obtain
+\begin{equation*}
+  L_{\epsilon}^{(i)} (y) = \{c^{(i1)}(x_1,x_2,ldots,x_i) = c^{(i-1)}+c_ix_i\}
+\end{equation*}
+Note that $x_i$ can be any of the remaining $m-i$ basis vectors, and hence we get $2^{m-i}$ `extensions' of $c^{(i)}$ for each $c^{(i-1)}$. This is an exponentially growing list, and we consider how to limit it's size next.
+
+Given a $2^m$ length vector, we consider its coordinates to be the points in an $m$-dimensional Boolean cube. Cosider an $i$-dimensional \emph{facet} of this cube as
+\begin{equation*}
+  S_\alpha = \{(x_1,\ldots x_i, \alpha_{i+1}\ldots \alpha_{m} \} 
+\text{where} \alpha=(\alpha_{i+1}, \ldots , \alpha_m)
+\end{equation*}
+The prefixes $(x_1,\ldots x_i)$ run through $\F_2^i$, and we get a set of coordinates.
+
+Thus, each facet is a particular subset of the coordinates of the vector.
+Let the \emph{restriction} of a vector $\V{y}$ to a given facet $S_\alpha$ be denoted by $\V{y_\alpha}$. The restriction to a facet yields the vector values only on those coordinates.
+
+Keeping note of the fact that we have to compute the inner product of the received vector with each of the codewords , let $\V{v_\alpha^{(i)}} \equiv \V{y_\alpha}\V{c^{(i)}}$
+
+Define our distance function  as
+\begin{equation*}
+  \Delta(\V{y},\V{c^{(i)}}) = \sum_\alpha|\V{y_\alpha}\V{c^{(i)}}| = \sum_\alpha|\V{v_\alpha^{(i)}}|
+\end{equation*}
+
+The central idea of the algorithm is to calculate the $\Delta$ for each candidate $\V{c^{(i)}}$ and use this function as an upperbound .
+
+Then in each step $i$, we use the function $\Delta(\V{y},\V{c^{(i)}})$ and construct the list of prefixes which are under the threshold
+\begin{equation*}
+   L_{\epsilon}^{(i)} (y) = \{c^{(i1)} : \Delta(\V{y},\V{c^{(i)}}) \geq n\epsilon \}
+\end{equation*}
+
+The final key idea is to calculate $\V{v_\alpha^{(i)}}$ recursively. 
+ $S_\alpha$, the $i$-dimensional facet can be written as two $(i-1)$-dimensional subfacets
+ \begin{equation*}
+   S_{0,\alpha} =  \{(x_1,\ldots x_{i-1},0, \alpha_{i+1}\ldots \alpha_{m} \} 
+
+ S_{1,\alpha} =  \{(x_1,\ldots x_{i-1},1, \alpha_{i+1}\ldots \alpha_{m} \} 
+ \end{equation*}
+
+Since $c^{(i)} = c^{(i-1)}+ c_ix_i$, we can write :
+\begin{equation*}
+  \V{v_\alpha^{(i)}} = \V{v_{0,\alpha}^{(i)}} + (-1)^{c_i}\V{v_{1,\alpha}^{(i-1)}}
+\end{equation*}
+
+The algorithm runs for $m$ phases.
+
+This algorithm is similar to the fast hadamard transform described earlier \ref{fht}. The key difference is that in the fast hadamard transform, all the $2^m$ vector products are computed, albiet in an efficient manner. Here, we perform the distance-check after each phase to limit the number of candidates.
+
+For a proof of correctness of the algorithm , see \cite{kabatiansky}. Analysis of running times and a probabilistic version is also presented. 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Other decoding algorithms}
 Besides the algorithms presented above, there exists a large number of algorithms. 
 Majority logic algorithms are:
@@ -650,4 +906,4 @@ A cryptanalysis attack also uses the properties of \rem{} codes to break the cry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
-\message{ !name(report.tex) !offset(-653) }
+\message{ !name(report.tex) !offset(-909) }

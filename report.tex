@@ -416,6 +416,49 @@ The dual code $\RM{1}{m}^{\bot}$ is the extended binary Hamming code $H(m)$
   \end{proof}
 \end{thm}
 
+\section {\RM{1}{3}}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&  	 1&1&1&1&1&1&1&1 \\
+
+v_1 \quad& 	 0&0&0&0&1&1&1&1 \\
+v_2 \quad& 	 0&0&1&1&0&0&1&1 \\
+v_3 \quad&	 0&1&0&1&0&1&0&1 \\
+v_1+v_2 \quad&    0&0&1&1&1&1&0&0 \\
+v_1+v_3 \quad&	 0&1&1&0&0&1&1&0 \\
+v_2+v_3 \quad&	 0&1&0&1&1&0&1&0 \\
+v_1+v2+v_3 \quad& 0&1&1&0&1&0&0&1 \\
+
+0	\quad&	 0&0&0&0&0&0&0&0 \\
+1+v_1	\quad&	 1&1&1&1&0&0&0&0 \\
+1+v_2	\quad&	 1&1&0&0&1&1&0&0 \\
+1+v_3	\quad&	 1&0&1&0&1&0&1&0 \\
+1+v_1+v2 \quad&	 1&1&0&0&0&0&1&1 \\
+1+v_1+v3 \quad&	 1&0&0&1&1&0&0&1 \\
+1+v_2+v_3 \quad&	 1&0&1&0&0&1&0&1 \\
+1+v_1+v_2+v_3\quad& 1&0&0&1&0&1&1&0 \\
+
+\end{array}
+
+\end{equation}
+
+\section{G(2,3)}
+
+\begin{equation}
+\begin{array}{l|cccccccc}
+1 \quad&         1&1&1&1&1&1&1&1 \\
+
+v_1 \quad&       0&0&0&0&1&1&1&1 \\
+v_2 \quad&       0&0&1&1&0&0&1&1 \\
+v_3 \quad&       0&1&0&1&0&1&0&1 \\
+v_1\cdot v_2 \quad& 0&0&0&0&0&0&1&1 \\ 
+v1\cdot v_3 \quad& 0&0&0&0&0&1&0&1 \\
+v2\cdot v_3 \quad& 0&0&0&1&0&0&0&1 \\
+
+\end{array}
+\end{equation}
+
 
 \section{Bounds}
 $A_q(n, d)$ is the largest integer $M$ such that there exists a $q$-ary $(n, M, d)$ code where $M$ is the number of codewords. A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
@@ -456,6 +499,62 @@ Combining the upper and the lower bounds, we obtain:
 
 It can be verified that $\RM{1}{m}$ codes satisfy this bound. This can also be shown by using the fact proved in \ref{equidistant} that $\RM{1}{m}$ are equidistant codes, and using that result in the proof of the plotkin bound.
 
+
+\subsection{Geometries}
+
+Some properties of the \rem{} codes can be best stated using finite geometries. A comprehensive source of the relation between the code and finite geometry is ~\cite{assumus} and ~\cite{sloane}.
+
+\begin{thm}
+  Let $f$ be a minimum weight codeword of $\RM{r}{m}$, and $f = \chi(S) $. Then $S$ is an $(m-r)$ dimensional flat in $AG(m,2)$.
+
+  \begin{proof}
+    TODO from sloane macwilliams.
+  \end{proof}
+\end{thm}
+
+The converse of this theorem also holds:
+\begin{thm}
+  The incidence vector of any $(m-r)$ dimensional flat in $AG(m,2)$ is a codeword in $\RM{r}{m}$.
+  \begin{proof}
+    Every $(m-r)$ dimensional flat in $AG(m,2)$ can be represented by $r$ linearly independent linear equations of the form
+    \begin{equation*}
+      \sum_{j \in m}{a_{ij}c_j = b_i}, \qquad i\in r
+    \end{equation*}
+   The elements of the flats are the vectors $c=(c_0,\ldots,c_m)$ satisfying these equations. We thus need to show that $c \in \RM{r}{m}$.
+   \begin{equation*}
+     \sum_{j \in m}{a_{ij}c_j} + b_i +1 =1}, \qquad i\in r
+   \end{equation*}
+   Since we are dealing with $\F_{2}$, we can combine all the $t$ equations to get
+   \begin{equation*}
+     \prod_{i \in r}( \sum_{j \in m}{a_{ij}c_j} + b_i +1) = 1
+   \end{equation*}
+   This is because if one of the original equations does not hold then one of the right hand sides must be zero, which makes the product in the second equation become zero. Conversely if, $c$ is a solution, then each of the equations must be satisfied since the product is one. 
+The last equation is also a polynomial of degree $r$, we get that $c \in \RM{r}{m}$.
+
+Since an affine space of rank $(m-r)$ contains $2^{m-r}$ points, we get that the incidence vector is the minimum weight vector in $\RM{r}{m}$.
+
+  \end{proof}
+\end{thm}
+
+\begin{thm}
+  The number of codewords of minimum weight in $\RM{r}{m}$ is \begin{equation*}
+A_2^{m-r} = 2^r \prod_{i=0}^{m-r-1}{\frac{2^{m-i} -1}{2^{m-r-i} -1}}
+\end{equation*}
+ 
+\end{thm}
+
+A lemma that will help us in decoding:
+\begin{lem}
+  In an affine geometry $AG(m,2)$, each $r$-flat is constained in exactly ${2^{m-r} -1}$ flats of dimension $r+1$. These $r+1$-flats intersect pairwise exactly in the elements of the given $r$-flat.
+  \begin{proof}
+Let $V$ be an $r$-dimensional vector subspace of $\F_2^m$. $W=(V,w)$ is an $r+1$ dimensional space containing $V$. We can choose $w$ in $2^{r+1}-2^r$ different ways such that the same vector space $W$ is obtained. Thus there are $\frac{2^m - 2^r}{2^{r+1} - 2^r} = 2^{m-r}-1$ linear subspaces $W$ of dimension $r+1$ containing $V$. Any two of these subspaces are going to intersect exactly in $V$.
+
+$V+x$ is a contained in $W+x$. Also the collection of all these $W+x$ flats intersect pairwise in exactly $V+x$.
+  \end{proof}
+\end{lem}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section {Weight distribution}
 
@@ -485,8 +584,9 @@ shifting received code words, until all n positions have been tried.
 \RM{}{}
 
 \section {Decoding}
+\label{decoding}
 
-As mentioned earlier, the RM family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
+As mentioned earlier, the \rem{} family of codes came into prominence because of the ease of decoding. In this section we present a variety of decoding algorithms. 
 Several very efficient algorithms have been known specially for the \rem{} codes of the first order. 
 
 \subsection {Majority Logic Decoding}
@@ -495,20 +595,19 @@ Majority Logic Decoding is the oldest and simplest method to decode the \rem{} c
 Some terminology is needed for a clearer understanding:
 Let $C$ be an arbitrary code. Then the \emph{parity-check} is simply a codeword in the orthogonal code $C^{\bot}$. 
 Define the \emph{support-vector} of a vector $\vec{v}$ as the coordinates where it is non-zero.For example, the support-vector of $01010100$ is $(2,4,6)$.
-Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $i$. The $J$ parity checks essentially 'vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
+Suppose we are given $J$ parity checks and a coordinate position, $i$, such that the intersection of all the $J$ supports is precisely $\{i\}$. The $J$ parity checks essentially `vote' for the position $i$ , and the result of the majority for the parity of $i$ is the value. 
 A collection of such parity checks described above is said to be \emph{orthogonal} to $i$. If each of the coordinates of the code has a collection of $J$ parity checks orthogonal to it, then the code is capable of correcting up-to $J/2$  errors.
-What are the conditions under which a code satisfies this?
 Another definition of orthogonality is: A set of parity check equations is called orthogonal on the $i$ coordinate if $x_i$ appears in each equation and no other $x_j$ appears more than once in the set.
-Clearly, the minimum weight must be at least $J+1$, because the 
 
 \begin{Theorem} 
 If there are $J$ parity checks on every co-ordinate, the code can correct $J/2$ errors.
-Proof: 
+\begin{proof}
 Let $m_i$ be the message bit at coordinate $i$. $x_i$ is the received bit. 
 Let $m_i=0$
 Since there are $J$ orthogonal parity equations voting for $x_i$, if there are fewer than $J/2$ errors, then the result is unchanged. Therefore atleast $J/2$ equations are $0$ and thus $x_i=0$.
 If $m_i=1$
 Still less than $J/2$ equations are affected, and we get the right result.
+\end{proof}
 \end{Theorem}
 
 Note: Ties can be broken in any way consistently. Either $0$, etc.
@@ -536,9 +635,7 @@ Definition: A set of parity checks $S_1, S_2,\ldots$ is orthogonal on coordinate
 
 \begin{Theorem}
 The number of errors which can be corrected by an L-step majority decoding scheme, $E_l \leq n/d' - 1/2 $ 
-
-
-Proof:
+\begin{proof}
 Let the $i-th$ parity check involve $a_i$ coordinates (besides the $l$). 
 Since these checks correspond to the codewords in the dual code, we have
 
@@ -561,6 +658,7 @@ Eliminating l and S, we get \begin{equation*}
 J \leq 2n/d' -1
 \end{equation*}
 
+\end{proof}
 \end{Theorem}
 
 
@@ -568,8 +666,7 @@ J \leq 2n/d' -1
 
 The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem{} codes of any order.
 
-Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in 
-, in which the nonzero coordinates of the codeword are points lying in the 
+Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in  in which the nonzero coordinates of the codeword are points lying in the 
 subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the $k$-th order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
 
 Let the corresponding subspace be $S$.
@@ -582,8 +679,29 @@ Define a \emph{Translate} of a subspace with respect to a point to be the subspa
   \begin{equation*}
     m_b = \sum_{P \in U_i}{x_P} \quad i=1,2,\ldots,2^{m-r}
   \end{equation*}
-  \begin{proof}[geometry]
-    
+  \begin{proof}
+    A codeword can be written as
+    \begin{equation*}
+      \V{v} = \sum_{t=i_1i_2\ldotsi_s}{a_t\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
+    \end{equation*}
+    The sum is over all the subsets $\{i_1,i_2 ldots i_s \}$ of $\{1 \ldots m\}$ of size atmost $r$.
+Summing up $\V{v}$ over all the translates gives:
+\begin{equation*}
+  \sum_{P \in U_i}x_P = \sum_t{a_t}\sum_{P \in U_i}{\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
+\end{equation*}
+Let $N(U_i,t)$ be the number of points in the intersection of $U_i$ and the subspace with the incidence vector $\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}$.
+\begin{equation*}
+  \sum_{P \in U_i}x_P = \sum_t{a_t N(U_i,t)}
+\end{equation*}
+
+Since the intersection of two subspaces is a subspace and the number of points in an affine subspace of rank $r$ is $2^r$.
+Let $V$ and $W$ intersect in the subspace
+\begin{equation*}
+   \V{x_{j_1}}\V{x_{j_2}}\ldots \V{x_{j_{m-r}}} \V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}
+\end{equation*}
+
+
+
   \end{proof}
 \end{them}
 
@@ -596,8 +714,9 @@ We can use the finite geometry construction of the codes to help in the decoding
 \subsection {Hadamard Transforms}
 
 \begin{def}
-  Real Vector $\V{F}$ of a binary vector $\V{V}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
+  Real Vector $\V{F(v)}$ of a binary vector $\V{v}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
 \end{def}
+
 \begin{lem}
   The Orthogonal code $\mathcal{O}_m$ with real vectors is equivalent to the Hadamard matrix $H_m$.
 \begin{proof}
@@ -607,11 +726,10 @@ We can use the finite geometry construction of the codes to help in the decoding
       v_i, v_j \in \RM{1}{m} \implies v_i\cdot v_j = 0
     \end{equation*}
     \begin{proof}
-      The systematic choice of the basis vectors helps. We use the recursive definition of the Generator matrix.
-
+      We can prove using induction on the basis vectors. Since the code is a linear combination, the result follows.
     \end{proof}
   \end{claim}
-This is the definition of the hadamard matrix too. 
+This is also the definition of the hadamard matrix.
 \end{proof}
 \end{lem}
 
@@ -624,10 +742,31 @@ This is the definition of the hadamard matrix too.
   \end{pmatrix}
 \end{equation}
 
-Keeping note that the code has been converted to the real-vector form, maximizing $FH_m$ is equivalent to finding the least-distance neighbour to $\V{v}$.
-This would entail doing a simple vector product with each row of the hadamard matrix. There are $n$ such rows, and we need $O(n^2)$ operations. However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+
+
+Keeping note that the code has been converted to the real-vector form, maximizing $F(v)H_m$ is equivalent to finding the least-distance neighbour of $\V{v}$.
+This would entail doing a simple vector product with each row of the hadamard matrix.
+If the correlation is negative, the absolute value is considered since the correlation of the negation of the corresponding row of the hadamard matrix is .
+
+ There are $n$ such rows, and we need $O(n^2)$ operations.
+However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+
+
+\begin{thm}
+  \begin{equation*}
+    H_{2^m} = M_{2^m}^{(1)}M_{2^m}^{(2)} \ldots M_{2^m}^{(m)}
+\text{ where }
+  M_{2^m}^{(i)} = I_{2^{m-i}}\otimes H_2 \oplus I_{2^{i-1}}, \qquad 1 \leq i \leq m
+  \end{equation*}
+  \begin{proof}
+    By simple induction on m.
+  \end{proof}
+\end{thm}
+
 
 This is the fastest classical decoding technique and was employed in the \emph{Green Machine} decoder for the Mariner-9 space mission. 
+
+For a detailed look into the construction of the decoder, refer ~\cite{sloane}
 
 \subsection {List Decoding}
 
@@ -654,14 +793,74 @@ Let $\V{y}$ be a received vector and $L_{\epsilon}(y) = \{f \in \RM{1}{m} : d(\V
 
 The main idea is to approximate the Hamming distance between the received vector y and an arbitrary ``propagation'' of a candidate $c(i) (x1 , . . . , xm) = c1 x1 + . . . + ci xi$ by the sum of Hamming distances over all $i$-dimensional ``facets'' of the $m$-dimensional Boolean cube.
 
+The $i$-th prefix of a boolean function is defined as an $i$-variate linear Boolean funtion:
+\begin{equation*}
+  c^{(i)}(x_1,x_2,ldots,x_i) = c_1x_1+ldots+c_ix_i
+\end{equation*}
+
+The algorithm essentially proceeds by considering more components of the candidates and in the process adds/removes candidates from the list.
+
+Thus, in phase $i$, we use
+\begin{equation*}
+  L_{\epsilon}^{(i-1)} (y) = \{c^{(i-1)}(x_1,x_2,ldots,x_i)\}
+\end{equation*}
+to obtain
+\begin{equation*}
+  L_{\epsilon}^{(i)} (y) = \{c^{(i1)}(x_1,x_2,ldots,x_i) = c^{(i-1)}+c_ix_i\}
+\end{equation*}
+Note that $x_i$ can be any of the remaining $m-i$ basis vectors, and hence we get $2^{m-i}$ `extensions' of $c^{(i)}$ for each $c^{(i-1)}$. This is an exponentially growing list, and we consider how to limit it's size next.
+
+Given a $2^m$ length vector, we consider its coordinates to be the points in an $m$-dimensional Boolean cube. Cosider an $i$-dimensional \emph{facet} of this cube as
+\begin{equation*}
+  S_\alpha = \{(x_1,\ldots x_i, \alpha_{i+1}\ldots \alpha_{m} \} 
+\text{where} \alpha=(\alpha_{i+1}, \ldots , \alpha_m)
+\end{equation*}
+The prefixes $(x_1,\ldots x_i)$ run through $\F_2^i$, and we get a set of coordinates.
+
+Thus, each facet is a particular subset of the coordinates of the vector.
+Let the \emph{restriction} of a vector $\V{y}$ to a given facet $S_\alpha$ be denoted by $\V{y_\alpha}$. The restriction to a facet yields the vector values only on those coordinates.
+
+Keeping note of the fact that we have to compute the inner product of the received vector with each of the codewords , let $\V{v_\alpha^{(i)}} \equiv \V{y_\alpha}\V{c^{(i)}}$
+
+Define our distance function  as
+\begin{equation*}
+  \Delta(\V{y},\V{c^{(i)}}) = \sum_\alpha|\V{y_\alpha}\V{c^{(i)}}| = \sum_\alpha|\V{v_\alpha^{(i)}}|
+\end{equation*}
+
+The central idea of the algorithm is to calculate the $\Delta$ for each candidate $\V{c^{(i)}}$ and use this function as an upperbound .
+
+Then in each step $i$, we use the function $\Delta(\V{y},\V{c^{(i)}})$ and construct the list of prefixes which are under the threshold
+\begin{equation*}
+   L_{\epsilon}^{(i)} (y) = \{c^{(i1)} : \Delta(\V{y},\V{c^{(i)}}) \geq n\epsilon \}
+\end{equation*}
+
+The final key idea is to calculate $\V{v_\alpha^{(i)}}$ recursively. 
+ $S_\alpha$, the $i$-dimensional facet can be written as two $(i-1)$-dimensional subfacets
+ \begin{equation*}
+   S_{0,\alpha} =  \{(x_1,\ldots x_{i-1},0, \alpha_{i+1}\ldots \alpha_{m} \} 
+
+ S_{1,\alpha} =  \{(x_1,\ldots x_{i-1},1, \alpha_{i+1}\ldots \alpha_{m} \} 
+ \end{equation*}
+
+Since $c^{(i)} = c^{(i-1)}+ c_ix_i$, we can write :
+\begin{equation*}
+  \V{v_\alpha^{(i)}} = \V{v_{0,\alpha}^{(i)}} + (-1)^{c_i}\V{v_{1,\alpha}^{(i-1)}}
+\end{equation*}
+
+The algorithm runs for $m$ phases.
+
+This algorithm is similar to the fast hadamard transform described earlier \ref{fht}. The key difference is that in the fast hadamard transform, all the $2^m$ vector products are computed, albiet in an efficient manner. Here, we perform the distance-check after each phase to limit the number of candidates.
+
+For a proof of correctness of the algorithm , see \cite{kabatiansky}. Analysis of running times and a probabilistic version is also presented. 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Other decoding algorithms}
 Besides the algorithms presented above, there exists a large number of algorithms. 
 Majority logic algorithms are:
 Some run in $O(n)$ time. There are hard and soft decision algorithms as well.
 
-\section{Generalized \rm codes}
+\section{Generalized \rem codes}
 
 \section {Applications}
 \label{applications}
