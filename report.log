@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.8.18)  11 APR 2010 17:46
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.8.18)  12 APR 2010 18:48
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -426,22 +426,16 @@ LaTeX Warning: Citation `muller' on page 1 undefined on input line 54.
 LaTeX Warning: Reference `recusive' on page 1 undefined on input line 55.
 
 
-LaTeX Warning: Reference `decoding' on page 1 undefined on input line 56.
-
-
 LaTeX Warning: Reference `geometry' on page 1 undefined on input line 56.
 
 
 LaTeX Warning: Citation `space' on page 1 undefined on input line 57.
 
-
-LaTeX Warning: Reference `applications' on page 1 undefined on input line 57.
-
 ./report.tex:65: Undefined control sequence.
 <argument> \mathbb 
                    {F}
 l.65 $\F
-         _q$ denotes a finite field of order $q$.
+        {} _q$ denotes a finite field of order $q$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -452,7 +446,7 @@ and I'll forget about whatever was undefined.
 <argument> \mathbb 
                    {F}
 l.68 A vector field over $\F
-                            $,(with the length of the vector being $n$) will...
+                            {}$,(with the length of the vector being $n$) wi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -463,7 +457,7 @@ and I'll forget about whatever was undefined.
 <argument> \mathbb 
                    {F}
 l.71 ... string of length $n$ with elements in $\F
-                                                  _2$ to write a vector in t...
+                                                  {}_2$ to write a vector in...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -492,10 +486,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./report.tex:85: Extra \right.
-l.85 \end{array} \right.
-                        
-I'm ignoring a \right that had no matching \left.
+./report.tex:81: Missing delimiter (. inserted).
+<to be read again> 
+                   {
+l.81 wt(x) = d(x,0) = \left{
+                            
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+./report.tex:85: Missing } inserted.
+<inserted text> 
+                }
+l.85 \end{array} \right
+                       .
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 Overfull \hbox (7.49875pt too wide) in paragraph at lines 88--90
@@ -565,48 +577,45 @@ I treat `x^1^2' essentially like `x^1{}^2'.
 
 LaTeX Warning: Citation `Problem2' on page 2 undefined on input line 113.
 
-./report.tex:136: Double subscript.
-l.136  1+a_1x_1+a_2_
-                    x2+\ldots+a_nx_n
-I treat `x_1_2' essentially like `x_1{}_2'.
+./report.tex:115: Undefined control sequence.
+l.115 ...ues. Hence $\V{f}$ and $x_1,x_2,\ldots \x
+                                                  _m$ have length $2^m$. Sin...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-./report.tex:149: LaTeX Error: \begin{equation*} on input line 147 ended by \en
-d{equations}.
+./report.tex:147: LaTeX Error: Environment lemma undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 \end{equations}
-                     
+l.147 \begin{lemma}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:149: Missing $ inserted.
-<inserted text> 
-                $
-l.149 \end{equations}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-./report.tex:149: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.149 \end{equations}
-                     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+./report.tex:155: LaTeX Error: \begin{document} ended by \end{lemma}.
 
-
-LaTeX Warning: Citation `rmlogic' on page 2 undefined on input line 166.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155 \end{lemma}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 [2]
+
+LaTeX Warning: Citation `rmlogic' on page 3 undefined on input line 187.
+
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
@@ -617,8 +626,20 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no à in font cmr10!
 Missing character: There is no í in font cmr10!
 
-./report.tex:184: Undefined control sequence.
-l.184   \RM{1}{m} = \mathcal{O}_m \union
+./report.tex:205: LaTeX Error: Environment theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.205 \begin{theorem}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./report.tex:207: Undefined control sequence.
+l.207   \RM{1}{m} = \mathcal{O}_m \union
                                          (\V{1} + \mathcal{O}_m)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -627,56 +648,69 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./report.tex:187: LaTeX Error: Environment theorem undefined.
+./report.tex:212: LaTeX Error: \begin{document} ended by \end{theorem}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.187 \begin{theorem}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Citation `uniq' on page 3 undefined on input line 189.
-
-
-./report.tex:192: LaTeX Error: \begin{document} ended by \end{theorem}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.192 \end{theorem}
+l.212 \end{theorem}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-LaTeX Warning: Citation `syncro' on page 3 undefined on input line 194.
+./report.tex:215: LaTeX Error: Environment theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.215 \begin{theorem}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Citation `uniq' on page 3 undefined on input line 217.
+
+
+./report.tex:220: LaTeX Error: \begin{document} ended by \end{theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 \end{theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Citation `runlen' on page 3 undefined on input line 222.
 
 [3]
 
-./report.tex:262: LaTeX Error: \begin{pmatrix} on input line 259 ended by \end{
+./report.tex:282: LaTeX Error: \begin{pmatrix} on input line 279 ended by \end{
 matrix}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262 \end{matrix}
+l.282 \end{matrix}
                    $
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:262: Missing \right. inserted.
+./report.tex:282: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.262 \end{matrix}
+l.282 \end{matrix}
                    $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -684,99 +718,19 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./report.tex:299: Missing $ inserted.
-<inserted text> 
-                $
-l.299 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./report.tex:299: Missing } inserted.
-<inserted text> 
-                }
-l.299 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:299: Display math should end with $$.
-<to be read again> 
-                   \@@par 
-l.299 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./report.tex:299: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.299 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./report.tex:300: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.300   \end{equation}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./report.tex:300: You can't use `\eqno' in vertical mode.
-\endmathdisplay@a ...\df@tag \@empty \else \veqno 
-                                                  \alt@tag \df@tag \fi \ifx ...
-l.300   \end{equation}
-                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./report.tex:300: Missing $ inserted.
-<inserted text> 
-                $
-l.300   \end{equation}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./report.tex:300: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.300   \end{equation}
-                      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
 [4]
-./report.tex:349: Missing $ inserted.
+./report.tex:358: Missing $ inserted.
 <inserted text> 
                 $
-l.349 \emph{Case: \V{c_2} \neq \V{0}}
+l.358 \emph{Case: \V{c_2} \neq \V{0}}
                                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:349: Extra }, or forgotten $.
+./report.tex:358: Extra }, or forgotten $.
 <recently read> \egroup 
                         
-l.349 \emph{Case: \V{c_2} \neq \V{0}}
+l.358 \emph{Case: \V{c_2} \neq \V{0}}
                                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -785,22 +739,22 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./report.tex:350: LaTeX Error: Bad math environment delimiter.
+./report.tex:359: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.350 \begin{equation*}
+l.359 \begin{equation*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:353: Missing \endgroup inserted.
+./report.tex:362: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.353 \end{equation*}
+l.362 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -809,23 +763,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./report.tex:353: LaTeX Error: \begin{proof} on input line 333 ended by \end{eq
+./report.tex:362: LaTeX Error: \begin{proof} on input line 342 ended by \end{eq
 uation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.353 \end{equation*}
+l.362 \end{equation*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:353: Missing $ inserted.
+./report.tex:362: Missing $ inserted.
 <inserted text> 
                 $
-l.353 \end{equation*}
+l.362 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -833,10 +787,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./report.tex:353: Missing } inserted.
+./report.tex:362: Missing } inserted.
 <inserted text> 
                 }
-l.353 \end{equation*}
+l.362 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -845,60 +799,234 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./report.tex:358: LaTeX Error: \begin{thm} on input line 325 ended by \end{proo
+./report.tex:367: LaTeX Error: \begin{thm} on input line 333 ended by \end{proo
 f}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.358 \end{proof}
+l.367 \end{proof}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:359: LaTeX Error: \begin{document} ended by \end{thm}.
+./report.tex:368: LaTeX Error: \begin{document} ended by \end{thm}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.359 \end{thm}
+l.368 \end{thm}
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:359: Extra \endgroup.
+./report.tex:368: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.359 \end{thm}
+l.368 \end{thm}
                
 Things are pretty mixed up, but I think the worst is over.
 
-./report.tex:367: Undefined control sequence.
-l.367 ...} = \{(u,u) : u \in \RM{1}{m-1} \} \union
-                                                   \{(u,\vec{1}+u) : u \in \...
+
+LaTeX Warning: Reference `concat' on page 5 undefined on input line 375.
+
+
+LaTeX Warning: Citation `pless' on page 5 undefined on input line 379.
+
+./report.tex:389: Undefined control sequence.
+l.389 ...}|\V{u} : \V{u} \in \RM{1}{m-1} \} \union
+                                                   \{(\V{u},\vec{1}+\V{u}) ,...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./report.tex:415: Missing $ inserted.
+./report.tex:443: Missing $ inserted.
 <inserted text> 
                 $
-l.415 
+l.443 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:415: Display math should end with $$.
+./report.tex:443: Display math should end with $$.
 <to be read again> 
                    \par 
-l.415 
+l.443 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[5]
+
+./report.tex:444: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 \end{equation}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./report.tex:444: You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.444 \end{equation}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./report.tex:444: Missing $ inserted.
+<inserted text> 
+                $
+l.444 \end{equation}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./report.tex:444: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.444 \end{equation}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./report.tex:470: LaTeX Error: Environment theorem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.470 \begin{theorem}
+                     [Plotkin Bound]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./report.tex:478: Missing } inserted.
+<inserted text> 
+                }
+l.478 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[6]
+./report.tex:497: Missing { inserted.
+<to be read again> 
+                   $
+l.497 \end{equation*}
+                     
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./report.tex:497: Missing } inserted.
+<inserted text> 
+                }
+l.497 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./report.tex:500: LaTeX Error: \begin{document} ended by \end{theorem}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.500 \end{theorem}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Reference `equidistant' on page 7 undefined on input line 502.
+
+
+LaTeX Warning: Citation `assumus' on page 7 undefined on input line 507.
+
+
+LaTeX Warning: Citation `slonae' on page 7 undefined on input line 516.
+
+
+LaTeX Warning: Reference `minwt' on page 7 undefined on input line 519.
+
+
+LaTeX Warning: Citation `rothschild' on page 7 undefined on input line 525.
+
+./report.tex:539: Extra }, or forgotten $.
+l.539      \sum_{j \in m}{a_{ij}c_j} + b_i +1 =1}
+                                                 , \qquad i\in r
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./report.tex:541: Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.541    Since we are dealing with $\F
+                                      _{2}$, we can combine all the $t$ equa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7]
+./report.tex:564: Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.564 ...an $r$-dimensional vector subspace of $\F
+                                                  _2^m$. $W=(V,w)$ is an $r+...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `r1m' on page 8 undefined on input line 576.
+
+./report.tex:585: Missing $ inserted.
+<inserted text> 
+                $
+l.585 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./report.tex:585: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.585 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -910,32 +1038,32 @@ Missing character: There is no ‚ in font cmr7!
 Missing character: There is no à in font cmr7!
 Missing character: There is no í in font cmr7!
 
-./report.tex:416: LaTeX Error: Bad math environment delimiter.
+./report.tex:586: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.416 \end{equation}
+l.586 \end{equation}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./report.tex:416: You can't use `\eqno' in vertical mode.
+./report.tex:586: You can't use `\eqno' in vertical mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.416 \end{equation}
+l.586 \end{equation}
                     
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./report.tex:416: Missing $ inserted.
+./report.tex:586: Missing $ inserted.
 <inserted text> 
                 $
-l.416 \end{equation}
+l.586 \end{equation}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -943,10 +1071,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./report.tex:416: Display math should end with $$.
+./report.tex:586: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.416 \end{equation}
+l.586 \end{equation}
                     
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -957,111 +1085,132 @@ Missing character: There is no Ü in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no à in font cmr10!
 Missing character: There is no í in font cmr10!
-[5]
+[8]
 
-./report.tex:447: LaTeX Error: Environment Theorem undefined.
+./report.tex:616: LaTeX Error: Environment Theorem undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 \begin{Theorem}
+l.616 \begin{Theorem}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:455: LaTeX Error: \begin{document} ended by \end{Theorem}.
+./report.tex:625: LaTeX Error: \begin{document} ended by \end{Theorem}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 \end{Theorem}
+l.625 \end{Theorem}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:459: LaTeX Error: Environment Theorem undefined.
+./report.tex:629: LaTeX Error: Environment Theorem undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.459 \begin{Theorem}
+l.629 \begin{Theorem}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:471: LaTeX Error: \begin{document} ended by \end{Theorem}.
+./report.tex:641: LaTeX Error: \begin{document} ended by \end{Theorem}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.471 \end{Theorem}
+l.641 \end{Theorem}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:480: LaTeX Error: Environment Theorem undefined.
+./report.tex:650: LaTeX Error: Environment Theorem undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.480 \begin{Theorem}
+l.650 \begin{Theorem}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[6]
-./report.tex:490: Missing $ inserted.
+./report.tex:658: Missing $ inserted.
 <inserted text> 
                 $
-l.490 
+l.658 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:490: Display math should end with $$.
+./report.tex:658: Missing } inserted.
+<inserted text> 
+                }
+l.658 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./report.tex:658: Display math should end with $$.
 <to be read again> 
-                   \par 
-l.490 
+                   \@@par 
+l.658 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./report.tex:491: Missing $ inserted.
+./report.tex:658: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.658 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./report.tex:659: Missing $ inserted.
 <inserted text> 
                 $
-l.491 a_
+l.659 a_
         i + a_j \geq d'
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:492: You can't use `\eqno' in math mode.
+./report.tex:660: You can't use `\eqno' in math mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.492 \end{equation}
+l.660 \end{equation}
                     
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./report.tex:492: Missing $ inserted.
+./report.tex:660: Missing $ inserted.
 <inserted text> 
                 $
-l.492 \end{equation}
+l.660 \end{equation}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1069,34 +1218,56 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./report.tex:500: Missing $ inserted.
+./report.tex:668: Missing $ inserted.
 <inserted text> 
                 $
-l.500 
+l.668 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:500: Display math should end with $$.
+./report.tex:668: Missing } inserted.
+<inserted text> 
+                }
+l.668 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./report.tex:668: Display math should end with $$.
 <to be read again> 
-                   \par 
-l.500 
+                   \@@par 
+l.668 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./report.tex:501: Missing $ inserted.
+./report.tex:668: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.668 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./report.tex:669: Missing $ inserted.
 <inserted text> 
                 $
-l.501 (J-1)S \geq
+l.669 (J-1)S \geq
                   \binom{J}{2}d'
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./report.tex:502: Missing $ inserted.
+./report.tex:670: Missing $ inserted.
 <inserted text> 
                 $
-l.502 \end{equation*}
+l.670 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1105,18 +1276,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./report.tex:507: LaTeX Error: \begin{document} ended by \end{Theorem}.
+./report.tex:676: LaTeX Error: \begin{document} ended by \end{Theorem}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.507 \end{Theorem}
+l.676 \end{Theorem}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+[9]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
@@ -1126,72 +1298,59 @@ Missing character: There is no Å in font cmr10!
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
-./report.tex:516: Double subscript.
-l.516 ...basis vectors v_{i_1}v_{i_{2}}\ldots v_i_
+
+./report.tex:684: Double subscript.
+l.684 ...basis vectors v_{i_1}v_{i_{2}}\ldots v_i_
                                                   k$.
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./report.tex:519: Undefined control sequence.
-l.519 ...tary subspace of $S$ where $j_1j_2\ldotsj
-                                                  _{m-k} = {1,2,ldots,m}-{i_...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./report.tex:519: Double subscript.
-l.519 ...ary subspace of $S$ where $j_1j_2\ldotsj_
-                                                  {m-k} = {1,2,ldots,m}-{i_1...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-
-./report.tex:523: LaTeX Error: Environment them undefined.
+./report.tex:691: LaTeX Error: Environment them undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.523 \begin{them}
+l.691 \begin{them}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./report.tex:531: LaTeX Error: \begin{document} ended by \end{them}.
+./report.tex:720: LaTeX Error: \begin{document} ended by \end{them}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.531 \end{them}
+l.720 \end{them}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-LaTeX Warning: Citation `cooke' on page 7 undefined on input line 533.
+LaTeX Warning: Citation `cooke' on page 10 undefined on input line 722.
 
 
-LaTeX Warning: Citation `lec9' on page 7 undefined on input line 533.
+LaTeX Warning: Citation `lec9' on page 10 undefined on input line 722.
 
-./report.tex:542: Missing control sequence inserted.
+./report.tex:731: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.542   R
-         eal Vector $\V{F}$ of a binary vector $\V{V}$ is a vector with $0$ ...
+l.731   R
+         eal Vector $\V{F(v)}$ of a binary vector $\V{v}$ is a vector with $...
 Please don't say `\def cs{...}', say `\def\cs{...}'.
 I've inserted an inaccessible control sequence so that your
 definition will be completed without mixing me up too badly.
 You can recover graciously from this error, if you're
 careful; see exercise 27.2 in The TeXbook.
 
-./report.tex:543: Missing $ inserted.
+./report.tex:732: Missing $ inserted.
 <inserted text> 
                 $
-l.543 \end{def}
+l.732 \end{def}
                
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1199,9 +1358,9 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[7]
-./report.tex:577: Undefined control sequence.
-l.577 ...n F_q^n$ and $e > 0$ outputs all $v \elem
+[10]
+./report.tex:787: Undefined control sequence.
+l.787 ...n F_q^n$ and $e > 0$ outputs all $v \elem
                                                    C$ such that $\d(u,v) \le...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1210,19 +1369,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Command \d invalid in math mode on input line 577.
+LaTeX Warning: Command \d invalid in math mode on input line 787.
 
 
-LaTeX Warning: Citation `elias' on page 8 undefined on input line 577.
+LaTeX Warning: Citation `elias' on page 11 undefined on input line 787.
 
 
-LaTeX Warning: Citation `goldreich' on page 8 undefined on input line 579.
+LaTeX Warning: Citation `goldreich' on page 11 undefined on input line 789.
 
 
-LaTeX Warning: Citation `sudan' on page 8 undefined on input line 579.
+LaTeX Warning: Citation `sudan' on page 11 undefined on input line 789.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 579.
+LaTeX Warning: Reference `' on page 11 undefined on input line 789.
 
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
@@ -1235,65 +1394,121 @@ Missing character: There is no à in font cmr10!
 Missing character: There is no à in font cmr10!
 Missing character: There is no œ in font cmr10!
 Missing character: There is no µ in font cmr10!
-[8]
+[11]
+./report.tex:832: Undefined control sequence.
+<argument> \mathbb 
+                   {F}
+l.832 ...efixes $(x_1,\ldots x_i)$ run through $\F
+                                                  _2^i$, and we get a set of...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Citation `lowdeg' on page 9 undefined on input line 620.
+./report.tex:855: Missing $ inserted.
+<inserted text> 
+                $
+l.855 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./report.tex:855: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.855 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./report.tex:856: Missing $ inserted.
+<inserted text> 
+                $
+l.856  S_
+         {1,\alpha} =  \{(x_1,\ldots x_{i-1},1, \alpha_{i+1}\ldots \alpha_{m...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./report.tex:857: Missing $ inserted.
+<inserted text> 
+                $
+l.857  \end{equation*}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-LaTeX Warning: Citation `sidenkov' on page 9 undefined on input line 626.
+LaTeX Warning: Reference `fht' on page 12 undefined on input line 866.
 
 
-LaTeX Warning: Citation `attack' on page 9 undefined on input line 627.
+LaTeX Warning: Citation `dumer2008' on page 12 undefined on input line 872.
+
+[12]
+
+LaTeX Warning: Citation `lowdeg' on page 13 undefined on input line 893.
 
 
-LaTeX Warning: Citation `roche' on page 9 undefined on input line 631.
+LaTeX Warning: Citation `sidenkov' on page 13 undefined on input line 899.
 
 
-LaTeX Warning: Citation `codingtheory+blog' on page 9 undefined on input line 6
-33.
+LaTeX Warning: Citation `attack' on page 13 undefined on input line 900.
 
 
-LaTeX Warning: Citation `snakes' on page 9 undefined on input line 636.
+LaTeX Warning: Citation `correlation' on page 13 undefined on input line 901.
 
 
-LaTeX Warning: Citation `OFDM' on page 9 undefined on input line 636.
+LaTeX Warning: Citation `roche' on page 13 undefined on input line 904.
 
-(./report.bbl [9]) [10] (./report.aux)
+
+LaTeX Warning: Citation `codingtheory+blog' on page 13 undefined on input line 
+906.
+
+
+LaTeX Warning: Citation `snakes' on page 13 undefined on input line 909.
+
+
+LaTeX Warning: Citation `OFDM' on page 13 undefined on input line 909.
+
+(./report.bbl [13]) [14] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 8065 strings out of 494733
- 139856 string characters out of 1170938
- 195819 words of memory out of 3000000
- 11128 multiletter control sequences out of 10000+50000
- 11652 words of font info for 41 fonts, out of 3000000 for 5000
+ 8084 strings out of 494733
+ 140046 string characters out of 1170938
+ 201885 words of memory out of 3000000
+ 11147 multiletter control sequences out of 10000+50000
+ 12491 words of font info for 44 fonts, out of 3000000 for 5000
  188 hyphenation exceptions out of 8191
- 47i,8n,49p,587b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,10n,49p,587b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></
 usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/
-local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx7.pfb></usr/local
-/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx9.pfb></usr/local/texl
-ive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texliv
-e/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/20
-08basic/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008ba
-sic/texmf-dist/fonts/type1/bluesky/cm/cmmi5.pfb></usr/local/texlive/2008basic/t
-exmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008basic/texmf-
-dist/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008basic/texmf-dist/
-fonts/type1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008basic/texmf-dist/fonts
-/type1/bluesky/cm/cmr17.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type
-1/bluesky/cm/cmr5.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/blue
-sky/cm/cmr7.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm
-/cmr9.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmsy1
-0.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb
-></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb>
-Output written on report.pdf (10 pages, 150694 bytes).
+local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx5.pfb></usr/local
+/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx7.pfb></usr/local/texl
+ive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmbx9.pfb></usr/local/texlive/2
+008basic/texmf-dist/fonts/type1/bluesky/cm/cmbxti10.pfb></usr/local/texlive/200
+8basic/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/2008bas
+ic/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008basic/t
+exmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2008basic/texmf
+-dist/fonts/type1/bluesky/cm/cmmi5.pfb></usr/local/texlive/2008basic/texmf-dist
+/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2008basic/texmf-dist/font
+s/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/typ
+e1/bluesky/cm/cmr12.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bl
+uesky/cm/cmr17.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky
+/cm/cmr5.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cm
+r7.pfb></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb
+></usr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></u
+sr/local/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmsy5.pfb></usr/lo
+cal/texlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/t
+exlive/2008basic/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb>
+Output written on report.pdf (14 pages, 179894 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -43,7 +43,7 @@
 \maketitle
 
 \begin{abstract} 
-This Seminar Report gives an introduction to the Reed-Muller family of Error Correcting Codes. Reed-Muller codes are one of the oldest codes used for error correction. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the decoding techniques and algorithms is presented. Some applications of the code are also presented. Some applications of the code to error correction and other areas are listed.
+This Seminar Report gives an introduction to the Reed-Muller family of Error Correcting Codes. The construction and various interpretations of the codewords is discussed. Reed Muller codes are primarily used because of their large error correcting ability and easy decoding - hence a survey of the decoding techniques and algorithms is presented. Some applications of the code are also presented. Some applications of the code to error correction and other areas are listed.
 \end{abstract}
 
 
@@ -62,13 +62,13 @@ Most famously used to transmit live images of mars in the Mariner-9 mission in 1
 
 %% OK
 
-$\F _q$ denotes a finite field of order $q$.
+$\F{} _q$ denotes a finite field of order $q$.
 Throughout, unless otherwise explicity stated, $q=2$ and therefore $F=\{0,1\}$, with the addition operation being equivalent to the binary exclusive-or (\emph{xor}), and the multiplication operation being the binary \emph{and}.
 
-A vector field over $\F$,(with the length of the vector being $n$) will be denoted by $F^n$.
+A vector field over $\F{}$,(with the length of the vector being $n$) will be denoted by $F^n$.
 %% For more on vector fields and finite fields, refer to \cite{vectors},chapter 4 of \cite{singa} , but a very basic understanding is sufficient for understanding \rem{} codes.
 
-We use a string of length $n$ with elements in $\F_2$ to write a vector in the vector space $\F_2^n$ . For example, if we have the vector $\mathbf{v} = (1,0,1,1,0,1,0,1) \in \F_2^8$, we simply write $\V{v}$ as $10110101$. 
+We use a string of length $n$ with elements in $\F{}_2$ to write a vector in the vector space $\F_2^n$ . For example, if we have the vector $\mathbf{v} = (1,0,1,1,0,1,0,1) \in \F_2^8$, we simply write $\V{v}$ as $10110101$. 
 
 We shall also deal with boolean functions, and shall denote the boolean \emph{xor} by $+$, instead of the customary $\oplus$ to maintain consistency with the addition operation in $F_2$. 
 
@@ -78,7 +78,7 @@ The distance between two vectors $\V{u}$ and $\V{v}$ which we are concerned abou
 Analogously, the Hamming weight of a vector is defined as:
 $$ $$
 \begin{equation}
-wt(x) = d(x,0) = \{ 
+wt(x) = d(x,0) = \left{ 
 \begin{array}{rl} 
 1 & \text{if } x \neq 0 \\
 0 & \text{if } x = 0 
@@ -100,7 +100,7 @@ In the example below, $x_1, x_2, x_3$ are rows and $f(x_1, x_2, x_3)$ is compute
 $x_1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
 $x_2$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
 $x_3$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
-$f$   & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+$f$   & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ \\
 
 \end{tabular}
 \end{center} 
@@ -110,9 +110,9 @@ Since $(x_1,x_2,\ldots,x_m)$ can take $2^m$ values, $\V{f}$ is a $n=2^m$ length 
 The Reed-Muller codes are particular subsets of this collection as described below.
 
 $f$ can be written in the disjunctive normal form.
-Using logical operations, $f$ can be represented as a function of the $x_1, x_2,\ldots , x_m$. In the above example, for instance, $f = x_1 \vee x_2 \vee x_3 ... $. We can represent any boolean function in the disjunctive Normal form (with or replaced by xor) \cite{Problem2}, for instance in the above example $f = $
+Using logical operations, $f$ can be represented as a function of the $x_1, x_2,\ldots , x_m$. In the above example, for instance, $f = x_3 + x_1x_2$. 
 
-If there $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence $\V{f}$ and $x_1,x_2,\ldots \x_m$ have length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
+If $f$ is an $m-ary$ function, it can take the $2^m$ input values. Hence $\V{f}$ and $x_1,x_2,\ldots \x_m$ have length $2^m$. Since $\V{f}$ is also a linear combination, it follows that the length of $x_1, x_2,ldots,x_m$ is $2^m$. 
 
 Let the set of boolean monomials be:
 \begin{equation*}
@@ -127,12 +127,14 @@ There are
 distinct monomials. 
 
 A Boolean polynomial is a linear combination (with coefficients in $F_2$) of boolean monomials. The degree of the boolean polynomial is the degree of the its highest term (monomial).
+We can represent any Boolean function in the Disjunctive Normal Form (with or replaced by xor), and represent the Boolean function $f$ as :
 \begin{equation*}
   f = 1 + a_1x_1+a_2x_2+\ldots+a_mx_m + a_{12}x_1x_2+\ldots+a_{12\ldots r}x_1x_2\ldots x_r+\ldots
 \end{equation*}
 
+\footnote{The interchange between Boolean functions and their corresponding vector representation can get confusing at times.In fact, Boolean logic using exclusive-or is also called Reed-Muller logic \cite{rm-logic}}
 
-The polynomials (we will drop the term boolean from here on) of degree $1$ are simply the linear combination of $m$ vectors.
+The polynomials (we will drop the term Boolean from here on) of degree $1$ are simply the linear combination of $m$ vectors.
 \begin{equation}
  \V{1}+a_1x_1+a_2x_2+\ldots+a_mx_m
 \end{equation}
@@ -155,7 +157,11 @@ Thus the boolean monomial set $M$ consists of linearly independent vectors, and 
 \end{lemma}
 
 From the above proof:
-The monomials of degree $\leq r$ thus form a basis for $\RM{r}{m}$
+The monomials of degree $\leq r$ thus form a basis for $\RM{r}{m}$. The number of monomials of degree $\leq r$ is thus equal to the dimension ($k$) of $\RM{r}{m}$.
+\begin{equation}
+  \label{eq:2}
+  \text{ The dimension } of $\RM{r}{m}$ , k= 1+\binom{m}{1}+\binom{m}{2}+\ldots+\binom{m}{r}
+\end{equation}
 
 Let $G(r,m)$ denote the \emph{Generator Matrix} of $\RM{r}{m}$. It consists of all the monomials from set $M$ of degree $\leq r$.
 \begin{equation}
@@ -173,24 +179,20 @@ Let $G(r,m)$ denote the \emph{Generator Matrix} of $\RM{r}{m}$. It consists of a
   \end{pmatrix}
 \end{equation}
 
-$\RM{0}{m} $ is the repetition code. At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $m$.
+$\RM{0}{m} $ is the repetition code ($2^m$ repetition). At the other extreme $\RM{m}{m}$ is a code consisting of all possible binary sequences of length $2^m$.
 
 
-\subsection{clarification}
+\begin{tabular}[center]{|c|c|}
+\hline
+Length & $n = 2^m$ \\
+Minimum Distance & $d = 2^{m-r}$ \\
+Dimension & $k= 1+\binom{m}{1}+\binom{m}{2}+\ldots+\binom{m}{r}$ \\
+\hline
+\end{tabular}
 
-In what follows, we frequently switch back and forth between 
-B(r, {v1 , . . . , vm}) 
-and 
-R(r, m). Doing so in the most explicit manner would make the reasoning a 
-lot harder to read, and for this reason we decided to treat codewords and Boolean 
-functions as interchangeable.
-In fact, boolean logic using xor is also called reed-muller logic! \cite{rmlogic}
+Thus, $\RM{r}{m}$ is an $[2^m,1+\binom{m}{1}+\binom{m}{2}+\ldots+\binom{m}{r}, 2^{m-r}]$ linear code.
 
-Properties:
-Length, $n = 2^m$
-Minimum Distance, $d = 2^{m-r}$
-Dimension, $k=1+..$
-
+%%move up?
 The rate of an $[n, k]$ code is deﬁned as $k/n$. 
 (Thinking of the code as having $n − k$ check digits and $k$ message 
 digits.
@@ -215,15 +217,15 @@ Then
 \begin{theorem}
   Uniqueness: Any linear code with parameters $[2^m, m+1, 2^{m} ]$ is equivalent to the first order \rem{} code.
 \begin{proof}[from \cite{uniq}]
-  
+  \emph{DO THIS PROOF}.
 \end{proof}
 \end{theorem}
 
-Run-length properties at \cite{syncro}
+Run-length properties at \cite{runlen}
 
 
 \subsection{Recursive Formulation}
-
+\label{recursive}
 \begin{thm}
 $\RM{r+1}{m+1} =  \{ \V{u} | \V{u}+\V{v} : \V{u} \in \RM{r+1}{m}, \V{v} \in \RM{r}{m} \}$
 
@@ -461,6 +463,8 @@ v2\cdot v_3 \quad& 0&0&0&1&0&0&0&1 \\
 
 
 \section{Bounds}
+\label{bounds}
+
 $A_q(n, d)$ is the largest integer $M$ such that there exists a $q$-ary $(n, M, d)$ code where $M$ is the number of codewords. A $q$-ary $(n, M, d)$ code $C$ is called optimal if $M = A_q(n, d)$. 
 
 The \rem{} codes satisfy the \emph{Plotkin bound}.
@@ -504,11 +508,23 @@ It can be verified that $\RM{1}{m}$ codes satisfy this bound. This can also be s
 
 Some properties of the \rem{} codes can be best stated using finite geometries. A comprehensive source of the relation between the code and finite geometry is ~\cite{assumus} and ~\cite{sloane}.
 
+\begin{lem}
+  $\V{f} \in \RM{r}{m}$ is the incidence vector of the set $S$, then $\V{hf} \in \RM{r+1}{m}$ is the incidence vector of $S \cup H$
+\end{lem}
+
 \begin{thm}
   Let $f$ be a minimum weight codeword of $\RM{r}{m}$, and $f = \chi(S) $. Then $S$ is an $(m-r)$ dimensional flat in $AG(m,2)$.
 
-  \begin{proof}
-    TODO from sloane macwilliams.
+  \begin{proof}[From \cite{slonae}]
+Let $H$ be a hyperplane in $AG(m,2)$ and let $H'$ be the parallel hyperplane.
+
+By the previous lemma, $S \cap H$ and $S \cap H'$ are in $\RM{r+1}{m}$ and thus contain $0$ or $\geq 2^{m-r-1}$ points. (Minimum weight , \ref{minwt}). 
+But since $|S| = 2^{m-r} = |S \cap H| + |S \cap H'| $ , we have
+\begin{equation*}
+  |S H| = 0,2^{m-r-1}, \text{ or } 2^{m-r}
+\end{equation*}
+
+Using the rothschild-vanlint theorem \cite{rothschild}, we get that $S$ is an $(m-r)$-dimensional flat in $AG(m,2)$.
   \end{proof}
 \end{thm}
 
@@ -516,7 +532,7 @@ The converse of this theorem also holds:
 \begin{thm}
   The incidence vector of any $(m-r)$ dimensional flat in $AG(m,2)$ is a codeword in $\RM{r}{m}$.
   \begin{proof}
-    Every $(m-r)$ dimensional flat in $AG(m,2)$ can be represented by $r$ linearly independent linear equations of the form
+    Every $(m-r)$ dimensional flat in $AG(m,2)$ can be represented by $r$ linearly independent linear equations of the form      
     \begin{equation*}
       \sum_{j \in m}{a_{ij}c_j = b_i}, \qquad i\in r
     \end{equation*}
@@ -666,13 +682,22 @@ J \leq 2n/d' -1
 
 The Reed decoding algorithm is a majority logic decoding scheme for decoding \rem{} codes of any order.
 
-Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in  in which the nonzero coordinates of the codeword are points lying in the 
-subspace. Based upon this geometry we can ﬁnd equations for orthogonal checksums as follows. To ﬁnd a set of orthogonal checksums that provide an estimate for the $k$-th order message bit $m_{i_1,i_2 ,... ,i_k} corresponding to the basis vectors v_{i_1}v_{i_{2}}\ldots v_i_k$. 
+Each codeword from $\RM{r}{m}$ is an incidence vector that deﬁnes a subspace in which the nonzero coordinates of the codeword are points lying in the 
+subspace. 
+For example, if $\V{y} = 00001111 \in \RM{1}{3}$, then the corresponding points are $\{P_4,P_5,P_6,P_7\}$ .Their binary representation is $\{(100),(101),(110),(111)\}$ (simply the binary representation of the indices).
+Based upon this geometry we can ﬁnd equations for orthogonal checksums. Our goal is to ﬁnd a set of orthogonal checksums that provide an estimate for the $k$-th order message bit $m_{i_1,i_2,ldots ,i_k}$ corresponding to the basis vectors $x_{i_1}x_{i_{2}}\ldots x_i_k$. 
 
 Let the corresponding subspace be $S$.
-Let $T$ be the complementary subspace of $S$ where $j_1j_2\ldotsj_{m-k} = {1,2,ldots,m}-{i_1,i_2,\ldots,i_k}.$ The incidence vector of $T$ is v. <todo>
+Let $T$ be the complementary subspace of $S$ where $j_1j_2\ldots j_{m-k} = {1,2,ldots,m}-{i_1,i_2,\ldots,i_k}.$ 
+The incidence vector of $T$ is $\V{x_j_1}\V{x_j_2}\ldots \V{x_j_{m-k}}$
 
-Define a \emph{Translate} of a subspace with respect to a point to be the subspace obtained by adding the binary representation of the point to each element of the subspace. 
+Define a \emph{Translate} of a subspace,$T$ with respect to a point $\V{y}$ to be $y+T$.
+
+In the reed decoding scheme, the checksums are the codeword coordinates specified by $T$. 
+
+
+
+%%the subspace obtained by adding the binary representation of the point to each element of the subspace. 
 
 \begin{them}
   If there are no errors, the message bit $m_b$ is given by 
@@ -682,7 +707,7 @@ Define a \emph{Translate} of a subspace with respect to a point to be the subspa
   \begin{proof}
     A codeword can be written as
     \begin{equation*}
-      \V{v} = \sum_{t=i_1i_2\ldotsi_s}{a_t\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
+      \V{v} = \sum_{t=i_1i_2\ldots i_s}{a_t\V{x_{i_1}}\V{x_{i_2}}\ldots \V{x_{i_s}}}
     \end{equation*}
     The sum is over all the subsets $\{i_1,i_2 ldots i_s \}$ of $\{1 \ldots m\}$ of size atmost $r$.
 Summing up $\V{v}$ over all the translates gives:
@@ -854,6 +879,9 @@ This algorithm is similar to the fast hadamard transform described earlier \ref{
 For a proof of correctness of the algorithm , see \cite{kabatiansky}. Analysis of running times and a probabilistic version is also presented. 
 
 
+\subsection{general bounds}
+\cite{dumer2008}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Other decoding algorithms}
 Besides the algorithms presented above, there exists a large number of algorithms. 
@@ -881,7 +909,7 @@ Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polyno
 
 The Sidenkov public-key system, (a variant of the McEliece cryptosystem) uses \rem{} codes instead of Goppa codes because of the efficient decoding ~\cite{sidenkov}.
 A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code ~\cite{attack}. The uniqueness result proved earlier is a central feature in the cryptographic attack.
-
+~\cite{correlation}
 \subsection{Side Channel attacks}
 
 ~\cite{roche}
