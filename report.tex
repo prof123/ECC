@@ -25,6 +25,8 @@
 
 \newcommand{\V}[1]{\ensuremath{\mathbf{#1}}}
 
+\newcommand{\slm}{Sloane MacWilliams}
+
 %%% Theorems %%%
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
@@ -489,24 +491,30 @@ Since $\sum{D_{ji}} = 2^k $, we have:
 \begin{equation*}
   D = n2^{2k} - \sum_{i \in n}{\sum_{j=\{0,1\}} {D_{ji}^2}}
 \end{equation*}
-
+Some manipulation yields:
 \begin{equation*}
   \sum_{j=0,1}{D_{ji}^2} \geq 2^{2k-1}, \qquad i \in n
 \end{equation*}
-Combining the upper and the lower bounds, we obtain:
+Combining the upper and the lower bounds:
 \begin{equation*}
-  2^k(2^k-1)d \leq D \leq n2^
+  2^k(2^k-1)d \leq D \leq n2^{2k-1}
 \end{equation*}
 
   \end{proof}
 \end{theorem}
 
-It can be verified that $\RM{1}{m}$ codes satisfy this bound. This can also be shown by using the fact proved in \ref{equidistant} that $\RM{1}{m}$ are equidistant codes, and using that result in the proof of the plotkin bound.
+It can be verified that $\RM{1}{m}$ codes satisfy this bound. The right hand side is:
+\begin{equation*}
+  \frac{2^m2^{1+m-1}}{2^{1+m}-1}
+\end{equation*}
+which is asymptotically equal to $d= 2^{m-1}$. Since we have hit a bound, $\RM{1}{m}$ codes are optimal.
+
+We can also confirm this by noting that the equality holds only if the code is equidistant, and that has already been shown in \ref{equidistant}.
 
 
 \subsection{Geometries}
 
-Some properties of the \rem{} codes can be best stated using finite geometries. A comprehensive source of the relation between the code and finite geometry is ~\cite{assumus} and ~\cite{sloane}.
+Some properties of the \rem{} codes can be best stated using finite geometries. A comprehensive source of the relation between the code and finite geometry is ~\cite{assumus-polynomial} and ~\cite{sloane}.
 
 \begin{lem}
   $\V{f} \in \RM{r}{m}$ is the incidence vector of the set $S$, then $\V{hf} \in \RM{r+1}{m}$ is the incidence vector of $S \cup H$
@@ -574,7 +582,7 @@ $V+x$ is a contained in $W+x$. Also the collection of all these $W+x$ flats inte
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section {Weight distribution}
 
-For the codes of order $r\geq2$, determining the complete weight distribution is hard. (impossible).
+For the codes of order $r\geq 2$, determining the complete weight distribution is hard. (impossible).
 For $r=1$, as shown \ref{r1m}, the weight of all words is $2^{m-1}$.
 
 Considerable work has been done to establish the distribution for $\RM{2}{m}$. We state the classic results (for proofs see \cite{sloane}) : 
@@ -584,7 +592,15 @@ Considerable work has been done to establish the distribution for $\RM{2}{m}$. W
   \label{eq:4}
   \text{There are at least} 2^{mr−r(r−1)} . 
 \text{minimum weight codewords in } \RM{r}{m}. 
+\end{equation}
 
+For the second order codes, we have:
+\begin{equation}
+  \label{eq:6}
+  A_i =  0 \qquad i \neq 2^{m-1}, 2^{m-1}+-2^{m-1-h} \text{ for } 0 \leq h \leq [m/2]
+  A_0 = 1
+  A_{2^m} = 1
+  A_{ 2^{m-1}+-2^{m-1-h}} = 2^{h(h+1)}\cdot \frac{(2^m - 1)(2^{m-1}-1)\ldots (2^{m-2h+1} -1)} { (2^{2h} -1)(2^{2h-2} -1)\ldots (2^{2} -1)}
 \end{equation}
 
 \section{cyclic decoding}
@@ -644,7 +660,7 @@ We get the desired result by using the previous theorem.
 
 
 \subsection{L-step decoding}
-
+\cite{mann}
 We can extend the idea of step-decoding using orthogonal parity checks by generalizing for parity check equations to be orthogonal on a set of coordinates. 
 
 Definition: A set of parity checks $S_1, S_2,\ldots$ is orthogonal on coordinates $i,j,..$ if the sum $x_i+x_j+\ldots$ appears in each S but no other $x_p$ appears more than once in the set.
@@ -739,7 +755,7 @@ We can use the finite geometry construction of the codes to help in the decoding
 \subsection {Hadamard Transforms}
 
 \begin{def}
-  Real Vector $\V{F(v)}$ of a binary vector $\V{v}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
+  The \emph{Real Vector} ${F(\V{v})}$ of a binary vector $\V{v}$ is a vector with $0$ replaced by $1$ and $1$ by $-1$.
 \end{def}
 
 \begin{lem}
@@ -754,10 +770,11 @@ We can use the finite geometry construction of the codes to help in the decoding
       We can prove using induction on the basis vectors. Since the code is a linear combination, the result follows.
     \end{proof}
   \end{claim}
-This is also the definition of the hadamard matrix.
+ This is also the definition of the Hadamard matrix.
 \end{proof}
 \end{lem}
 
+The \rem{} codes can thus be written like:
 \begin{equation}
   \label{eq:3}
   \RM{1}{m} =
@@ -767,21 +784,27 @@ This is also the definition of the hadamard matrix.
   \end{pmatrix}
 \end{equation}
 
+Since the purpose of decoding is the find the codeword $\V{c}$ closest to the received vector $\V{v}$, we will want to maximize the correlation between the two, where correlation is the dot-product.
 
+The Hadamard transform computes the correlation of the received vector $F(v)$ with each of the rows of the Hadamard matrix. Let the vector which has the largest correlation with $v$ be $c$. Then the goal is find $c$.
 
-Keeping note that the code has been converted to the real-vector form, maximizing $F(v)H_m$ is equivalent to finding the least-distance neighbour of $\V{v}$.
-This would entail doing a simple vector product with each row of the hadamard matrix.
-If the correlation is negative, the absolute value is considered since the correlation of the negation of the corresponding row of the hadamard matrix is .
+Also note that \begin{equation} F(\V{v}) = -F(\V{1}+\V{v}) \end{equation}. We will thus consider the absolute value of the correlation.
 
- There are $n$ such rows, and we need $O(n^2)$ operations.
-However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(nlogn)$.
+Because the rows of the matrix are the real-vector versions of the binary representation of the numbers from $1,\ldots 2^{m-1}$, we can determine the coordinate $a=(a_m\ldots a_1)$, where $a$ is the correlation value.
+ 
+If the correlation is negative, then $c = \v{1}+a_iv_i$. Otherwise  $c = \v{1}+a_iv_i$.
 
+\subsubsection{Fast Hadmard Transform}
+In the Hadamard Transform, we need to compute the $n$  products  of vectors of length $n$, resulting in $O(n^2)$ operations. 
+However, by using the \emph{Fast Hadamard Transform }, we can improve the number of operations to $O(nlogn)$ \cite{dumer}. We use the recursive formulation of the Hadamard matrix  to prove the following theorem.  
+
+Let $A \otimes B$ be the Kronecker product of matrices $A$ and $B$.
 
 \begin{thm}
   \begin{equation*}
     H_{2^m} = M_{2^m}^{(1)}M_{2^m}^{(2)} \ldots M_{2^m}^{(m)}
 \text{ where }
-  M_{2^m}^{(i)} = I_{2^{m-i}}\otimes H_2 \oplus I_{2^{i-1}}, \qquad 1 \leq i \leq m
+  M_{2^m}^{(i)} = I_{2^{m-i}}\otimes H_2 \otimes I_{2^{i-1}}, \qquad 1 \leq i \leq m
   \end{equation*}
   \begin{proof}
     By simple induction on m.
@@ -789,18 +812,15 @@ However, by using the \emph{Fast Hadamard Transform }, we can speed it up to $O(
 \end{thm}
 
 
-This is the fastest classical decoding technique and was employed in the \emph{Green Machine} decoder for the Mariner-9 space mission. 
+This technique was employed in the \emph{Green Machine} \cite{green} decoder for the Mariner-9 space mission. 
 
-For a detailed look into the construction of the decoder, refer ~\cite{sloane}
+For a detailed look into the construction of the decoder, refer ~\cite{sloane}. Sloane \& MacWilliams is an excellent source for the implementation details of the various algorithms presented (particularly the step-decoding and the green machine).
 
 \subsection {List Decoding}
 
-A list decoding procedure for a code $C$ is a function which for given a $\V{u} \in F_q^n$ and $e > 0$ outputs all $v \elem C$ such that $\d(u,v) \leq e$. Alternately, given a decoding radius $T$, it should produce a list (set) of codewords which are distance less than $T$. List decoding is an old technique given by P.Elias in 1950 \cite{elias}, but has recently found significant attention.
+A list decoding procedure for a code $C$ is a function which for given a $\V{u} \in F_q^n$ and $e > 0$ outputs all $\V{v} \in C$ such that $\d(\V{u},\V{v}) \leq e$. List decoding is an old technique given by P.Elias in 1950 \cite{elias}, and has recently found significant attention (\cite{sudan}, among others).
 
 The existence of a good, fast list decoding algorithm for the first order \rem{} codes was given by goldreich and levin \cite{goldreich}, \cite{sudan}. However they do not give a usable algorithm. Recently, Kabatiansky, Dumer and Tavernier \cite{kabatiansky}, \cite{dumer} have presented a simple list decoding algorithm for $\RM{1}{m}$ capable of correcting $n(\frac{1}{2} - \epsilon)$ errors in $O(n \epsilon^3)$. This is significantly better than the $\frac{n}{4}$ correcting capability of the Hadamard transform \ref{}, which uses $O(nlogn)$ time.
-
-
-The algorithm  
 
 
 
@@ -884,42 +904,34 @@ For a proof of correctness of the algorithm , see \cite{kabatiansky}. Analysis o
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Other decoding algorithms}
-Besides the algorithms presented above, there exists a large number of algorithms. 
-Majority logic algorithms are:
-Some run in $O(n)$ time. There are hard and soft decision algorithms as well.
+Besides the algorithms presented above, there exists a large variety of algorithms, especially for the first-order code.
 
-\section{Generalized \rem codes}
+See \cite{fourier}, \cite{dumer2004recursive}, \cite{gopalan2008list} for a few of the algorithms.
 
 \section {Applications}
 \label{applications}
+The \rem{} codes typically find applications in communication and complexity theory. In this section a few representative examples are presented. 
 
+\begin{description}
 
-The \rem{} codes typically find application in communication and complexity theory. In this section a few representative examples are presented. 
-\subsection{Communication}
+\item[Communication]
+The oldest and original use is the error-correction of signal transmissions. \rem{} codes were used in the Mariner and Viking space-probes of the 1970's ~\cite{space}, transmitting the first black-and-white pictures of Mars which were broadcast live (thanks to the fast decoding algorithm presented in \ref{fht}).A more recent use is in the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) ~\cite{feldman}.         
 
-The oldest and original use. \rem{} codes were used in the 1969 Mariner-9 deep space probe to the IEEE 802.11b standard for Wireless Local Area Networks (WLANs) ~\cite{feldman}.         
+\item[Testing Low-degree polynomials]
+Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial is a central theme in a lot of research in complexity theory ~\cite{lowdeg} , ~\cite{local+testing}.In a typical scenario, the Boolean functions are mapped to the \rem{} codes, and the properties are used to prove the bounds on the number of queries needed to determine the original function.
 
-\subsection{Testing Low-degree polynomials}
+\item[Sidelnikov cryptanalysis]
+The Sidenikov public-key system, (a variant of the McEliece cryptosystem) uses \rem{} codes instead of Goppa codes because of the efficient decoding ~\cite{sidelnikov}.
+A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code ~\cite{attack}. The uniqueness result stated earlier is a central feature in the cryptographic attack.~\cite{correlation}
 
-~\cite{lowdeg} 
-
-Using $\RM{1}{m}$ codes to test whether a binary function is a low-degree polynomial. The functions are mapped to the \rem{} codes, and the properties are used to prove the bounds on the number of queries needed. 
-
-\subsection{Sidenkov cryptanalysis}
-
-The Sidenkov public-key system, (a variant of the McEliece cryptosystem) uses \rem{} codes instead of Goppa codes because of the efficient decoding ~\cite{sidenkov}.
-A cryptanalysis attack also uses the properties of \rem{} codes to break the cryptographic code ~\cite{attack}. The uniqueness result proved earlier is a central feature in the cryptographic attack.
-~\cite{correlation}
-\subsection{Side Channel attacks}
-
+\item[Side Channel attacks]
 ~\cite{roche}
-
 ~\cite{codingtheory+blog}
 
-\subsection{Other Applications}
+\item[Other Applications]
 ~\cite{snakes} , ~\cite{OFDM}, ~\cite{}. 
-
-\section{Conclusion}
+  \item
+\end{description}
 
 \section {References}
 
